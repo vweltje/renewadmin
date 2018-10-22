@@ -1,0 +1,54 @@
+.FooterForm .FormGroup {
+  border: none;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.FooterForm .FormGroup label {
+  display: inline-block;
+  position: relative;
+  width: calc(50% - 1rem);
+}
+
+.FooterForm .FormGroup label input {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+
+.FooterForm .FormGroup label textarea {
+  height: auto;
+  min-height: inherit;
+}
+
+.FooterForm .Form--Input {
+  background: transparent;
+  border-radius: 0;
+  border: 0;
+  border-bottom: 0.1rem solid var(--lightGrey);
+  transition: all 0.3s ease;
+}
+
+.FooterForm .Form--Input::placeholder {
+  color: var(--lightGrey);
+}
+
+.FooterForm .Form--Input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.FooterForm .Form--SubmitButton {
+  padding: 1rem;
+  min-width: 13rem;
+  font-weight: normal;
+  text-transform: lowercase;
+  display: flex;
+  align-self: flex-end;
+  margin-top: 3rem;
+}

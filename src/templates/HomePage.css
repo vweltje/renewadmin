@@ -1,0 +1,53 @@
+.Home--TitleSection h2 {
+  color: var(--darkerGrey);
+  font-size: 2.8rem;
+  font-weight: bold;
+  letter-spacing: -0.52px;
+  line-height: 34px;
+  text-align: center;
+}
+
+.Home--TitleSection .ButtonBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Home--TitleSection .ButtonBox .Button:first-of-type {
+  margin-right: 4rem;
+}
+
+.Home--TitleSection .Image {
+  max-width: 120rem;
+  width: 100%;
+  height: auto;
+  margin: 2.5rem auto;
+}
+
+.Home--ServicesSecction p {
+  margin-bottom: 7.5rem;
+}
+
+.Home--ServicesSecction .Button,
+.Home--CaseStudiesSection .Button {
+  width: 21rem;
+  margin: 0 auto;
+  margin-top: 4rem;
+}
+
+.Home--CertificationsSection .ContentBlock div:last-of-type div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto 0;
+}
+
+.Home--CertificationsSection .logo {
+  max-width: 13.5rem;
+  max-height: 12rem;
+  width: auto;
+  height: auto;
+  display: inline-block;
+}

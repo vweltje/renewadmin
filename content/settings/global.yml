@@ -1,0 +1,8 @@
+siteTitle: Renew Admin
+siteUrl: 'https://renewadmin.netlify.com'
+siteDescription: >-
+  A starter project for creating lightning-fast websites with Gatsby Netlify
+  CMS.
+socialMediaCard:
+  image: 'https://ucarecdn.com/f31683d7-8fe7-431c-86d6-97f0f097657a/'
+headerScripts: <!-- Add your analytics scripts / verification meta here -->

@@ -1,0 +1,90 @@
+footer {
+  --formWidth: 37rem;
+}
+
+.Footer {
+  position: relative;
+  padding: 10rem 0;
+  margin-top: 7.5rem;
+  background: var(--lightGrey);
+  z-index: 0;
+}
+
+.Footer .BackgroundImage {
+  z-index: -1;
+}
+
+.Footer .FooterBox {
+  display: flex;
+  flex-direction: row;
+}
+
+.FooterBox .FooterNav {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.FooterBox .FooterNav .FooterNavItems {
+  width: 100%;
+  display: flex;
+  flex-grow: 1;
+}
+
+.FooterBox .FooterNav p {
+  margin: 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.FooterBox .FooterFormBox {
+  position: relative;
+  width: 30%;
+}
+
+.FooterBox .FooterNav p,
+.FooterBox .FooterFormBox p {
+  color: var(--white);
+  opacity: 0.5;
+  font-size: 1.4rem;
+}
+
+.FooterBox .FooterFormBox p {
+  margin-top: 10rem;
+  margin-bottom: 0;
+  text-align: left;
+}
+
+.FooterBox ul {
+  list-style: none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+}
+
+.FooterBox ul li {
+  color: var(--midGrey);
+  font-size: 1.4rem;
+}
+
+.FooterBox ul li a {
+  color: var(--midGrey);
+  text-decoration: none;
+}
+
+.FooterBox ul li svg {
+  opacity: 0.5;
+  max-height: 1.6rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 1.2rem;
+}
+
+.FooterBox .ListHeading {
+  color: var(--white);
+  font-weight: bold;
+  text-transform: uppercase;
+  min-height: 2.2rem;
+  padding-bottom: 1.2rem;
+}

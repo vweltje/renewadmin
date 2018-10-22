@@ -1,0 +1,43 @@
+.ContentBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ContentBlock:nth-of-type(2n + 2) {
+  flex-direction: row-reverse;
+  margin-top: 15rem;
+}
+
+.ContentBlock > div {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ContentBlock > div:first-of-type {
+  padding-right: 5rem;
+}
+
+.ContentBlock > div:last-of-type {
+  padding-left: 5rem;
+}
+
+.ContentBlock:nth-of-type(2n + 2) > div:last-of-type {
+  padding-right: 5rem;
+}
+
+.ContentBlock:nth-of-type(2n + 2) > div:first-of-type {
+  padding-left: 5rem;
+}
+
+.ContentBlock > div img {
+  max-width: 51.5rem;
+  margin: 0 auto;
+}
+
+.ContentBlock > div .Button {
+  width: 21rem;
+  margin-top: 2rem;
+}

@@ -1,0 +1,40 @@
+.Image {
+  display: block;
+  width: 100%;
+}
+
+.BackgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.BackgroundImage .Image {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.BackgroundOverlay::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background: var(--darkerGrey);
+  opacity: 0.95;
+}
+
+.BackgroundOverlay.soft::before {
+  opacity: 0.7;
+  background: var(--grey);
+}

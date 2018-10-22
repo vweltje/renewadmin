@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react'
-import { graphql } from 'gatsby'
+import React from "react";
+import { graphql } from "gatsby";
 
-import Layout from '../components/Layout'
-import ContentBlock from '../components/ContentBlock'
-import InlineBanner from '../components/InlineBanner'
-import CertificationsSection from '../components/Certifications'
-import './AboutPage.css'
+import Layout from "../components/Layout";
+import ContentBlock from "../components/ContentBlock";
+import InlineBanner from "../components/InlineBanner";
+import CertificationsSection from "../components/Certifications";
+import "./AboutPage.css";
 
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
@@ -22,9 +22,9 @@ export const AboutPageTemplate = ({
     shortDescription: shortDescription,
     description: description,
     image: image
-  }
+  };
   return (
-    <Fragment>
+    <main>
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
@@ -46,18 +46,18 @@ export const AboutPageTemplate = ({
       )}
       {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
       <CertificationsSection {...certificationsSection} />
-    </Fragment>
-  )
-}
+    </main>
+  );
+};
 
 // Export Default AboutPage for front-end
 const AboutPage = ({ data }) => {
-  const page = { ...data.page }
-  let certificationData
+  const page = { ...data.page };
+  let certificationData;
 
   certificationData = data.homePage.edges.map(data => ({
     ...data.node.frontmatter.certificationsSection
-  }))[0]
+  }))[0];
 
   return (
     <Layout>
@@ -67,10 +67,10 @@ const AboutPage = ({ data }) => {
         certificationsSection={certificationData}
       />
     </Layout>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;
 
 export const pageQuery = graphql`
   ## Query for AboutPage data
@@ -119,4 +119,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

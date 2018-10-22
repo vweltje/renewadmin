@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -20,7 +20,7 @@ export const ContactPageTemplate = ({
   contactInfo
 }) => {
   return (
-    <Fragment>
+    <main>
       <section className="section ContactPage">
         <div className="container">
           <h1>{title}</h1>
@@ -52,7 +52,7 @@ export const ContactPageTemplate = ({
           </div>
         </div>
       </section>
-    </Fragment>
+    </main>
   );
 };
 

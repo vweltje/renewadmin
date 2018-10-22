@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
@@ -7,13 +7,13 @@ import "./HowItWorks.css";
 // Export Template for use in CMS preview
 export const HowItWorksTemplate = ({ title }) => {
   return (
-    <Fragment>
+    <main>
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
         </div>
       </section>
-    </Fragment>
+    </main>
   );
 };
 

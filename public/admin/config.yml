@@ -276,6 +276,44 @@ collections: # A list of collections the CMS should be able to edit
               widget: markdown,
               buttons: { bulleted-list, numbered-list, bold, italic, link },
             }
+      - file: "content/pages/services.md"
+        label: "Services Page"
+        name: "services-index"
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: servicesIndex,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: Services,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: services }
+          - { label: title, name: title, widget: string }
+          - { label: short description, name: shortDescription, widget: text }
+          - { label: description, name: description, widget: text }
+          - { label: Image, name: image, widget: image }
+          - label: "Inline Banner"
+            name: "inlineBanner"
+            widget: "object"
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: description, name: description, widget: string }
+              - { label: Background, name: background, widget: image }
+              - label: "Button"
+                name: "button"
+                widget: "object"
+                fields:
+                  - label: "Link"
+                    name: "link"
+                    widget: "string"
+                    default: ""
+                    hint: "Copy past a url"
+                  - { label: text, name: text, widget: string }
 
   - name: "settings"
     label: "Settings"

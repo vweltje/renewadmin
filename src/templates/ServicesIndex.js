@@ -1,19 +1,34 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import ContentBlock from "../components/ContentBlock";
+import InlineBanner from "../components/InlineBanner";
 import "./Services.css";
 
 // Export Template for use in CMS preview
-export const ServicesTemplate = ({ title }) => {
+export const ServicesTemplate = ({
+  title,
+  shortDescription,
+  description,
+  image,
+  inlineBanner
+}) => {
+  const contentData = {
+    shortDescription: shortDescription,
+    description: description,
+    image: image
+  };
   return (
-    <Fragment>
+    <main>
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
+          <ContentBlock content={contentData} />
+          {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
         </div>
       </section>
-    </Fragment>
+    </main>
   );
 };
 
@@ -38,6 +53,18 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+        shortDescription
+        description
+        image
+        inlineBanner {
+          background
+          button {
+            link
+            text
+          }
+          title
+          description
+        }
       }
     }
   }

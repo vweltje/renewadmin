@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "0e556edeacdda18a9488";
+/******/ 	var hotCurrentHash = "57a9f9cda2bf30495b2c";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -1294,7 +1294,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* WEBPACK VAR INJECTION */(f
 /* 79 */
 /***/ (function(module) {
 
-eval("module.exports = [{\"componentChunkName\":\"component---src-templates-home-page-js\",\"jsonName\":\"index\",\"path\":\"/\"},{\"componentChunkName\":\"component---src-pages-404-js\",\"jsonName\":\"404-html-516\",\"path\":\"/404.html\"},{\"componentChunkName\":\"component---src-pages-404-js\",\"jsonName\":\"404-22d\",\"path\":\"/404/\"},{\"componentChunkName\":\"component---src-templates-about-page-js\",\"jsonName\":\"about-f34\",\"path\":\"/about/\"},{\"componentChunkName\":\"component---src-templates-case-studies-index-js\",\"jsonName\":\"case-studies-693\",\"path\":\"/case-studies/\"},{\"componentChunkName\":\"component---src-templates-contact-page-js\",\"jsonName\":\"contact-26a\",\"path\":\"/contact/\"},{\"componentChunkName\":\"component---cache-dev-404-page-js\",\"jsonName\":\"dev-404-page-5f9\",\"path\":\"/dev-404-page/\"},{\"componentChunkName\":\"component---src-templates-how-it-works-index-js\",\"jsonName\":\"how-it-works-9f8\",\"path\":\"/how-it-works/\"},{\"componentChunkName\":\"component---src-templates-news-index-js\",\"jsonName\":\"news-014\",\"path\":\"/news/\"},{\"componentChunkName\":\"component---src-templates-services-index-js\",\"jsonName\":\"services-522\",\"path\":\"/services/\"}];\n\n//# sourceURL=webpack:///./.cache/pages.json?");
+eval("module.exports = [{\"componentChunkName\":\"component---src-templates-home-page-js\",\"jsonName\":\"index\",\"path\":\"/\"},{\"componentChunkName\":\"component---src-pages-404-js\",\"jsonName\":\"404-html-516\",\"path\":\"/404.html\"},{\"componentChunkName\":\"component---src-pages-404-js\",\"jsonName\":\"404-22d\",\"path\":\"/404/\"},{\"componentChunkName\":\"component---src-templates-about-page-js\",\"jsonName\":\"about-f34\",\"path\":\"/about/\"},{\"componentChunkName\":\"component---src-templates-case-studies-index-js\",\"jsonName\":\"case-studies-693\",\"path\":\"/case-studies/\"},{\"componentChunkName\":\"component---src-templates-contact-page-js\",\"jsonName\":\"contact-26a\",\"path\":\"/contact/\"},{\"componentChunkName\":\"component---cache-dev-404-page-js\",\"jsonName\":\"dev-404-page-5f9\",\"path\":\"/dev-404-page/\"},{\"componentChunkName\":\"component---src-templates-how-it-works-page-js\",\"jsonName\":\"how-it-works-9f8\",\"path\":\"/how-it-works/\"},{\"componentChunkName\":\"component---src-templates-news-index-js\",\"jsonName\":\"news-014\",\"path\":\"/news/\"},{\"componentChunkName\":\"component---src-templates-services-index-js\",\"jsonName\":\"services-522\",\"path\":\"/services/\"}];\n\n//# sourceURL=webpack:///./.cache/pages.json?");
 
 /***/ }),
 /* 80 */

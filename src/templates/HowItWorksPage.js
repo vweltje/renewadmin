@@ -2,42 +2,58 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
-import "./HowItWorks.css";
+import ContentBlock from "../components/ContentBlock";
+
+import "./HowItWorksPage.css";
 
 // Export Template for use in CMS preview
-export const HowItWorksTemplate = ({ title }) => {
+export const HowItWorksPageTemplate = ({
+  title,
+  shortDescription,
+  description,
+  image
+}) => {
+  const contentData = {
+    shortDescription: shortDescription,
+    description: description,
+    image: image
+  };
   return (
     <main>
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
+          <ContentBlock content={contentData} />
         </div>
       </section>
     </main>
   );
 };
 
-// Export Default HowItWorks for front-end
-const HowItWorks = ({ data: { page } }) => {
+// Export Default HowItWorksPage for front-end
+const HowItWorksPage = ({ data: { page } }) => {
   return (
     <Layout>
-      <HowItWorksTemplate {...page} {...page.frontmatter} />
+      <HowItWorksPageTemplate {...page} {...page.frontmatter} />
     </Layout>
   );
 };
 
-export default HowItWorks;
+export default HowItWorksPage;
 
 export const pageQuery = graphql`
-  ## Query for HowItWorks data
+  ## Query for HowItWorksPage data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
-  query HowItWorks($id: String!) {
+  query HowItWorksPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
+        shortDescription
+        description
+        image
       }
     }
   }

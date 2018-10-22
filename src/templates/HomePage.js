@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import ContentBlock from "../components/ContentBlock";
+import ServicesGrid from "../components/ServicesGrid";
 import InlineBanner from "../components/InlineBanner";
 import Image from "../components/Image";
 import CertificationsSection from "../components/Certifications";
@@ -34,17 +35,12 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
 };
 
 export const ServicesSection = ({ title, description, button = [] }) => {
-  let styles = {
-    width: "100%",
-    height: "650px",
-    background: "#33495b"
-  };
   return (
     <section className="section Home--ServicesSecction">
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
-        <div style={styles}>placeholder</div>
+        <ServicesGrid showDescription />
         <Link to={button.link} className="Button">
           {button.text}
         </Link>

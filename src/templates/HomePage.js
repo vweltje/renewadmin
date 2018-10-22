@@ -1,14 +1,14 @@
-import React from 'react'
-import { graphql, Link } from 'gatsby'
+import React from "react";
+import { graphql, Link } from "gatsby";
 
-import Layout from '../components/Layout'
-import ContentBlock from '../components/ContentBlock'
-import InlineBanner from '../components/InlineBanner'
-import Image from '../components/Image'
-import CertificationsSection from '../components/Certifications'
+import Layout from "../components/Layout";
+import ContentBlock from "../components/ContentBlock";
+import InlineBanner from "../components/InlineBanner";
+import Image from "../components/Image";
+import CertificationsSection from "../components/Certifications";
 
-import './HomePage.css'
-import '../components/ContentBlock.css'
+import "./HomePage.css";
+import "../components/ContentBlock.css";
 
 export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   return (
@@ -30,15 +30,15 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
         />
       </div>
     </section>
-  )
-}
+  );
+};
 
 export const ServicesSection = ({ title, description, button = [] }) => {
   let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+    width: "100%",
+    height: "650px",
+    background: "#33495b"
+  };
   return (
     <section className="section Home--ServicesSecction">
       <div className="container">
@@ -50,15 +50,15 @@ export const ServicesSection = ({ title, description, button = [] }) => {
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export const CaseStudiesSection = ({ title, description, button = [] }) => {
   let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+    width: "100%",
+    height: "650px",
+    background: "#33495b"
+  };
   return (
     <section className="section Home--CaseStudiesSection">
       <div className="container">
@@ -70,15 +70,15 @@ export const CaseStudiesSection = ({ title, description, button = [] }) => {
         </Link>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export const NewsSection = ({ title, description }) => {
   let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+    width: "100%",
+    height: "650px",
+    background: "#33495b"
+  };
   return (
     <section className="section Home--CaseStudiesSection">
       <div className="container">
@@ -87,8 +87,8 @@ export const NewsSection = ({ title, description }) => {
         <div style={styles}>placeholder</div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
@@ -101,7 +101,7 @@ export const HomePageTemplate = ({
   newsSection,
   certificationsSection
 }) => {
-  const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
+  const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }];
   return (
     <main className="Home">
       <TitleSection {...titleSection} />
@@ -112,18 +112,17 @@ export const HomePageTemplate = ({
       <NewsSection {...newsSection} />
       <CertificationsSection {...certificationsSection} />
     </main>
-  )
-}
+  );
+};
 
 // Export Default HomePage for front-end
 const HomePage = ({ data: { page } }) => (
   <Layout>
-    test titleSectiont
     <HomePageTemplate {...page} {...page.frontmatter} />
   </Layout>
-)
+);
 
-export default HomePage
+export default HomePage;
 
 export const pageQuery = graphql`
   ## Query for HomePage data
@@ -204,4 +203,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

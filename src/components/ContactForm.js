@@ -113,7 +113,7 @@ class FooterForm extends React.Component {
             className="Form--Input Form--Textarea"
             placeholder="Message*"
             name="message"
-            rows="5"
+            rows="8"
             required
           />
         </label>

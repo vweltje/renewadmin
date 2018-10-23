@@ -4,10 +4,6 @@ import { Link } from "gatsby";
 import "./ServicesGrid.css";
 
 export default class Grid extends React.Component {
-  state = {
-    hover: false
-  };
-
   getIconSrc(slug) {
     let icon;
     if (slug.includes("account-payable")) icon = "payable";
@@ -24,7 +20,7 @@ export default class Grid extends React.Component {
 
   render() {
     const services = this.props.services;
-    const showDescription = this.props.showDescription;
+    const showDescription = this.props.showDescription || false;
     return (
       <div className="ServicesGrid">
         {services.map((service, index) => {
@@ -57,48 +53,3 @@ export default class Grid extends React.Component {
     );
   }
 }
-
-// export default ({ content, services = {}, showDescription = false }) => {
-//   let activeElem = false;
-//   const activateElem = key => {
-//     activeElem = key;
-//     console.log(key);
-//   };
-//   const deactivateElem = () => {
-//     activeElem = false;
-//   };
-//
-//   return (
-{
-  /* <div className="ServicesGrid">
-  {services.map((service, index) => {
-    const key = service.title + " " + index;
-    return (
-      <div
-        className="ServicesGrid--service"
-        key={key}
-        onClick={activateElem(key)}
-        onMouseLeave={deactivateElem()}
-      >
-        <div className={"ServicesGrid--Icon " + getIconSrc(service.slug)} />
-        <h3>{service.title}</h3>
-        {(() => {
-          if (showDescription) {
-            return <p>{service.description}</p>;
-          } else {
-            const btnType = activeElem === key ? "" : "Secondary";
-            console.log(btnType);
-            return (
-              <Link to={service.slug} className={"Button " + { btnType }}>
-                know more
-              </Link>
-            );
-          }
-        })()}
-      </div>
-    );
-  })}
-</div>;
-//   ); */
-}
-// };

@@ -1215,6 +1215,7 @@ footer {
 }
 
 .ServicesGrid--service {
+  position: relative;
   border-top: 1px solid var(--secondary);
 }
 
@@ -1229,15 +1230,21 @@ footer {
   border-left: 1px solid var(--secondary);
 }
 
-.ServicesGrid--service img {
-  width: 100%;
-  height: auto;
+.ServicesGrid--service .BackgroundImage {
+  position: relative;
+  width: 5.2rem;
+  height: 5.2rem;
   max-width: 6rem;
   margin-bottom: 2rem;
 }
 
 .ServicesGrid--service p {
   margin-bottom: 0;
+}
+
+.ServicesGrid--service .Button {
+  width: 5.5rem;
+  margin-top: 2rem;
 }
 
 .InlineBanner {

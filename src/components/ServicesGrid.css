@@ -15,6 +15,7 @@
 }
 
 .ServicesGrid--service {
+  position: relative;
   border-top: 1px solid var(--secondary);
 }
 
@@ -29,13 +30,48 @@
   border-left: 1px solid var(--secondary);
 }
 
-.ServicesGrid--service img {
-  width: 100%;
-  height: auto;
+.ServicesGrid--service .ServicesGrid--Icon {
+  background-color: var(--secondary);
+  position: relative;
+  width: 5.2rem;
+  height: 5.2rem;
   max-width: 6rem;
   margin-bottom: 2rem;
 }
 
-.ServicesGrid--service p {
+.ServicesGrid--service .ServicesGrid--Icon.payable {
+  mask-image: url("/images/icons/payable.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.receive {
+  mask-image: url("/images/icons/receive.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.bas {
+  mask-image: url("/images/icons/bas.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.month {
+  mask-image: url("/images/icons/month.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.pay {
+  mask-image: url("/images/icons/pay.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.payroll {
+  mask-image: url("/images/icons/payroll.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.reconciliantion {
+  mask-image: url("/images/icons/reconciliantion.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.super {
+  mask-image: url("/images/icons/super.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.flow {
+  mask-image: url("/images/icons/flow.svg");
+}
+
+.ServicesGrid--service .ServicesGrid--Icon .ServicesGrid--service p {
   margin-bottom: 0;
+}
+
+.ServicesGrid--service .Button {
+  width: 5.5rem;
+  margin-top: 2rem;
 }

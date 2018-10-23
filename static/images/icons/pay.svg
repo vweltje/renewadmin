@@ -1,16 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="52px" height="52px" viewBox="0 0 52 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 35</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Homepage" transform="translate(-966.000000, -3080.000000)">
-            <g id="services" transform="translate(139.000000, 2503.000000)">
-                <g id="Group-35" transform="translate(828.000000, 578.000000)">
-                    <circle id="Oval-Copy-5" stroke="#5C8098" stroke-width="2" cx="25" cy="25" r="25"></circle>
-                    <path d="M11,19.8 L39,19.8 L39,15 L11,15 L11,19.8 Z M11,34.2 L39,34.2 L39,22.2 L11,22.2 L11,34.2 Z M31,27.8 L34.2,27.8 L34.2,27 L31,27 L31,27.8 Z M15.8,27.8 L26.2,27.8 L26.2,27 L15.8,27 L15.8,27.8 Z" id="Fill-1" fill="#5C8098"></path>
-                </g>
-            </g>
-        </g>
-    </g>
+<svg width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+  <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
+    <circle stroke="#5C8098" stroke-width="2" cx="25" cy="25" r="25"/>
+    <path d="M11 19.8h28V15H11v4.8zm0 14.4h28v-12H11v12zm20-6.4h3.2V27H31v.8zm-15.2 0h10.4V27H15.8v.8z" fill="#5C8098"/>
+  </g>
 </svg>

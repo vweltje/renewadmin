@@ -1,54 +1,23 @@
 import React from "react";
-import Image from "../components/Image";
 import { Link } from "gatsby";
 
 import "./ServicesGrid.css";
 
-export default ({ content, showDescription = false }) => {
-  const services = [
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    },
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    },
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    },
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    },
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    },
-    {
-      title: "title",
-      description:
-        "Emily Irish, Charles Coathup and James Coathup met while working at Renew Solutions. We found that our individual fields complemented each other’s in surprising, and what turned out to be inseparable, ways.",
-      slug: "#",
-      icon: "https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/"
-    }
-  ];
+const getIconSrc = slug => {
+  let icon;
+  if (slug.includes("account-payable")) icon = "payable";
+  else if (slug.includes("accounts-receivable")) icon = "receive";
+  else if (slug.includes("bas")) icon = "bas";
+  else if (slug.includes("month-end")) icon = "month";
+  else if (slug.includes("payg")) icon = "pay";
+  else if (slug.includes("payroll")) icon = "payroll";
+  else if (slug.includes("reconciliations")) icon = "reconciliantion";
+  else if (slug.includes("superannuation")) icon = "super";
+  else if (slug.includes("work-flow-efficiency")) icon = "flow";
+  return icon;
+};
+
+export default ({ content, services = {}, showDescription = false }) => {
   return (
     <div className="ServicesGrid">
       {services.map((service, index) => {
@@ -57,14 +26,14 @@ export default ({ content, showDescription = false }) => {
             className="ServicesGrid--service"
             key={service.title + " " + index}
           >
-            <Image src={service.icon} alt="icon" />
+            <div className={"ServicesGrid--Icon " + getIconSrc(service.slug)} />
             <h3>{service.title}</h3>
             {(() => {
               if (showDescription) {
                 return <p>{service.description}</p>;
               } else {
                 return (
-                  <Link to={service.slug} className="button">
+                  <Link to={service.slug} className="Button Secondary">
                     know more
                   </Link>
                 );

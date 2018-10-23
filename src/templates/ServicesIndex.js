@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import ContentBlock from "../components/ContentBlock";
+import ServicesGrid from "../components/ServicesGrid";
 import InlineBanner from "../components/InlineBanner";
 import "./Services.css";
 
@@ -12,7 +13,8 @@ export const ServicesTemplate = ({
   shortDescription,
   description,
   image,
-  inlineBanner
+  inlineBanner,
+  services = {}
 }) => {
   const contentData = {
     shortDescription: shortDescription,
@@ -25,6 +27,7 @@ export const ServicesTemplate = ({
         <div className="container">
           <h1>{title}</h1>
           <ContentBlock content={contentData} />
+          <ServicesGrid services={services} />
           {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
         </div>
       </section>
@@ -33,10 +36,18 @@ export const ServicesTemplate = ({
 };
 
 // Export Default Services for front-end
-const Services = ({ data: { page } }) => {
+const Services = ({ data }) => {
+  const page = data.page;
+  let services = [];
+  data.services.edges.map((service, index) => {
+    return services.push({
+      ...service.node.fields,
+      ...service.node.frontmatter
+    });
+  });
   return (
     <Layout>
-      <ServicesTemplate {...page} {...page.frontmatter} />
+      <ServicesTemplate {...page} {...page.frontmatter} services={services} />
     </Layout>
   );
 };
@@ -64,6 +75,21 @@ export const pageQuery = graphql`
           }
           title
           description
+        }
+      }
+    }
+    services: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "services" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            shortDescription
+          }
         }
       }
     }

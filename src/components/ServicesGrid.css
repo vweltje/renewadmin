@@ -12,6 +12,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 5rem;
+  transition: ease all 0.3s;
 }
 
 .ServicesGrid--service {
@@ -37,6 +38,7 @@
   height: 5.2rem;
   max-width: 6rem;
   margin-bottom: 2rem;
+  transition: ease all 0.3s;
 }
 
 .ServicesGrid--service .ServicesGrid--Icon.payable {
@@ -74,4 +76,22 @@
 .ServicesGrid--service .Button {
   width: 5.5rem;
   margin-top: 2rem;
+  transition: ease all 0.3s;
+}
+
+.ServicesGrid--service:hover {
+  background: var(--darkerGrey);
+  color: var(--white);
+}
+
+.ServicesGrid--service:hover .ServicesGrid--Icon {
+  background-color: var(--white);
+}
+
+.ServicesGrid--service:hover .Button.Secondary {
+  background: var(--primary);
+}
+
+.ServicesGrid--service:hover .Button.Secondary::after {
+  background: var(--primaryFaded);
 }

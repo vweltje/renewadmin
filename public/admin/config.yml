@@ -228,6 +228,7 @@ collections: # A list of collections the CMS should be able to edit
                     default: ""
                     hint: "Copy past a url"
                   - { label: text, name: text, widget: string }
+
       - file: "content/pages/contact.md"
         label: "Contact Page"
         name: "contact-page"
@@ -314,6 +315,63 @@ collections: # A list of collections the CMS should be able to edit
                     default: ""
                     hint: "Copy past a url"
                   - { label: text, name: text, widget: string }
+
+  - name: service
+    label: Service
+    editor:
+      preview: true
+    folder: content/services
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: SingleService,
+        }
+      - { label: Title, name: title, widget: string }
+      - { label: short description, name: shortDescription, widget: text }
+      - { label: description, name: description, widget: text }
+      - { label: Image, name: image, widget: image }
+      - label: "Info Section"
+        name: "infoSection"
+        widget: "object"
+        fields:
+          - { label: title, name: title, widget: string }
+          - label: "Info Blocks"
+            name: "infoblocks"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "title", name: "title", widget: "string" }
+              - { label: description, name: description, widget: text }
+      - label: "Get in touch Section"
+        name: "getInTouchSection"
+        widget: "object"
+        fields:
+          - { label: title, name: title, widget: string }
+          - { label: subtitle, name: subtitle, widget: string }
+          - label: "Button 1"
+            name: "button1"
+            widget: "object"
+            fields:
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                default: ""
+                hint: "Copy past a url"
+              - { label: text, name: text, widget: string }
+          - label: "Button 2"
+            name: "button2"
+            widget: "object"
+            fields:
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                default: ""
+                hint: "Copy past a url"
+              - { label: text, name: text, widget: string }
 
   - name: "settings"
     label: "Settings"

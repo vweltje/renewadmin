@@ -15,7 +15,6 @@ description: >-
   fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet
   lorem.
 image: "https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/"
-icon: "https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/"
 infoSection:
   infoblocks:
     - title: Title for excesive info goes here

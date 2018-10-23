@@ -84,6 +84,10 @@
   color: var(--white);
 }
 
+.ServicesGrid--service:hover p {
+  color: var(--white);
+}
+
 .ServicesGrid--service:hover .ServicesGrid--Icon {
   background-color: var(--white);
 }

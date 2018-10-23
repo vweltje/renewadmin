@@ -34,13 +34,19 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   );
 };
 
-export const ServicesSection = ({ title, description, button = [] }) => {
+export const ServicesSection = ({
+  title,
+  description,
+  button = [],
+  services = {}
+}) => {
+  console.log(services);
   return (
     <section className="section Home--ServicesSecction">
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
-        <ServicesGrid showDescription />
+        <ServicesGrid services={services} showDescription />
         <Link to={button.link} className="Button">
           {button.text}
         </Link>
@@ -95,14 +101,15 @@ export const HomePageTemplate = ({
   inlineBanner,
   caseStudiesSection,
   newsSection,
-  certificationsSection
+  certificationsSection,
+  services
 }) => {
   const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }];
   return (
     <main className="Home">
       <TitleSection {...titleSection} />
       <ContentBlock content={infoSectionData} multiple />
-      <ServicesSection {...servicesSection} />
+      <ServicesSection {...servicesSection} services={services} />
       <InlineBanner {...inlineBanner} />
       <CaseStudiesSection {...inlineBanner} />
       <NewsSection {...newsSection} />
@@ -112,11 +119,21 @@ export const HomePageTemplate = ({
 };
 
 // Export Default HomePage for front-end
-const HomePage = ({ data: { page } }) => (
-  <Layout>
-    <HomePageTemplate {...page} {...page.frontmatter} />
-  </Layout>
-);
+const HomePage = ({ data }) => {
+  const page = data.page;
+  let services = [];
+  data.services.edges.map((service, index) => {
+    return services.push({
+      ...service.node.fields,
+      ...service.node.frontmatter
+    });
+  });
+  return (
+    <Layout>
+      <HomePageTemplate {...page} {...page.frontmatter} services={services} />
+    </Layout>
+  );
+};
 
 export default HomePage;
 
@@ -195,6 +212,22 @@ export const pageQuery = graphql`
           description
           shortDescription
           title
+        }
+      }
+    }
+    services: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "services" } } }
+      limit: 6
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            shortDescription
+          }
         }
       }
     }

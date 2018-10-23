@@ -37,7 +37,7 @@ export default class Grid extends React.Component {
               <h3>{service.title}</h3>
               {(() => {
                 if (showDescription) {
-                  return <p>{service.description}</p>;
+                  return <p>{service.shortDescription}</p>;
                 } else {
                   return (
                     <Link to={service.slug} className="Button Secondary">

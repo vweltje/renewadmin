@@ -1,6 +1,6 @@
 ---
 template: SingleService
-title: Payroll
+title: Superannuation
 shortDescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
   nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis

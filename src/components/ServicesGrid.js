@@ -50,10 +50,13 @@ export default ({ content, showDescription = false }) => {
     }
   ];
   return (
-    <div class="ServicesGrid">
-      {services.map(service => {
+    <div className="ServicesGrid">
+      {services.map((service, index) => {
         return (
-          <div class="ServicesGrid--service">
+          <div
+            className="ServicesGrid--service"
+            key={service.title + " " + index}
+          >
             <Image src={service.icon} alt="icon" />
             <h3>{service.title}</h3>
             {(() => {

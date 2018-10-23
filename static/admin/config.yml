@@ -334,6 +334,7 @@ collections: # A list of collections the CMS should be able to edit
       - { label: short description, name: shortDescription, widget: text }
       - { label: description, name: description, widget: text }
       - { label: Image, name: image, widget: image }
+      - { label: icon, name: icon, widget: image }
       - label: "Info Section"
         name: "infoSection"
         widget: "object"

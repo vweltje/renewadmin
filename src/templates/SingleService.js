@@ -6,11 +6,6 @@ import "./SingleService.css";
 
 // Export Template for use in CMS preview
 export const SingleServiceTemplate = ({ title }) => {
-  const contentData = {
-    shortDescription: shortDescription,
-    description: description,
-    image: image
-  };
   return (
     <main>
       <section className="section About--TitleSection">
@@ -46,25 +41,25 @@ export const pageQuery = graphql`
         shortDescription
         description
         image
-        # infoSection {
-        #   title
-        #   infoblocks {
-        #     title
-        #     description
-        #   }
-        # }
-        # getInTouchSection {
-        #   title
-        #   subtitle
-        #   button1 {
-        #     link
-        #     text
-        #   }
-        #   button2 {
-        #     link
-        #     text
-        #   }
-        # }
+        infoSection {
+          title
+          infoblocks {
+            title
+            description
+          }
+        }
+        getInTouchSection {
+          title
+          subtitle
+          button1 {
+            link
+            text
+          }
+          button2 {
+            link
+            text
+          }
+        }
       }
     }
   }

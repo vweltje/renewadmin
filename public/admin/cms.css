@@ -1212,6 +1212,7 @@ footer {
   flex-direction: column;
   justify-content: flex-start;
   padding: 5rem;
+  transition: ease all 0.3s;
 }
 
 .ServicesGrid--service {
@@ -1230,21 +1231,78 @@ footer {
   border-left: 1px solid var(--secondary);
 }
 
-.ServicesGrid--service .BackgroundImage {
+.ServicesGrid--service .ServicesGrid--Icon {
+  background-color: var(--secondary);
   position: relative;
   width: 5.2rem;
   height: 5.2rem;
   max-width: 6rem;
   margin-bottom: 2rem;
+  transition: ease all 0.3s;
 }
 
-.ServicesGrid--service p {
+.ServicesGrid--service .ServicesGrid--Icon.payable {
+  -webkit-mask-image: url("/images/icons/payable.svg");
+          mask-image: url("/images/icons/payable.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.receive {
+  -webkit-mask-image: url("/images/icons/receive.svg");
+          mask-image: url("/images/icons/receive.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.bas {
+  -webkit-mask-image: url("/images/icons/bas.svg");
+          mask-image: url("/images/icons/bas.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.month {
+  -webkit-mask-image: url("/images/icons/month.svg");
+          mask-image: url("/images/icons/month.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.pay {
+  -webkit-mask-image: url("/images/icons/pay.svg");
+          mask-image: url("/images/icons/pay.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.payroll {
+  -webkit-mask-image: url("/images/icons/payroll.svg");
+          mask-image: url("/images/icons/payroll.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.reconciliantion {
+  -webkit-mask-image: url("/images/icons/reconciliantion.svg");
+          mask-image: url("/images/icons/reconciliantion.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.super {
+  -webkit-mask-image: url("/images/icons/super.svg");
+          mask-image: url("/images/icons/super.svg");
+}
+.ServicesGrid--service .ServicesGrid--Icon.flow {
+  -webkit-mask-image: url("/images/icons/flow.svg");
+          mask-image: url("/images/icons/flow.svg");
+}
+
+.ServicesGrid--service .ServicesGrid--Icon .ServicesGrid--service p {
   margin-bottom: 0;
 }
 
 .ServicesGrid--service .Button {
   width: 5.5rem;
   margin-top: 2rem;
+  transition: ease all 0.3s;
+}
+
+.ServicesGrid--service:hover {
+  background: var(--darkerGrey);
+  color: var(--white);
+}
+
+.ServicesGrid--service:hover .ServicesGrid--Icon {
+  background-color: var(--white);
+}
+
+.ServicesGrid--service:hover .Button.Secondary {
+  background: var(--primary);
+}
+
+.ServicesGrid--service:hover .Button.Secondary::after {
+  background: var(--primaryFaded);
 }
 
 .InlineBanner {

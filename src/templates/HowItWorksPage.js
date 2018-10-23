@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import ContentBlock from "../components/ContentBlock";
+import ServicesGrid from "../components/ServicesGrid";
 
 import "./HowItWorksPage.css";
 
@@ -11,7 +12,8 @@ export const HowItWorksPageTemplate = ({
   title,
   shortDescription,
   description,
-  image
+  image,
+  services
 }) => {
   const contentData = {
     shortDescription: shortDescription,
@@ -24,6 +26,7 @@ export const HowItWorksPageTemplate = ({
         <div className="container">
           <h1>{title}</h1>
           <ContentBlock content={contentData} />
+          <ServicesGrid services={services} />
         </div>
       </section>
     </main>
@@ -31,10 +34,22 @@ export const HowItWorksPageTemplate = ({
 };
 
 // Export Default HowItWorksPage for front-end
-const HowItWorksPage = ({ data: { page } }) => {
+const HowItWorksPage = ({ data }) => {
+  const page = data.page;
+  let services = [];
+  data.services.edges.map((service, index) => {
+    return services.push({
+      ...service.node.fields,
+      ...service.node.frontmatter
+    });
+  });
   return (
     <Layout>
-      <HowItWorksPageTemplate {...page} {...page.frontmatter} />
+      <HowItWorksPageTemplate
+        {...page}
+        {...page.frontmatter}
+        services={services}
+      />
     </Layout>
   );
 };
@@ -54,6 +69,21 @@ export const pageQuery = graphql`
         shortDescription
         description
         image
+      }
+    }
+    services: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "services" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            shortDescription
+          }
+        }
       }
     }
   }

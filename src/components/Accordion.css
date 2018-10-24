@@ -35,11 +35,11 @@
 
 .Accordion--item svg {
   float: right;
+  transition: ease all 0.3s;
 }
 
-.Accordion--item:hover svg,
 .Accordion--item.active svg {
-  color: var(--col1);
+  transform: rotate(-180deg);
 }
 
 .Accordion--item .description {

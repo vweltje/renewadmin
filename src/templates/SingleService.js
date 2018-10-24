@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 
 import Layout from "../components/Layout";
 import ContentBlock from "../components/ContentBlock";
@@ -21,7 +21,6 @@ export const SingleServiceTemplate = ({
     description: description,
     image: image
   };
-  console.log(infoSection);
   return (
     <main>
       <section className="section Service--TitleSection">
@@ -31,8 +30,33 @@ export const SingleServiceTemplate = ({
       </section>
       <section className="section Service--Info">
         <div className="container">
-          <h3 class="taCenter">{infoSection.title}</h3>
+          <h3 className="taCenter">{infoSection.title}</h3>
           <Accordion items={infoSection.infoblocks} />
+        </div>
+      </section>
+      <section className="section Service--Contact">
+        <div className="container">
+          <div className="Service--ContactBlock">
+            <div>
+              <h3>{getInTouchSection.subtitle}</h3>
+              <h2>{getInTouchSection.title}</h2>
+            </div>
+            <div>
+              {getInTouchSection.button1 && (
+                <Link to={getInTouchSection.button1.link} className="Button">
+                  {getInTouchSection.button1.text}
+                </Link>
+              )}
+              {getInTouchSection.button2 && (
+                <Link
+                  to={getInTouchSection.button2.link}
+                  className="Button Secondary"
+                >
+                  {getInTouchSection.button2.text}
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
       </section>
     </main>

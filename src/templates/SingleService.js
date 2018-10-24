@@ -1,10 +1,10 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
+import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import ContentBlock from "../components/ContentBlock";
 import Accordion from "../components/Accordion";
-import "./SingleService.css";
+import GetInTouchBlock from "../components/GetInTouchBlock";
 
 // Export Template for use in CMS preview
 export const SingleServiceTemplate = ({
@@ -36,27 +36,7 @@ export const SingleServiceTemplate = ({
       </section>
       <section className="section Service--Contact">
         <div className="container">
-          <div className="Service--ContactBlock">
-            <div>
-              <h3>{getInTouchSection.subtitle}</h3>
-              <h2>{getInTouchSection.title}</h2>
-            </div>
-            <div>
-              {getInTouchSection.button1 && (
-                <Link to={getInTouchSection.button1.link} className="Button">
-                  {getInTouchSection.button1.text}
-                </Link>
-              )}
-              {getInTouchSection.button2 && (
-                <Link
-                  to={getInTouchSection.button2.link}
-                  className="Button Secondary"
-                >
-                  {getInTouchSection.button2.text}
-                </Link>
-              )}
-            </div>
-          </div>
+          <GetInTouchBlock content={getInTouchSection} />
         </div>
       </section>
     </main>

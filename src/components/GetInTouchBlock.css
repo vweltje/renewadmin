@@ -1,4 +1,4 @@
-.Service--ContactBlock {
+.GetInTouchBlock {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.Service--ContactBlock h3 {
+.GetInTouchBlock h3 {
   color: var(--darkerGrey);
   font-weight: normal;
   font-size: 3rem;
@@ -14,19 +14,19 @@
   line-height: 2.4rem;
 }
 
-.Service--ContactBlock h2 {
+.GetInTouchBlock h2 {
   font-size: 36px;
   letter-spacing: -0.67px;
   line-height: 44px;
 }
 
-.Service--ContactBlock > div:last-of-type {
+.GetInTouchBlock > div:last-of-type {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.Service--ContactBlock > div:last-of-type .Button {
+.GetInTouchBlock > div:last-of-type .Button {
   display: inline-block;
   width: 20rem;
   margin: 2rem;

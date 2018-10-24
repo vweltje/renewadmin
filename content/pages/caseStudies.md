@@ -3,7 +3,7 @@ template: CaseStudiesIndex
 pageTitle: Case Studies
 slug: case-studies
 titleSection:
-  title: Case Studies
+  title: Join [1,000+] businesses on Renew Admin
   shortDescription: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis aliquet lacus sollicitudin a.
     Donec vel sodales mauris.

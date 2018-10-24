@@ -2,15 +2,52 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import Image from "../components/Image";
 import "./CaseStudies.css";
 
+export const niceTitle = title => {
+  title = title.replace("[", "<span>");
+  title = title.replace("]", "</span>");
+  return title;
+};
+
 // Export Template for use in CMS preview
-export const CaseStudiesTemplate = ({ title }) => {
+export const CaseStudiesTemplate = ({
+  businessesSection = {},
+  titleSection = {}
+}) => {
   return (
     <main>
-      <section className="section About--TitleSection">
+      <section className="section CaseStudies--TitleSection">
         <div className="container">
-          <h1>{title}</h1>
+          <div className="blockSmaller">
+            <h1
+              dangerouslySetInnerHTML={{
+                __html: niceTitle(titleSection.title)
+              }}
+            />
+            <p className="larger">{titleSection.shortDescription}</p>
+            <p>{titleSection.description}</p>
+          </div>
+        </div>
+      </section>
+      <section className="section">
+        <div className="container">blocks are comming!!!!</div>
+      </section>
+      <section className="section CaseStudies--BusinessLogos">
+        <div className="container">
+          <h2>{businessesSection.title}</h2>
+          <div>
+            {businessesSection.logos.map((logo, index) => {
+              return (
+                <Image
+                  src={logo}
+                  alt={"Logo " + index}
+                  key={"BusinessLogo-" + index}
+                />
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>
@@ -21,7 +58,7 @@ export const CaseStudiesTemplate = ({ title }) => {
 const CaseStudies = ({ data: { page } }) => {
   return (
     <Layout>
-      {/* <CaseStudiesTemplate {...page} {...page.frontmatter} /> */}
+      <CaseStudiesTemplate {...page} {...page.frontmatter} />
     </Layout>
   );
 };

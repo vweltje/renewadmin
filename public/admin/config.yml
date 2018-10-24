@@ -387,32 +387,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: "title", name: "title", widget: "string" }
               - { label: description, name: description, widget: text }
-      - label: "Get in touch Section"
-        name: "getInTouchSection"
-        widget: "object"
-        fields:
-          - { label: title, name: title, widget: string }
-          - { label: subtitle, name: subtitle, widget: string }
-          - label: "Button 1"
-            name: "button1"
-            widget: "object"
-            fields:
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                default: ""
-                hint: "Copy past a url"
-              - { label: text, name: text, widget: string }
-          - label: "Button 2"
-            name: "button2"
-            widget: "object"
-            fields:
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                default: ""
-                hint: "Copy past a url"
-              - { label: text, name: text, widget: string }
 
   - name: "settings"
     label: "Settings"
@@ -443,3 +417,36 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
+
+  - name: "repeatable Content"
+    label: "Repeatable Content"
+    delete: false # Prevent users from deleting documents in this collection
+    editor:
+      preview: false
+    files:
+      - file: "content/repeatableContent/sectionGetInTouch.md"
+        label: "section - Get In Touch"
+        name: "section-get-in-touch"
+        fields:
+          - { label: title, name: title, widget: string }
+          - { label: subtitle, name: subtitle, widget: string }
+          - label: "Button 1"
+            name: "button1"
+            widget: "object"
+            fields:
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                default: ""
+                hint: "Copy past a url"
+              - { label: text, name: text, widget: string }
+          - label: "Button 2"
+            name: "button2"
+            widget: "object"
+            fields:
+              - label: "Link"
+                name: "link"
+                widget: "string"
+                default: ""
+                hint: "Copy past a url"
+              - { label: text, name: text, widget: string }

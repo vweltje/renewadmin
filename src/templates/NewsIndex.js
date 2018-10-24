@@ -2,10 +2,12 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import GetInTouchBlock from "../components/GetInTouchBlock";
+
 import "./News.css";
 
 // Export Template for use in CMS preview
-export const NewsTemplate = ({ title }) => {
+export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
   return (
     <main>
       <section className="section About--TitleSection">
@@ -13,12 +15,21 @@ export const NewsTemplate = ({ title }) => {
           <h1>{title}</h1>
         </div>
       </section>
+      <section className="section Service--Contact">
+        <div className="container">
+          <GetInTouchBlock content={getInTouchSection} />
+        </div>
+      </section>
     </main>
   );
 };
 
 // Export Default News for front-end
-const News = ({ data: { page } }) => {
+const News = ({ data }) => {
+  const page = {
+    ...data.page,
+    getInTouchSection: data.sectionContact
+  };
   return (
     <Layout>
       <NewsTemplate {...page} {...page.frontmatter} />
@@ -38,6 +49,26 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
+      }
+    }
+    sectionContact: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
+            button1 {
+              text
+              link
+            }
+            button2 {
+              text
+              link
+            }
+          }
+        }
       }
     }
   }

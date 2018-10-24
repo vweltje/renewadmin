@@ -3,6 +3,8 @@ import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
 import Image from "../components/Image";
+import GetInTouchBlock from "../components/GetInTouchBlock";
+
 import "./CaseStudies.css";
 
 export const niceTitle = title => {
@@ -14,7 +16,8 @@ export const niceTitle = title => {
 // Export Template for use in CMS preview
 export const CaseStudiesTemplate = ({
   businessesSection = {},
-  titleSection = {}
+  titleSection = {},
+  getInTouchSection = {}
 }) => {
   return (
     <main>
@@ -50,12 +53,21 @@ export const CaseStudiesTemplate = ({
           </div>
         </div>
       </section>
+      <section className="section Service--Contact">
+        <div className="container">
+          <GetInTouchBlock content={getInTouchSection} />
+        </div>
+      </section>
     </main>
   );
 };
 
 // Export Default CaseStudies for front-end
-const CaseStudies = ({ data: { page } }) => {
+const CaseStudies = ({ data }) => {
+  const page = {
+    ...data.page,
+    getInTouchSection: data.sectionContact
+  };
   return (
     <Layout>
       <CaseStudiesTemplate {...page} {...page.frontmatter} />
@@ -82,6 +94,26 @@ export const pageQuery = graphql`
         businessesSection {
           title
           logos
+        }
+      }
+    }
+    sectionContact: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
+            button1 {
+              text
+              link
+            }
+            button2 {
+              text
+              link
+            }
+          }
         }
       }
     }

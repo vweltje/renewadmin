@@ -44,7 +44,12 @@ export const SingleServiceTemplate = ({
 };
 
 // Export Default SingleService for front-end
-const SingleService = ({ data: { service } }) => {
+const SingleService = ({ data }) => {
+  const service = {
+    ...data.service,
+    getInTouchSection: data.sectionContact
+  };
+
   return (
     <Layout>
       <SingleServiceTemplate {...service} {...service.frontmatter} />
@@ -74,16 +79,24 @@ export const pageQuery = graphql`
             description
           }
         }
-        getInTouchSection {
-          title
-          subtitle
-          button1 {
-            link
-            text
-          }
-          button2 {
-            link
-            text
+      }
+    }
+    sectionContact: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            subtitle
+            button1 {
+              text
+              link
+            }
+            button2 {
+              text
+              link
+            }
           }
         }
       }

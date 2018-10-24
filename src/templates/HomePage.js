@@ -110,7 +110,7 @@ export const HomePageTemplate = ({
       <ContentBlock content={infoSectionData} multiple />
       <ServicesSection {...servicesSection} services={services} />
       <InlineBanner {...inlineBanner} />
-      <CaseStudiesSection {...inlineBanner} />
+      <CaseStudiesSection {...caseStudiesSection} />
       <NewsSection {...newsSection} />
       <CertificationsSection {...certificationsSection} />
     </main>

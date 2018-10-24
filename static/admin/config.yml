@@ -277,6 +277,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: markdown,
               buttons: { bulleted-list, numbered-list, bold, italic, link },
             }
+
       - file: "content/pages/services.md"
         label: "Services Page"
         name: "services-index"
@@ -315,6 +316,46 @@ collections: # A list of collections the CMS should be able to edit
                     default: ""
                     hint: "Copy past a url"
                   - { label: text, name: text, widget: string }
+
+      - file: "content/pages/caseStudies.md"
+        label: "Case Studies Page"
+        name: "case-studies-index"
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: CaseStudiesIndex,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: CaseStudies,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: case-studies }
+          - label: "Title Section"
+            name: "titleSection"
+            widget: "object"
+            fields:
+              - { label: title, name: title, widget: string }
+              - {
+                  label: short description,
+                  name: shortDescription,
+                  widget: text,
+                }
+              - { label: description, name: description, widget: text }
+          - label: "Businesses Section"
+            name: "businessesSection"
+            widget: "object"
+            fields:
+              - { label: title, name: title, widget: text }
+              - {
+                  label: logo,
+                  name: logo,
+                  widget: image,
+                  options: { media_library: { config: { multiple: true } } },
+                }
 
   - name: service
     label: Service

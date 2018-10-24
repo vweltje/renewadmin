@@ -421,11 +421,9 @@ collections: # A list of collections the CMS should be able to edit
   - name: "repeatable Content"
     label: "Repeatable Content"
     delete: false # Prevent users from deleting documents in this collection
-    editor:
-      preview: false
     files:
       - file: "content/repeatableContent/sectionGetInTouch.md"
-        label: "section - Get In Touch"
+        label: "Section - Get In Touch"
         name: "section-get-in-touch"
         fields:
           - { label: title, name: title, widget: string }

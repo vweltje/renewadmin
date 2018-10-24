@@ -9,7 +9,6 @@ import Image from "../components/Image";
 import CertificationsSection from "../components/Certifications";
 
 import "./HomePage.css";
-import "../components/ContentBlock.css";
 
 export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   return (

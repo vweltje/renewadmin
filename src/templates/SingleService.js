@@ -2,15 +2,37 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/Layout";
+import ContentBlock from "../components/ContentBlock";
+import Accordion from "../components/Accordion";
 import "./SingleService.css";
 
 // Export Template for use in CMS preview
-export const SingleServiceTemplate = ({ title }) => {
+export const SingleServiceTemplate = ({
+  title,
+  shortDescription,
+  description,
+  image,
+  infoSection = {},
+  getInTouchSection = {}
+}) => {
+  const blockData = {
+    title: title,
+    shortDescription: shortDescription,
+    description: description,
+    image: image
+  };
+  console.log(infoSection);
   return (
     <main>
-      <section className="section About--TitleSection">
+      <section className="section Service--TitleSection">
         <div className="container">
-          <h1>{title}</h1>
+          <ContentBlock content={blockData} />
+        </div>
+      </section>
+      <section className="section Service--Info">
+        <div className="container">
+          <h3 class="taCenter">{infoSection.title}</h3>
+          <Accordion items={infoSection.infoblocks} />
         </div>
       </section>
     </main>

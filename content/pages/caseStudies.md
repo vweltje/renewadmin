@@ -2,8 +2,8 @@
 template: CaseStudiesIndex
 pageTitle: Case Studies
 slug: case-studies
-title: Case Studies
 titleSection:
+  title: Case Studies
   shortDescription: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis aliquet lacus sollicitudin a.
     Donec vel sodales mauris.

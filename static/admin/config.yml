@@ -349,7 +349,7 @@ collections: # A list of collections the CMS should be able to edit
             name: "businessesSection"
             widget: "object"
             fields:
-              - { label: title, name: title, widget: text }
+              - { label: title, name: title, widget: string }
               - {
                   label: logo,
                   name: logo,

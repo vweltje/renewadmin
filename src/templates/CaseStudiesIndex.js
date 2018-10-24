@@ -21,7 +21,7 @@ export const CaseStudiesTemplate = ({ title }) => {
 const CaseStudies = ({ data: { page } }) => {
   return (
     <Layout>
-      <CaseStudiesTemplate {...page} {...page.frontmatter} />
+      {/* <CaseStudiesTemplate {...page} {...page.frontmatter} /> */}
     </Layout>
   );
 };
@@ -37,7 +37,15 @@ export const pageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
+        titleSection {
+          title
+          shortDescription
+          description
+        }
+        businessesSection {
+          title
+          logos
+        }
       }
     }
   }

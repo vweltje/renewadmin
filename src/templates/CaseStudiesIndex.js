@@ -1,9 +1,10 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Image from '../components/Image'
 import GetInTouchBlock from '../components/GetInTouchBlock'
+import _kebabCase from 'lodash/kebabCase'
 
 import './CaseStudies.css'
 
@@ -17,8 +18,10 @@ export const niceTitle = title => {
 export const CaseStudiesTemplate = ({
   businessesSection = {},
   titleSection = {},
-  sectionGetInTouch = {}
+  sectionGetInTouch = {},
+  caseStudies = {}
 }) => {
+  console.log(caseStudies)
   return (
     <main>
       <section className="section CaseStudies--TitleSection">
@@ -35,7 +38,35 @@ export const CaseStudiesTemplate = ({
         </div>
       </section>
       <section className="section">
-        <div className="container">blocks are comming!!!!</div>
+        <div className="container">
+          <div className="CaseStudies--Cases">
+            {caseStudies.map((studie, i) => {
+              studie = {
+                ...studie.node.fields,
+                ...studie.node.frontmatter
+              }
+              return (
+                <Link
+                  to={studie.slug}
+                  className="caseStudie"
+                  key={_kebabCase(studie.slug) + '-' + i}
+                >
+                  <Image
+                    background
+                    src={studie.image}
+                    className="BackgroundOverlay"
+                  />
+                  <Image
+                    src={studie.clientLogo}
+                    alt={_kebabCase(studie.slug)}
+                    className="clientLogo"
+                  />
+                  <button className="Button Quaternary">See case studie</button>
+                </Link>
+              )
+            })}
+          </div>
+        </div>
       </section>
       <section className="section CaseStudies--BusinessLogos">
         <div className="container">
@@ -65,7 +96,8 @@ export const CaseStudiesTemplate = ({
 // Export Default CaseStudies for front-end
 const CaseStudies = ({ data }) => {
   const page = {
-    ...data.page
+    ...data.page,
+    caseStudies: data.allCaseStudies.edges
   }
   return (
     <Layout>
@@ -104,6 +136,22 @@ export const pageQuery = graphql`
           button2 {
             text
             link
+          }
+        }
+      }
+    }
+    allCaseStudies: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "caseStudies" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            clientLogo
+            image
           }
         }
       }

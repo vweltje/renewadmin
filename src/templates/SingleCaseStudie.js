@@ -29,7 +29,6 @@ export const SingleCaseStudieTemplate = ({
   page = {},
   edges = {}
 }) => {
-  console.log(edges)
   return (
     <main>
       <section className="section Case--Content">

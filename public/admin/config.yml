@@ -461,6 +461,7 @@ collections: # A list of collections the CMS should be able to edit
               default: singleService,
             }
           - { label: Slug, name: slug, widget: hidden, default: single-service }
+          - { label: Date / Order, name: date, widget: date }
           - label: 'get In Touch Section'
             name: 'sectionGetInTouch'
             widget: 'object'

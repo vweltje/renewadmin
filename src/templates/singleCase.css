@@ -63,3 +63,53 @@
   border-left: none;
   padding: 5rem 0;
 }
+
+.Case--Edges .edges {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.Case--Edges .edge.default {
+  background: var(--secondaryFaded);
+}
+
+.Case--Edges .edge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 50%;
+  z-index: 0;
+  padding: 7.5rem 5rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.Case--Edges .edge .BackgroundImage {
+  z-index: -1;
+  opacity: 0.25;
+  transition: 0.3s ease all;
+}
+
+.Case--Edges .edge .Image {
+  max-height: 10rem;
+  max-width: 15rem;
+  height: auto;
+  width: auto;
+  margin-bottom: 2rem;
+}
+
+.Case--Edges .edge span {
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 2.4rem;
+  text-transform: uppercase;
+}
+
+.Case--Edges .edge:hover .BackgroundImage {
+  transform: scale(1.05);
+}

@@ -1,8 +1,7 @@
 ---
-template: NewsIndex
-pageTitle: News
-slug: news
-title: News
+template: SingleService
+pageTitle: SingleService
+slug: single-service
 sectionGetInTouch:
   title: Get in touch or create an account.
   subtitle: Ready to get started?

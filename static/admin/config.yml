@@ -373,6 +373,115 @@ collections: # A list of collections the CMS should be able to edit
                   widget: image,
                   options: { media_library: { config: { multiple: true } } },
                 }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
+              - label: 'Button 1'
+                name: 'button1'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
+              - label: 'Button 2'
+                name: 'button2'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
+
+      - file: 'content/pages/singleService.md'
+        label: 'Single Service Page'
+        name: 'single-service-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: SingleServiceP,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: singleService,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: single-service }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
+              - label: 'Button 1'
+                name: 'button1'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
+              - label: 'Button 2'
+                name: 'button2'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
+
+      - file: 'content/pages/news.md'
+        label: 'News Page'
+        name: 'news-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: NewsIndex,
+            }
+          - { label: PageTitle, name: pageTitle, widget: hidden, default: news }
+          - { label: Slug, name: slug, widget: hidden, default: case-studies }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
+              - label: 'Button 1'
+                name: 'button1'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
+              - label: 'Button 2'
+                name: 'button2'
+                widget: 'object'
+                fields:
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
+                  - { label: text, name: text, widget: string }
 
   - name: service
     label: Service
@@ -434,40 +543,3 @@ collections: # A list of collections the CMS should be able to edit
               widget: text,
               required: false,
             }
-
-  - name: 'repeatable-content'
-    label: 'Repeatable Content'
-    delete: false # Prevent users from deleting documents in this collection
-    files:
-      - file: 'content/repeatableContent/sectionGetInTouch.md'
-        label: 'Section - Get In Touch'
-        name: 'section-get-in-touch'
-        fields:
-          - {
-              label: filterName,
-              name: filterName,
-              widget: hidden,
-              default: sectionGetInTouch,
-            }
-          - { label: title, name: title, widget: string }
-          - { label: subtitle, name: subtitle, widget: string }
-          - label: 'Button 1'
-            name: 'button1'
-            widget: 'object'
-            fields:
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-                default: ''
-                hint: 'Copy past a url'
-              - { label: text, name: text, widget: string }
-          - label: 'Button 2'
-            name: 'button2'
-            widget: 'object'
-            fields:
-              - label: 'Link'
-                name: 'link'
-                widget: 'string'
-                default: ''
-                hint: 'Copy past a url'
-              - { label: text, name: text, widget: string }

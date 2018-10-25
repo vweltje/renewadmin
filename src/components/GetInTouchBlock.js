@@ -1,18 +1,11 @@
-import React from "react";
-import { Link } from "gatsby";
-import "./GetInTouchBlock.css";
+import React from 'react'
+import { Link } from 'gatsby'
+import './GetInTouchBlock.css'
 
 export default class GetInTouchBlock extends React.Component {
-  substractContent(data) {
-    return { ...data.edges[0].node.frontmatter };
-  }
-
   render() {
-    const getInTouchSection =
-      this.props.content.edges !== "undefined"
-        ? this.substractContent(this.props.content)
-        : this.props.content;
-
+    const getInTouchSection = this.props.content
+    console.log(getInTouchSection)
     return (
       <div className="GetInTouchBlock">
         <div>
@@ -35,6 +28,6 @@ export default class GetInTouchBlock extends React.Component {
           )}
         </div>
       </div>
-    );
+    )
   }
 }

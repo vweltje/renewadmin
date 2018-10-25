@@ -12,7 +12,16 @@ titleSection:
 businessesSection:
   title: Businesses that have already join us
   logos:
-    - "https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/"
-    - "https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/"
-    - "https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/"
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/'
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
+sectionGetInTouch:
+  title: Get in touch or create an account.
+  subtitle: Ready to get started?
+  button1:
+    link: ''
+    text: create account
+  button2:
+    link: ''
+    text: Contact us
 ---

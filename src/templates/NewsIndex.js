@@ -7,7 +7,7 @@ import GetInTouchBlock from '../components/GetInTouchBlock'
 import './News.css'
 
 // Export Template for use in CMS preview
-export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
+export const NewsTemplate = ({ title, sectionGetInTouch = {} }) => {
   return (
     <main>
       <section className="section About--TitleSection">
@@ -17,7 +17,7 @@ export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
       </section>
       <section className="section Service--Contact">
         <div className="container">
-          <GetInTouchBlock content={getInTouchSection} />
+          <GetInTouchBlock content={sectionGetInTouch} />
         </div>
       </section>
     </main>
@@ -27,8 +27,7 @@ export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
 // Export Default News for front-end
 const News = ({ data }) => {
   const page = {
-    ...data.page,
-    getInTouchSection: data.sectionContact
+    ...data.page
   }
   return (
     <Layout>
@@ -49,27 +48,16 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-      }
-    }
-    sectionContact: allMarkdownRemark(
-      filter: {
-        fields: { contentType: { eq: "repeatableContent" } }
-        frontmatter: { filterName: { eq: "sectionGetInTouch" } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            subtitle
-            button1 {
-              text
-              link
-            }
-            button2 {
-              text
-              link
-            }
+        sectionGetInTouch {
+          title
+          subtitle
+          button1 {
+            text
+            link
+          }
+          button2 {
+            text
+            link
           }
         }
       }

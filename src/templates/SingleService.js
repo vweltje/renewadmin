@@ -36,7 +36,11 @@ export const SingleServiceTemplate = ({
       </section>
       <section className="section Service--Contact">
         <div className="container">
-          <GetInTouchBlock content={getInTouchSection} />
+          <GetInTouchBlock
+            content={
+              getInTouchSection.edges[0].node.frontmatter.sectionGetInTouch
+            }
+          />
         </div>
       </section>
     </main>
@@ -45,14 +49,18 @@ export const SingleServiceTemplate = ({
 
 // Export Default SingleService for front-end
 const SingleService = ({ data }) => {
+  console.log(data)
   const service = {
-    ...data.service,
-    getInTouchSection: data.sectionContact
+    ...data.service
   }
 
   return (
     <Layout>
-      <SingleServiceTemplate {...service} {...service.frontmatter} />
+      <SingleServiceTemplate
+        {...service}
+        {...service.frontmatter}
+        getInTouchSection={data.page}
+      />
     </Layout>
   )
 }
@@ -81,24 +89,26 @@ export const pageQuery = graphql`
         }
       }
     }
-    sectionContact: allMarkdownRemark(
+    page: allMarkdownRemark(
       filter: {
-        fields: { contentType: { eq: "repeatableContent" } }
-        frontmatter: { filterName: { eq: "sectionGetInTouch" } }
+        fields: { contentType: { eq: "pages" } }
+        frontmatter: { template: { eq: "SingleService" } }
       }
     ) {
       edges {
         node {
           frontmatter {
-            title
-            subtitle
-            button1 {
-              text
-              link
-            }
-            button2 {
-              text
-              link
+            sectionGetInTouch {
+              title
+              subtitle
+              button1 {
+                text
+                link
+              }
+              button2 {
+                text
+                link
+              }
             }
           }
         }

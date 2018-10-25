@@ -1,7 +1,7 @@
 ---
 filterName: sectionGetInTouch
-title: Ready to get started?
-subtitle: Get in touch or create an account.
+title: Get in touch or create an account.
+subtitle: Ready to get started?
 button1:
   link: ''
   text: create account

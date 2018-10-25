@@ -65,7 +65,6 @@ collections: # A list of collections the CMS should be able to edit
                     default: ''
                     hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
-
           - label: 'About Us Section'
             name: 'aboutUsSection'
             widget: 'object'
@@ -165,6 +164,23 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
+          - label: 'Certifications Section'
+            name: 'certificationsSection'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - {
+                  label: short description,
+                  name: shortDescription,
+                  widget: string,
+                }
+              - { label: description, name: description, widget: string }
+              - {
+                  label: Logos,
+                  name: logos,
+                  widget: image,
+                  options: { media_library: { config: { multiple: true } } },
+                }
 
       - file: 'content/pages/about.md'
         label: 'About Page'
@@ -212,6 +228,23 @@ collections: # A list of collections the CMS should be able to edit
                     default: ''
                     hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
+          - label: 'Certifications Section'
+            name: 'certificationsSection'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - {
+                  label: short description,
+                  name: shortDescription,
+                  widget: string,
+                }
+              - { label: description, name: description, widget: string }
+              - {
+                  label: Logos,
+                  name: logos,
+                  widget: image,
+                  options: { media_library: { config: { multiple: true } } },
+                }
 
       - file: 'content/pages/contact.md'
         label: 'Contact Page'
@@ -438,22 +471,3 @@ collections: # A list of collections the CMS should be able to edit
                 default: ''
                 hint: 'Copy past a url'
               - { label: text, name: text, widget: string }
-      - file: 'content/repeatableContent/sectionCertifications.md'
-        label: 'Section - Certifications'
-        name: 'section-certifications'
-        fields:
-          - {
-              label: filterName,
-              name: filterName,
-              widget: hidden,
-              default: sectionCertifications,
-            }
-          - { label: title, name: title, widget: string }
-          - { label: short description, name: shortDescription, widget: string }
-          - { label: description, name: description, widget: string }
-          - {
-              label: Logos,
-              name: logos,
-              widget: image,
-              options: { media_library: { config: { multiple: true } } },
-            }

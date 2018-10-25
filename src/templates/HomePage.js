@@ -121,8 +121,7 @@ export const HomePageTemplate = ({
 const HomePage = ({ data }) => {
   const page = {
     ...data.page,
-    services: [],
-    certificationsSection: data.sectionCertifications.edges[0].node.frontmatter
+    services: []
   }
   data.services.edges.map((service, index) => {
     return page.services.push({
@@ -209,6 +208,12 @@ export const pageQuery = graphql`
           description
           title
         }
+        certificationsSection {
+          logos
+          description
+          shortDescription
+          title
+        }
       }
     }
     services: allMarkdownRemark(
@@ -223,23 +228,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             shortDescription
-          }
-        }
-      }
-    }
-    sectionCertifications: allMarkdownRemark(
-      filter: {
-        fields: { contentType: { eq: "repeatableContent" } }
-        frontmatter: { filterName: { eq: "sectionCertifications" } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            logos
-            description
-            shortDescription
-            title
           }
         }
       }

@@ -53,8 +53,7 @@ export const AboutPageTemplate = ({
 // Export Default AboutPage for front-end
 const AboutPage = ({ data }) => {
   const page = {
-    ...data.page,
-    certificationsSection: data.sectionCertifications.edges[0].node.frontmatter
+    ...data.page
   }
 
   return (
@@ -93,22 +92,11 @@ export const pageQuery = graphql`
           title
           description
         }
-      }
-    }
-    sectionCertifications: allMarkdownRemark(
-      filter: {
-        fields: { contentType: { eq: "repeatableContent" } }
-        frontmatter: { filterName: { eq: "sectionCertifications" } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            logos
-            description
-            shortDescription
-            title
-          }
+        certificationsSection {
+          logos
+          description
+          shortDescription
+          title
         }
       }
     }

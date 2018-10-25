@@ -5,7 +5,6 @@ import './GetInTouchBlock.css'
 export default class GetInTouchBlock extends React.Component {
   render() {
     const getInTouchSection = this.props.content
-    console.log(getInTouchSection)
     return (
       <div className="GetInTouchBlock">
         <div>

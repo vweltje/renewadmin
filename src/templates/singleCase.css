@@ -1,0 +1,65 @@
+.Case--Content h1 {
+  padding: 5rem 0 7rem;
+}
+
+.Case--ContentBlock {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.Case--ContentBlock > div:first-child {
+  width: 60%;
+  padding-right: 2.5rem;
+}
+
+.Case--ContentBlock > div:last-child {
+  width: 40%;
+  padding-left: 2.5rem;
+}
+
+.Case--ContentBlock div:last-child .Image {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.Case--ContentBlock div:last-child iframe {
+  max-width: 100%;
+}
+
+.Case--InfoBlock {
+  display: inline-grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  width: 100%;
+}
+
+.Case--InfoBlock h4 {
+  text-transform: uppercase;
+}
+
+.Case--InfoBlock img {
+  max-width: 15rem;
+  max-height: 65rem;
+}
+
+.Case--InfoBlock svg {
+  opacity: 0.5;
+  max-height: 1.6rem;
+  display: inline-block;
+  position: relative;
+  margin-right: 1.2rem;
+}
+
+.Case--ContentBlock blockquote {
+  color: var(--secondary);
+  font-family: 'Open Sans';
+  font-size: 2.4rem;
+  letter-spacing: -0.45px;
+  line-height: 3.4rem;
+  opacity: 0.7;
+  max-width: 45rem;
+  margin: 0 auto;
+  text-align: center;
+  border-left: none;
+  padding: 5rem 0;
+}

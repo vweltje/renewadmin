@@ -1,6 +1,6 @@
 ---
 template: SingleCaseStudie
-title: Case3
+title: Case2
 service: Account payable
 clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
 quote: >-

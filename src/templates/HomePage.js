@@ -1,5 +1,6 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
+import _truncate from 'lodash/truncate'
 
 import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
@@ -71,7 +72,11 @@ export const CaseStudiesSection = ({
               ...caseStudie.node.frontmatter
             }
             return (
-              <Link to={studie.slug} className="Home--Case">
+              <Link
+                to={studie.slug}
+                className="Home--Case"
+                key={studie.slug + '-' + i}
+              >
                 <div>
                   <div className="square">
                     <Image src={studie.image} alt="erger" />
@@ -79,7 +84,13 @@ export const CaseStudiesSection = ({
                 </div>
                 <div>
                   <h4>{studie.title}</h4>
-                  <p>{studie.contentBlock[0].text}</p>
+                  <p>
+                    {_truncate(studie.contentBlock[0].text, {
+                      length: 150,
+                      separator: ' '
+                    })}
+                    <span>Read more+</span>
+                  </p>
                 </div>
               </Link>
             )

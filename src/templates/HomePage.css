@@ -66,11 +66,12 @@
 
 .Home-caseStudies .Home--Case .square {
   position: relative;
-  width: 14rem;
-  height: 14rem;
+  width: 13rem;
+  height: 13rem;
   overflow: hidden;
   border-radius: 1rem;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.4);
+  background: var(--secondary);
 }
 
 .Home-caseStudies .Home--Case .square .Image {
@@ -79,4 +80,43 @@
   min-width: 100%;
   min-height: 100%;
   object-fit: cover;
+  transition: 0.3s ease all;
+}
+
+.Home-caseStudies .Home--Case > div:last-child {
+  padding: 0 4rem;
+}
+
+.Home-caseStudies .Home--Case {
+  padding: 5rem 0;
+  text-decoration: none;
+}
+
+.Home-caseStudies .Home--Case:hover {
+  color: var(--secondary);
+}
+
+.Home-caseStudies .Home--Case h4 {
+  font-size: 2.4rem;
+  letter-spacing: -0.45px;
+  line-height: 2.9rem;
+}
+
+.Home-caseStudies .Home--Case p {
+  margin: 0;
+}
+
+.Home-caseStudies .Home--Case p span {
+  display: block;
+  margin-top: 1.2rem;
+}
+
+.Home-caseStudies,
+.Home-caseStudies .Home--Case:nth-child(-n + 2) {
+  border-bottom: 1px solid var(--secondary);
+}
+
+.Home-caseStudies .Home--Case:hover .square .Image {
+  opacity: 0.3;
+  transform: scale(1.05);
 }

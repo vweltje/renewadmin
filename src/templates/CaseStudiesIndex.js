@@ -53,7 +53,7 @@ export const CaseStudiesTemplate = ({
           </div>
         </div>
       </section>
-      <section className="section Service--Contact">
+      <section className="section">
         <div className="container">
           <GetInTouchBlock content={sectionGetInTouch} />
         </div>

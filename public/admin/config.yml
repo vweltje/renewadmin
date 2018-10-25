@@ -452,7 +452,7 @@ collections: # A list of collections the CMS should be able to edit
               label: Template,
               name: template,
               widget: hidden,
-              default: SingleServiceP,
+              default: singleCaseStudie,
             }
           - {
               label: PageTitle,

@@ -1,6 +1,6 @@
 ---
 template: SingleCaseStudie
-title: Title goes here
+title: Case3
 service: Account payable
 clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
 quote: >-
@@ -13,7 +13,7 @@ contentBlock:
       nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
       velit est, ac varius urna consequat non. Sed auctor, libero sit amet
       tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem. 
+      sit amet lorem.
     title: What we did
   - text: >-
       Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
@@ -21,9 +21,8 @@ contentBlock:
       nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
       velit est, ac varius urna consequat non. Sed auctor, libero sit amet
       tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem. 
+      sit amet lorem.
     title: Results
 image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
 youtubeVideo: 'https://www.youtube.com/watch?v=SFySjst-TlA'
 ---
-

@@ -49,7 +49,6 @@ export const SingleServiceTemplate = ({
 
 // Export Default SingleService for front-end
 const SingleService = ({ data }) => {
-  console.log(data)
   const service = {
     ...data.service
   }

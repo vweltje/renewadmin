@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import ContentBlock from "../components/ContentBlock";
-import Accordion from "../components/Accordion";
-import GetInTouchBlock from "../components/GetInTouchBlock";
+import Layout from '../components/Layout'
+import ContentBlock from '../components/ContentBlock'
+import Accordion from '../components/Accordion'
+import GetInTouchBlock from '../components/GetInTouchBlock'
 
 // Export Template for use in CMS preview
 export const SingleServiceTemplate = ({
@@ -20,7 +20,7 @@ export const SingleServiceTemplate = ({
     shortDescription: shortDescription,
     description: description,
     image: image
-  };
+  }
   return (
     <main>
       <section className="section Service--TitleSection">
@@ -40,24 +40,24 @@ export const SingleServiceTemplate = ({
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 // Export Default SingleService for front-end
 const SingleService = ({ data }) => {
   const service = {
     ...data.service,
     getInTouchSection: data.sectionContact
-  };
+  }
 
   return (
     <Layout>
       <SingleServiceTemplate {...service} {...service.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default SingleService;
+export default SingleService
 
 export const pageQuery = graphql`
   ## Query for SingleService data
@@ -82,7 +82,10 @@ export const pageQuery = graphql`
       }
     }
     sectionContact: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+      filter: {
+        fields: { contentType: { eq: "repeatableContent" } }
+        frontmatter: { filterName: { eq: "sectionGetInTouch" } }
+      }
     ) {
       edges {
         node {
@@ -102,4 +105,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

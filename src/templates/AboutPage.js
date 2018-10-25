@@ -1,11 +1,11 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import ContentBlock from "../components/ContentBlock";
-import InlineBanner from "../components/InlineBanner";
-import CertificationsSection from "../components/Certifications";
-import "./AboutPage.css";
+import Layout from '../components/Layout'
+import ContentBlock from '../components/ContentBlock'
+import InlineBanner from '../components/InlineBanner'
+import CertificationsSection from '../components/Certifications'
+import './AboutPage.css'
 
 // Export Template for use in CMS preview
 export const AboutPageTemplate = ({
@@ -22,7 +22,7 @@ export const AboutPageTemplate = ({
     shortDescription: shortDescription,
     description: description,
     image: image
-  };
+  }
   return (
     <main>
       <section className="section About--TitleSection">
@@ -47,30 +47,24 @@ export const AboutPageTemplate = ({
       {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
       <CertificationsSection {...certificationsSection} />
     </main>
-  );
-};
+  )
+}
 
 // Export Default AboutPage for front-end
 const AboutPage = ({ data }) => {
-  const page = { ...data.page };
-  let certificationData;
-
-  certificationData = data.homePage.edges.map(data => ({
-    ...data.node.frontmatter.certificationsSection
-  }))[0];
+  const page = {
+    ...data.page,
+    certificationsSection: data.sectionCertifications.edges[0].node.frontmatter
+  }
 
   return (
     <Layout>
-      <AboutPageTemplate
-        {...page}
-        {...page.frontmatter}
-        certificationsSection={certificationData}
-      />
+      <AboutPageTemplate {...page} {...page.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default AboutPage;
+export default AboutPage
 
 export const pageQuery = graphql`
   ## Query for AboutPage data
@@ -101,22 +95,22 @@ export const pageQuery = graphql`
         }
       }
     }
-    homePage: allMarkdownRemark(
-      filter: { frontmatter: { template: { eq: "HomePage" } } }
+    sectionCertifications: allMarkdownRemark(
+      filter: {
+        fields: { contentType: { eq: "repeatableContent" } }
+        frontmatter: { filterName: { eq: "sectionCertifications" } }
+      }
     ) {
       edges {
         node {
           frontmatter {
-            template
-            certificationsSection {
-              logos
-              description
-              shortDescription
-              title
-            }
+            logos
+            description
+            shortDescription
+            title
           }
         }
       }
     }
   }
-`;
+`

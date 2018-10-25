@@ -1,10 +1,11 @@
 ---
+filterName: sectionGetInTouch
 title: Ready to get started?
 subtitle: Get in touch or create an account.
 button1:
-  link: ""
+  link: ''
   text: create account
 button2:
-  link: ""
+  link: ''
   text: Contact us
 ---

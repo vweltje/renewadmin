@@ -1,17 +1,17 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import Image from "../components/Image";
-import GetInTouchBlock from "../components/GetInTouchBlock";
+import Layout from '../components/Layout'
+import Image from '../components/Image'
+import GetInTouchBlock from '../components/GetInTouchBlock'
 
-import "./CaseStudies.css";
+import './CaseStudies.css'
 
 export const niceTitle = title => {
-  title = title.replace("[", "<span>");
-  title = title.replace("]", "</span>");
-  return title;
-};
+  title = title.replace('[', '<span>')
+  title = title.replace(']', '</span>')
+  return title
+}
 
 // Export Template for use in CMS preview
 export const CaseStudiesTemplate = ({
@@ -45,10 +45,10 @@ export const CaseStudiesTemplate = ({
               return (
                 <Image
                   src={logo}
-                  alt={"Logo " + index}
-                  key={"BusinessLogo-" + index}
+                  alt={'Logo ' + index}
+                  key={'BusinessLogo-' + index}
                 />
-              );
+              )
             })}
           </div>
         </div>
@@ -59,23 +59,23 @@ export const CaseStudiesTemplate = ({
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 // Export Default CaseStudies for front-end
 const CaseStudies = ({ data }) => {
   const page = {
     ...data.page,
     getInTouchSection: data.sectionContact
-  };
+  }
   return (
     <Layout>
       <CaseStudiesTemplate {...page} {...page.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default CaseStudies;
+export default CaseStudies
 
 export const pageQuery = graphql`
   ## Query for CaseStudies data
@@ -98,7 +98,10 @@ export const pageQuery = graphql`
       }
     }
     sectionContact: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+      filter: {
+        fields: { contentType: { eq: "repeatableContent" } }
+        frontmatter: { filterName: { eq: "sectionGetInTouch" } }
+      }
     ) {
       edges {
         node {
@@ -118,4 +121,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

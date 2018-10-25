@@ -1,10 +1,10 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import GetInTouchBlock from "../components/GetInTouchBlock";
+import Layout from '../components/Layout'
+import GetInTouchBlock from '../components/GetInTouchBlock'
 
-import "./News.css";
+import './News.css'
 
 // Export Template for use in CMS preview
 export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
@@ -21,23 +21,23 @@ export const NewsTemplate = ({ title, getInTouchSection = {} }) => {
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 // Export Default News for front-end
 const News = ({ data }) => {
   const page = {
     ...data.page,
     getInTouchSection: data.sectionContact
-  };
+  }
   return (
     <Layout>
       <NewsTemplate {...page} {...page.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default News;
+export default News
 
 export const pageQuery = graphql`
   ## Query for News data
@@ -52,7 +52,10 @@ export const pageQuery = graphql`
       }
     }
     sectionContact: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "repeatableContent" } } }
+      filter: {
+        fields: { contentType: { eq: "repeatableContent" } }
+        frontmatter: { filterName: { eq: "sectionGetInTouch" } }
+      }
     ) {
       edges {
         node {
@@ -72,4 +75,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -9,22 +9,22 @@ media_library:
   config:
     publicKey: df19f57714627515ea61
     multiple: false
-    tabs: "file camera url facebook gdrive"
-    effects: "crop, rotate, enhance, grayscale"
-    imageShrink: "2000x2000"
+    tabs: 'file camera url facebook gdrive'
+    effects: 'crop, rotate, enhance, grayscale'
+    imageShrink: '2000x2000'
     previewStep: true
     clearable: true
 
 collections: # A list of collections the CMS should be able to edit
-  - name: "pages"
-    label: "Page"
+  - name: 'pages'
+    label: 'Page'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: true
     files:
-      - file: "content/pages/home.md"
-        label: "Home Page"
-        name: "home-page"
+      - file: 'content/pages/home.md'
+        label: 'Home Page'
+        name: 'home-page'
         fields:
           - {
               label: Template,
@@ -38,37 +38,37 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: Home Page,
             }
-          - { label: Slug, name: slug, widget: hidden, default: "" }
-          - label: "title section"
-            name: "titleSection"
-            widget: "object"
+          - { label: Slug, name: slug, widget: hidden, default: '' }
+          - label: 'title section'
+            name: 'titleSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
-              - label: "Button 1"
-                name: "button1"
-                widget: "object"
+              - label: 'Button 1'
+                name: 'button1'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
-              - label: "Button 2"
-                name: "button2"
-                widget: "object"
+              - label: 'Button 2'
+                name: 'button2'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
 
-          - label: "About Us Section"
-            name: "aboutUsSection"
-            widget: "object"
+          - label: 'About Us Section'
+            name: 'aboutUsSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - {
@@ -77,20 +77,20 @@ collections: # A list of collections the CMS should be able to edit
                   widget: string,
                 }
               - { label: description, name: description, widget: string }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
               - { label: Image, name: image, widget: image }
-          - label: "How It Works Section"
-            name: "howItWorksSection"
-            widget: "object"
+          - label: 'How It Works Section'
+            name: 'howItWorksSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - {
@@ -99,92 +99,76 @@ collections: # A list of collections the CMS should be able to edit
                   widget: string,
                 }
               - { label: description, name: description, widget: string }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
               - { label: Image, name: image, widget: image }
-          - label: "Services Section"
-            name: "servicesSection"
-            widget: "object"
+          - label: 'Services Section'
+            name: 'servicesSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
-          - label: "Inline Banner"
-            name: "inlineBanner"
-            widget: "object"
+          - label: 'Inline Banner'
+            name: 'inlineBanner'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
               - { label: Background, name: background, widget: image }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
-          - label: "Case Studies Section"
-            name: "caseStudiesSection"
-            widget: "object"
+          - label: 'Case Studies Section'
+            name: 'caseStudiesSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
-          - label: "News Section"
-            name: "newsSection"
-            widget: "object"
+          - label: 'News Section'
+            name: 'newsSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
-          - label: "Certifications Section"
-            name: "certificationsSection"
-            widget: "object"
-            fields:
-              - { label: title, name: title, widget: string }
-              - {
-                  label: short description,
-                  name: shortDescription,
-                  widget: string,
-                }
-              - { label: description, name: description, widget: string }
-              - {
-                  label: Logos,
-                  name: logos,
-                  widget: image,
-                  options: { media_library: { config: { multiple: true } } },
-                }
-      - file: "content/pages/about.md"
-        label: "About Page"
-        name: "about-page"
+
+      - file: 'content/pages/about.md'
+        label: 'About Page'
+        name: 'about-page'
         fields:
           - {
               label: Template,
@@ -198,40 +182,40 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: About Page,
             }
-          - { label: Slug, name: slug, widget: hidden, default: "about" }
+          - { label: Slug, name: slug, widget: hidden, default: 'about' }
           - { label: title, name: title, widget: string }
           - { label: short description, name: shortDescription, widget: text }
           - { label: description, name: description, widget: text }
           - { label: Image, name: image, widget: image }
           - { label: team title, name: teamTitle, widget: string }
-          - label: "services section"
-            name: "servicesSection"
-            widget: "object"
+          - label: 'services section'
+            name: 'servicesSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
 
-          - label: "Inline Banner"
-            name: "inlineBanner"
-            widget: "object"
+          - label: 'Inline Banner'
+            name: 'inlineBanner'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
               - { label: Background, name: background, widget: image }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
 
-      - file: "content/pages/contact.md"
-        label: "Contact Page"
-        name: "contact-page"
+      - file: 'content/pages/contact.md'
+        label: 'Contact Page'
+        name: 'contact-page'
         fields:
           - {
               label: Template,
@@ -245,7 +229,7 @@ collections: # A list of collections the CMS should be able to edit
               widget: hidden,
               default: Contact Page,
             }
-          - { label: Slug, name: slug, widget: hidden, default: "contact" }
+          - { label: Slug, name: slug, widget: hidden, default: 'contact' }
           - { label: title, name: title, widget: string }
           - {
               label: contact Text title,
@@ -278,9 +262,9 @@ collections: # A list of collections the CMS should be able to edit
               buttons: { bulleted-list, numbered-list, bold, italic, link },
             }
 
-      - file: "content/pages/services.md"
-        label: "Services Page"
-        name: "services-index"
+      - file: 'content/pages/services.md'
+        label: 'Services Page'
+        name: 'services-index'
         fields:
           - {
               label: Template,
@@ -299,27 +283,27 @@ collections: # A list of collections the CMS should be able to edit
           - { label: short description, name: shortDescription, widget: text }
           - { label: description, name: description, widget: text }
           - { label: Image, name: image, widget: image }
-          - label: "Inline Banner"
-            name: "inlineBanner"
-            widget: "object"
+          - label: 'Inline Banner'
+            name: 'inlineBanner'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
               - { label: Background, name: background, widget: image }
-              - label: "Button"
-                name: "button"
-                widget: "object"
+              - label: 'Button'
+                name: 'button'
+                widget: 'object'
                 fields:
-                  - label: "Link"
-                    name: "link"
-                    widget: "string"
-                    default: ""
-                    hint: "Copy past a url"
+                  - label: 'Link'
+                    name: 'link'
+                    widget: 'string'
+                    default: ''
+                    hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
 
-      - file: "content/pages/caseStudies.md"
-        label: "Case Studies Page"
-        name: "case-studies-index"
+      - file: 'content/pages/caseStudies.md'
+        label: 'Case Studies Page'
+        name: 'case-studies-index'
         fields:
           - {
               label: Template,
@@ -334,9 +318,9 @@ collections: # A list of collections the CMS should be able to edit
               default: CaseStudies,
             }
           - { label: Slug, name: slug, widget: hidden, default: case-studies }
-          - label: "Title Section"
-            name: "titleSection"
-            widget: "object"
+          - label: 'Title Section'
+            name: 'titleSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - {
@@ -345,9 +329,9 @@ collections: # A list of collections the CMS should be able to edit
                   widget: text,
                 }
               - { label: description, name: description, widget: text }
-          - label: "Businesses Section"
-            name: "businessesSection"
-            widget: "object"
+          - label: 'Businesses Section'
+            name: 'businessesSection'
+            widget: 'object'
             fields:
               - { label: title, name: title, widget: string }
               - {
@@ -362,7 +346,7 @@ collections: # A list of collections the CMS should be able to edit
     editor:
       preview: true
     folder: content/services
-    slug: "{{slug}}"
+    slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {
@@ -375,28 +359,28 @@ collections: # A list of collections the CMS should be able to edit
       - { label: short description, name: shortDescription, widget: text }
       - { label: description, name: description, widget: text }
       - { label: Image, name: image, widget: image }
-      - label: "Info Section"
-        name: "infoSection"
-        widget: "object"
+      - label: 'Info Section'
+        name: 'infoSection'
+        widget: 'object'
         fields:
           - { label: title, name: title, widget: string }
-          - label: "Info Blocks"
-            name: "infoblocks"
-            widget: "list"
+          - label: 'Info Blocks'
+            name: 'infoblocks'
+            widget: 'list'
             required: false
             fields:
-              - { label: "title", name: "title", widget: "string" }
+              - { label: 'title', name: 'title', widget: 'string' }
               - { label: description, name: description, widget: text }
 
-  - name: "settings"
-    label: "Settings"
+  - name: 'settings'
+    label: 'Settings'
     delete: false # Prevent users from deleting documents in this collection
     editor:
       preview: false
     files:
-      - file: "content/settings/global.yml"
-        label: "Global Settings"
-        name: "global-settings"
+      - file: 'content/settings/global.yml'
+        label: 'Global Settings'
+        name: 'global-settings'
         fields:
           - { label: Site Title, name: siteTitle, widget: string }
           - { label: Site Url, name: siteUrl, widget: string, required: false }
@@ -418,33 +402,58 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
 
-  - name: "repeatable Content"
-    label: "Repeatable Content"
+  - name: 'repeatable-content'
+    label: 'Repeatable Content'
     delete: false # Prevent users from deleting documents in this collection
     files:
-      - file: "content/repeatableContent/sectionGetInTouch.md"
-        label: "Section - Get In Touch"
-        name: "section-get-in-touch"
+      - file: 'content/repeatableContent/sectionGetInTouch.md'
+        label: 'Section - Get In Touch'
+        name: 'section-get-in-touch'
         fields:
+          - {
+              label: filterName,
+              name: filterName,
+              widget: hidden,
+              default: sectionGetInTouch,
+            }
           - { label: title, name: title, widget: string }
           - { label: subtitle, name: subtitle, widget: string }
-          - label: "Button 1"
-            name: "button1"
-            widget: "object"
+          - label: 'Button 1'
+            name: 'button1'
+            widget: 'object'
             fields:
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                default: ""
-                hint: "Copy past a url"
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+                default: ''
+                hint: 'Copy past a url'
               - { label: text, name: text, widget: string }
-          - label: "Button 2"
-            name: "button2"
-            widget: "object"
+          - label: 'Button 2'
+            name: 'button2'
+            widget: 'object'
             fields:
-              - label: "Link"
-                name: "link"
-                widget: "string"
-                default: ""
-                hint: "Copy past a url"
+              - label: 'Link'
+                name: 'link'
+                widget: 'string'
+                default: ''
+                hint: 'Copy past a url'
               - { label: text, name: text, widget: string }
+      - file: 'content/repeatableContent/sectionCertifications.md'
+        label: 'Section - Certifications'
+        name: 'section-certifications'
+        fields:
+          - {
+              label: filterName,
+              name: filterName,
+              widget: hidden,
+              default: sectionCertifications,
+            }
+          - { label: title, name: title, widget: string }
+          - { label: short description, name: shortDescription, widget: string }
+          - { label: description, name: description, widget: string }
+          - {
+              label: Logos,
+              name: logos,
+              widget: image,
+              options: { media_library: { config: { multiple: true } } },
+            }

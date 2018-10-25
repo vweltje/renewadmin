@@ -1,14 +1,14 @@
-import React from "react";
-import { graphql, Link } from "gatsby";
+import React from 'react'
+import { graphql, Link } from 'gatsby'
 
-import Layout from "../components/Layout";
-import ContentBlock from "../components/ContentBlock";
-import ServicesGrid from "../components/ServicesGrid";
-import InlineBanner from "../components/InlineBanner";
-import Image from "../components/Image";
-import CertificationsSection from "../components/Certifications";
+import Layout from '../components/Layout'
+import ContentBlock from '../components/ContentBlock'
+import ServicesGrid from '../components/ServicesGrid'
+import InlineBanner from '../components/InlineBanner'
+import Image from '../components/Image'
+import CertificationsSection from '../components/Certifications'
 
-import "./HomePage.css";
+import './HomePage.css'
 
 export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   return (
@@ -30,8 +30,8 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
         />
       </div>
     </section>
-  );
-};
+  )
+}
 
 export const ServicesSection = ({
   title,
@@ -39,7 +39,6 @@ export const ServicesSection = ({
   button = [],
   services = {}
 }) => {
-  console.log(services);
   return (
     <section className="section Home--ServicesSecction">
       <div className="container">
@@ -51,15 +50,15 @@ export const ServicesSection = ({
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export const CaseStudiesSection = ({ title, description, button = [] }) => {
   let styles = {
-    width: "100%",
-    height: "650px",
-    background: "#33495b"
-  };
+    width: '100%',
+    height: '650px',
+    background: '#33495b'
+  }
   return (
     <section className="section Home--CaseStudiesSection">
       <div className="container">
@@ -71,15 +70,15 @@ export const CaseStudiesSection = ({ title, description, button = [] }) => {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
 export const NewsSection = ({ title, description }) => {
   let styles = {
-    width: "100%",
-    height: "650px",
-    background: "#33495b"
-  };
+    width: '100%',
+    height: '650px',
+    background: '#33495b'
+  }
   return (
     <section className="section Home--CaseStudiesSection">
       <div className="container">
@@ -88,8 +87,8 @@ export const NewsSection = ({ title, description }) => {
         <div style={styles}>placeholder</div>
       </div>
     </section>
-  );
-};
+  )
+}
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
@@ -103,7 +102,8 @@ export const HomePageTemplate = ({
   certificationsSection,
   services
 }) => {
-  const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }];
+  console.log(certificationsSection)
+  const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
   return (
     <main className="Home">
       <TitleSection {...titleSection} />
@@ -114,27 +114,30 @@ export const HomePageTemplate = ({
       <NewsSection {...newsSection} />
       <CertificationsSection {...certificationsSection} />
     </main>
-  );
-};
+  )
+}
 
 // Export Default HomePage for front-end
 const HomePage = ({ data }) => {
-  const page = data.page;
-  let services = [];
+  const page = {
+    ...data.page,
+    services: [],
+    certificationsSection: data.sectionCertifications.edges[0].node.frontmatter
+  }
   data.services.edges.map((service, index) => {
-    return services.push({
+    return page.services.push({
       ...service.node.fields,
       ...service.node.frontmatter
-    });
-  });
+    })
+  })
   return (
     <Layout>
-      <HomePageTemplate {...page} {...page.frontmatter} services={services} />
+      <HomePageTemplate {...page} {...page.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage
 
 export const pageQuery = graphql`
   ## Query for HomePage data
@@ -206,12 +209,6 @@ export const pageQuery = graphql`
           description
           title
         }
-        certificationsSection {
-          logos
-          description
-          shortDescription
-          title
-        }
       }
     }
     services: allMarkdownRemark(
@@ -230,5 +227,22 @@ export const pageQuery = graphql`
         }
       }
     }
+    sectionCertifications: allMarkdownRemark(
+      filter: {
+        fields: { contentType: { eq: "repeatableContent" } }
+        frontmatter: { filterName: { eq: "sectionCertifications" } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            logos
+            description
+            shortDescription
+            title
+          }
+        }
+      }
+    }
   }
-`;
+`

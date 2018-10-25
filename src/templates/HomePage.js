@@ -53,18 +53,38 @@ export const ServicesSection = ({
   )
 }
 
-export const CaseStudiesSection = ({ title, description, button = [] }) => {
-  let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+export const CaseStudiesSection = ({
+  title,
+  description,
+  button = [],
+  caseStudies = {}
+}) => {
   return (
     <section className="section Home--CaseStudiesSection">
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
-        <div style={styles}>placeholder</div>
+        <div className="Home-caseStudies">
+          {caseStudies.map((caseStudie, i) => {
+            const studie = {
+              ...caseStudie.node.fields,
+              ...caseStudie.node.frontmatter
+            }
+            return (
+              <Link to={studie.slug} className="Home--Case">
+                <div>
+                  <div className="square">
+                    <Image src={studie.image} alt="erger" />
+                  </div>
+                </div>
+                <div>
+                  <h4>{studie.title}</h4>
+                  <p>{studie.contentBlock[0].text}</p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
         <Link to={button.link} className="Button">
           {button.text}
         </Link>
@@ -80,7 +100,7 @@ export const NewsSection = ({ title, description }) => {
     background: '#33495b'
   }
   return (
-    <section className="section Home--CaseStudiesSection">
+    <section className="section Home--NewsSection">
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
@@ -102,7 +122,7 @@ export const HomePageTemplate = ({
   certificationsSection,
   services
 }) => {
-  console.log(certificationsSection)
+  console.log(caseStudiesSection)
   const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
   return (
     <main className="Home">
@@ -122,6 +142,10 @@ const HomePage = ({ data }) => {
   const page = {
     ...data.page,
     services: []
+  }
+  page.frontmatter.caseStudiesSection = {
+    ...page.frontmatter.caseStudiesSection,
+    caseStudies: data.allCaseStudies.edges
   }
   data.services.edges.map((service, index) => {
     return page.services.push({
@@ -228,6 +252,26 @@ export const pageQuery = graphql`
           frontmatter {
             title
             shortDescription
+          }
+        }
+      }
+    }
+    allCaseStudies: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "caseStudies" } } }
+      sort: { order: ASC, fields: [frontmatter___date] }
+      limit: 4
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            contentBlock {
+              text
+            }
+            image
           }
         }
       }

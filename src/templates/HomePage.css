@@ -51,3 +51,32 @@
   height: auto;
   display: inline-block;
 }
+
+.Home-caseStudies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.Home-caseStudies .Home--Case {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+}
+
+.Home-caseStudies .Home--Case .square {
+  position: relative;
+  width: 14rem;
+  height: 14rem;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.4);
+}
+
+.Home-caseStudies .Home--Case .square .Image {
+  filter: grayscale(1);
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}

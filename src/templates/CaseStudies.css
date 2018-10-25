@@ -23,6 +23,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .CaseStudies--Cases .caseStudie {
@@ -39,12 +40,17 @@
   overflow: hidden;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.4);
   text-decoration: none;
+  margin-bottom: 5rem;
 }
 
 .CaseStudies--Cases .caseStudie .Button {
   opacity: 0;
-  margin-top: 2rem;
-  transition: 0.3s ease all;
+  margin-top: 0;
+  transform: scale(0.95);
+}
+
+.CaseStudies--Cases .caseStudie:hover .Button::after {
+  opacity: 0;
 }
 
 .CaseStudies--Cases .caseStudie .BackgroundImage {
@@ -65,14 +71,24 @@
 
 .CaseStudies--Cases .caseStudie:hover .Button {
   opacity: 1;
+  height: auto;
+  padding: 1rem;
+  margin-top: 2rem;
+  transform: scale(1);
+}
+
+.CaseStudies--Cases .caseStudie:hover .Button::after {
+  opacity: 1;
 }
 
 .CaseStudies--Cases .caseStudie:hover .BackgroundImage,
 .CaseStudies--Cases .caseStudie:hover .clientLogo {
+  margin-top: 0;
   transform: scale(1.05);
 }
 
 .CaseStudies--Cases .caseStudie .clientLogo {
+  margin-top: 4.5rem;
   max-width: 20rem;
   max-height: 12.5rem;
   width: auto;

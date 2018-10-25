@@ -444,18 +444,23 @@ collections: # A list of collections the CMS should be able to edit
                     hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
 
-      - file: 'content/pages/news.md'
-        label: 'News Page'
-        name: 'news-page'
+      - file: 'content/pages/singleCaseStudie.md'
+        label: 'Single Service Page'
+        name: 'single-service-page'
         fields:
           - {
               label: Template,
               name: template,
               widget: hidden,
-              default: NewsIndex,
+              default: SingleServiceP,
             }
-          - { label: PageTitle, name: pageTitle, widget: hidden, default: news }
-          - { label: Slug, name: slug, widget: hidden, default: case-studies }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: singleService,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: single-service }
           - label: 'get In Touch Section'
             name: 'sectionGetInTouch'
             widget: 'object'
@@ -513,6 +518,44 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: 'title', name: 'title', widget: 'string' }
               - { label: description, name: description, widget: text }
+
+  - name: case-studie
+    label: Case Studie
+    editor:
+      preview: true
+    folder: content/caseStudies
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - {
+          label: Template,
+          name: template,
+          widget: hidden,
+          default: SingleCaseStudie,
+        }
+      - { label: Title, name: title, widget: string }
+      - label: 'Service'
+        name: 'service'
+        widget: 'relation'
+        collection: 'services'
+        searchFields: ['title']
+        valueField: 'title'
+        displayFields: ['title']
+      - { label: Client logo, name: clientLogo, widget: image }
+      - { label: Quote, name: quote, widget: text }
+      - label: 'Content Block'
+        name: 'contentBlock'
+        widget: 'list'
+        fields:
+          - { label: 'title', name: 'title', widget: 'string' }
+          - { label: text, name: text, widget: text }
+      - { label: image, name: image, widget: image }
+      - {
+          label: youtube video,
+          name: youtubeVideo,
+          widget: string,
+          required: false,
+        }
 
   - name: 'settings'
     label: 'Settings'

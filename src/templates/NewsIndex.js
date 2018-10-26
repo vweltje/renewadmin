@@ -7,7 +7,7 @@ import GetInTouchBlock from '../components/GetInTouchBlock'
 import PostCategoriesNav from '../components/PostCategoriesNav'
 import PostSection from '../components/PostSection'
 
-import './News.css'
+import './NewsIndex.css'
 
 // Export Template for use in CMS preview
 export const NewsTemplate = ({
@@ -49,7 +49,7 @@ export const NewsTemplate = ({
       )}
 
       {!!newsItems.length && (
-        <section className="section">
+        <section className="section newsItems">
           <div className="container">
             <PostSection posts={filteredNewsItems} />
           </div>

@@ -20,11 +20,12 @@ const PostCard = ({
       </div>
     )}
     <div className="PostCard--Content">
-      {title && <h3 className="PostCard--Title">{title}</h3>}
       <div className="PostCard--Category">
         {categories && categories.map(cat => cat.category).join(', ')}
       </div>
+      {title && <h3 className="PostCard--Title">{title}</h3>}
       {excerpt && <div className="PostCard--Excerpt">{excerpt}</div>}
+      <span>Read more+</span>
     </div>
   </Link>
 )

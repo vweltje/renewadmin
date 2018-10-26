@@ -137,7 +137,7 @@ export const NewsSection = ({ title, description, newsItems = {} }) => {
               arrows: true,
               focusOnSelect: true,
               autoplay: true,
-              autoplaySpeed: 2000
+              autoplaySpeed: 3000
             }}
           >
             {newsItems.map((item, index) => {

@@ -490,6 +490,33 @@ collections: # A list of collections the CMS should be able to edit
                     hint: 'Copy past a url'
                   - { label: text, name: text, widget: string }
 
+  - name: team-member
+    label: Team Member
+    editor:
+      preview: true
+    folder: content/teamMembers
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Name, name: name, widget: string }
+      - { label: function, name: function, widget: string }
+      - { label: Bio, name: bio, widget: text }
+      - { label: Photo, name: photo, widget: image }
+      - label: 'Sicial media links'
+        name: 'socialMediaLinks'
+        widget: 'object'
+        fields:
+          - { label: Twitter, name: twitter, widget: string }
+          - { label: linkedin, name: linkedin, widget: string }
+          - { label: google plus, name: googlePlus, widget: string }
+      - {
+          label: additional info,
+          name: additionalInfo,
+          widget: markdown,
+          required: false,
+          buttons: { bold, italic, link, bulleted-list, numbered-list },
+        }
+
   - name: service
     label: Service
     editor:

@@ -586,15 +586,15 @@ collections: # A list of collections the CMS should be able to edit
           widget: image,
           required: false,
         }
-      - label: 'Services'
-        name: 'services'
+      - label: 'Categories'
+        name: 'categories'
         widget: 'list'
         required: false
         fields:
-          - label: 'Service'
-            name: 'service'
+          - label: 'Category'
+            name: 'category'
             widget: 'relation'
-            collection: 'services'
+            collection: 'newsCategories'
             searchFields: ['title']
             valueField: 'title'
       - { label: short Description, name: shortDescription, widget: text }
@@ -666,6 +666,17 @@ collections: # A list of collections the CMS should be able to edit
               required: false,
             }
           - { label: Noindex, name: noindex, widget: boolean, required: false }
+
+  - name: newsCategories
+    label: News Category
+    editor:
+      preview: false
+    folder: content/newsCategories
+    slug: '{{slug}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: Template, name: template, widget: hidden, default: NewsIndex }
+      - { label: Title, name: title, widget: string }
 
   - name: 'settings'
     label: 'Settings'

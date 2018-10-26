@@ -14,14 +14,20 @@ export const NewsTemplate = ({
   title,
   sectionGetInTouch = {},
   newsItems = {},
-  services = {},
+  newsCategories = {},
   contentType
 }) => {
-  const isFilter = contentType === 'postCategories'
-  const byService = newsItem =>
-    newsItem.service &&
-    newsItem.service.filter(ser => ser.service === title).length
-  const filteredItems = isFilter ? newsItems.filter(byService) : newsItems
+  const isCategory = contentType === 'newsCategories'
+  const byCategory = item => {
+    return (
+      item.categories &&
+      item.categories.filter(i => i.category === title).length
+    )
+  }
+  const filteredNewsItems = isCategory
+    ? newsItems.filter(byCategory)
+    : newsItems
+
   return (
     <main className="blog">
       <Helmet>
@@ -34,10 +40,10 @@ export const NewsTemplate = ({
         </div>
       </section>
 
-      {!!services.length && (
+      {!!newsCategories.length && (
         <section className="section thin">
           <div className="container">
-            <PostCategoriesNav categories={services} />
+            <PostCategoriesNav categories={newsCategories} />
           </div>
         </section>
       )}
@@ -45,7 +51,7 @@ export const NewsTemplate = ({
       {!!newsItems.length && (
         <section className="section">
           <div className="container">
-            <PostSection posts={filteredItems} />
+            <PostSection posts={filteredNewsItems} />
           </div>
         </section>
       )}
@@ -70,16 +76,17 @@ const News = ({ data }) => {
     <Layout>
       <NewsTemplate
         {...page}
+        {...page.fields}
         {...page.frontmatter}
         newsItems={data.newsItems.edges.map(item => ({
           ...item.node,
           ...item.node.frontmatter,
           ...item.node.fields
         }))}
-        services={data.services.edges.map(service => ({
-          ...service.node,
-          ...service.node.frontmatter,
-          ...service.node.fields
+        newsCategories={data.newsCategories.edges.map(category => ({
+          ...category.node,
+          ...category.node.frontmatter,
+          ...category.node.fields
         }))}
       />
     </Layout>
@@ -95,7 +102,6 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query News($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
-      html
       fields {
         contentType
       }
@@ -124,11 +130,12 @@ export const pageQuery = graphql`
           excerpt
           fields {
             slug
+            contentType
           }
           frontmatter {
             title
-            services {
-              service
+            categories {
+              category
             }
             shortDescription
             featuredImage
@@ -136,8 +143,8 @@ export const pageQuery = graphql`
         }
       }
     }
-    services: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "services" } } }
+    newsCategories: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "newsCategories" } } }
       sort: { order: ASC, fields: [frontmatter___title] }
     ) {
       edges {

@@ -132,8 +132,8 @@ export const pageQuery = graphql`
         title
         template
         date
-        services {
-          service
+        categories {
+          category
         }
         shortDescription
         contentImages {
@@ -146,31 +146,31 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-    # allNewsItems: allMarkdownRemark(
-    #   filter: { fields: { contentType: { eq: "news" } } }
-    #   sort: { order: DESC, fields: [frontmatter___date] }
-    # ) {
-    #   edges {
-    #     node {
-    #       id
-    #     }
-    #     next {
-    #       fields {
-    #         slug
-    #       }
-    #       frontmatter {
-    #         title
-    #       }
-    #     }
-    #     previous {
-    #       fields {
-    #         slug
-    #       }
-    #       frontmatter {
-    #         title
-    #       }
-    #     }
-    #   }
-    # }
+    allNewsItems: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "news" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          id
+        }
+        next {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+        previous {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+          }
+        }
+      }
+    }
   }
 `

@@ -1,0 +1,4 @@
+---
+template: NewsIndex
+title: Payroll
+---

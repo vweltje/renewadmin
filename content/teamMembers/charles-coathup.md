@@ -9,7 +9,7 @@ bio: >-
   successful business, egos come and go, but the admin team will stay strong"
   Emily has over 18 years of financial experience making her the perfect partner
   for your business.
-photo: 'https://ucarecdn.com/fa219437-3775-4c91-9577-f84a1db0c175/'
+photo: 'https://ucarecdn.com/df4df46e-5706-45d6-a5b0-91795a568d8e/'
 socialMediaLinks:
   googlePlus: 'https://www.plus.google.com/'
   linkedin: 'https://www.linkedin.com/'
@@ -25,3 +25,4 @@ additionalInfo: |-
   * Institute of Certified Bookkeepers - Member
   * Tax Practitioner Board - Member
 ---
+

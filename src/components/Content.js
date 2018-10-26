@@ -37,6 +37,7 @@ const Content = ({ source, src, className = '' }) => {
   source = source || src || ''
   if (source.match(/^</)) {
     // If source is html (starts with '<')
+    console.log(source)
     return (
       <div
         className={`Content ${className}`}

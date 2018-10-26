@@ -10,6 +10,7 @@ import { CaseStudiesIndex } from '../templates/CaseStudiesIndex'
 import { HowItWorksPage } from '../templates/HowItWorksPage'
 import { NewsIndex } from '../templates/NewsIndex'
 import { SingleService } from '../templates/SingleService'
+import { NewsItem } from '../templates/SingleNewsItem'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -45,4 +46,7 @@ CMS.registerPreviewTemplate('news-index', ({ entry }) => (
 ))
 CMS.registerPreviewTemplate('single-service', ({ entry }) => (
   <SingleService {...entry.toJS().data} />
+))
+CMS.registerPreviewTemplate('news', ({ entry }) => (
+  <NewsItem {...entry.toJS().data} />
 ))

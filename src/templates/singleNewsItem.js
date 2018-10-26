@@ -1,12 +1,11 @@
 import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
-import _get from 'lodash/get'
 import _format from 'date-fns/format'
-import { Link, graphql } from 'gatsby'
-import { ChevronLeft } from 'react-feather'
+import { graphql } from 'gatsby'
 
 import Content from '../components/Content'
 import Image from '../components/Image'
+import ShareWidget from '../components/ShareWidget'
 import Layout from '../components/Layout'
 import './SingleNewsItem.css'
 
@@ -15,9 +14,10 @@ export const SingleNewsItemTemplate = ({
   date,
   featuredImage,
   body,
-  nextNewsItemURL,
-  prevNewsItemURL,
-  categories = []
+  shortDescription,
+  // nextNewsItemURL,
+  // prevNewsItemURL,
+  services = []
 }) => (
   <main>
     <article
@@ -29,74 +29,57 @@ export const SingleNewsItemTemplate = ({
         <title>{title}</title>
       </Helmet>
 
-      {featuredImage && (
-        <Image
-          background
-          className="SingleNewsItem--BackgroundImage"
-          src={featuredImage}
-          alt={title}
-        />
-      )}
+      <div className="container">
+        {featuredImage && (
+          <header>
+            <Image
+              background
+              className="SingleNewsItem--BackgroundImage BackgroundOverlay"
+              src={featuredImage}
+              alt={title}
+            />
+          </header>
+        )}
+        <div className="container skinny">
+          <div className="SingleNewsItem--Content relative">
+            <div className="SingleNewsItem--Meta">
+              {date && (
+                <time
+                  className="SingleNewsItem--Meta--Date"
+                  itemProp="dateCreated pubdate datePublished"
+                  date={date}
+                >
+                  {_format(date, 'MM-DD-YYYY')}
+                </time>
+              )}
+            </div>
 
-      <div className="container skinny">
-        <Link className="SingleNewsItem--BackButton" to="/blog/">
-          <ChevronLeft /> BACK
-        </Link>
-        <div className="SingleNewsItem--Content relative">
-          <div className="SingleNewsItem--Meta">
-            {date && (
-              <time
-                className="SingleNewsItem--Meta--Date"
-                itemProp="dateCreated pubdate datePublished"
-                date={date}
-              >
-                {_format(date, 'MMMM Do, YYYY')}
-              </time>
+            {title && (
+              <h1 className="SingleNewsItem--Title" itemProp="title">
+                {title}
+              </h1>
             )}
-            {categories && (
-              <Fragment>
-                <span>|</span>
-                {categories.map((cat, index) => (
-                  <span
-                    key={cat.category}
-                    className="SingleNewsItem--Meta--Category"
-                  >
-                    {cat.category}
-                    {/* Add a comma on all but last category */}
-                    {index !== categories.length - 1 ? ',' : ''}
-                  </span>
-                ))}
-              </Fragment>
-            )}
-          </div>
-
-          {title && (
-            <h1 className="SingleNewsItem--Title" itemProp="title">
-              {title}
-            </h1>
-          )}
-
-          <div className="SingleNewsItem--InnerContent">
-            <Content source={body} />
-          </div>
-
-          <div className="SingleNewsItem--Pagination">
-            {prevNewsItemURL && (
-              <Link
-                className="SingleNewsItem--Pagination--Link prev"
-                to={prevNewsItemURL}
-              >
-                Previous NewsItem
-              </Link>
-            )}
-            {nextNewsItemURL && (
-              <Link
-                className="SingleNewsItem--Pagination--Link next"
-                to={nextNewsItemURL}
-              >
-                Next NewsItem
-              </Link>
-            )}
+            <div className="SingleNewsItem--Service">
+              {services && (
+                <Fragment>
+                  {services.map((item, index) => (
+                    <span
+                      key={item.service}
+                      className="SingleNewsItem--Meta--Service"
+                    >
+                      {item.service}
+                      {/* Add a comma on all but last service */}
+                      {index !== services.length - 1 ? ',' : ''}
+                    </span>
+                  ))}
+                </Fragment>
+              )}
+            </div>
+            <div className="SingleNewsItem--InnerContent">
+              <p className="larger">{shortDescription}</p>
+              <Content source={body} />
+            </div>
+            <ShareWidget />
           </div>
         </div>
       </div>
@@ -106,17 +89,17 @@ export const SingleNewsItemTemplate = ({
 
 // Export Default SingleNewsItem for front-end
 const SingleNewsItem = ({ data, pageContext }) => {
-  // const { newsItem, allNewsItems } = data
+  const { newsItem } = data
   // const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
   return (
     <Layout>
-      {/* <SingleNewsItemTemplate
-      {...newsItem}
-      {...newsItem.frontmatter}
-      body={newsItem.html}
-      nextNewsItemURL={_get(thisEdge, 'next.fields.slug')}
-      prevNewsItemURL={_get(thisEdge, 'previous.fields.slug')}
-    /> */}
+      <SingleNewsItemTemplate
+        {...newsItem}
+        {...newsItem.frontmatter}
+        body={newsItem.html}
+        // nextNewsItemURL={_get(thisEdge, 'next.fields.slug')}
+        // prevNewsItemURL={_get(thisEdge, 'previous.fields.slug')}
+      />
     </Layout>
   )
 }
@@ -143,7 +126,6 @@ export const pageQuery = graphql`
         featuredImage
       }
     }
-
     # allNewsItems: allMarkdownRemark(
     #   filter: { fields: { contentType: { eq: "news" } } }
     #   sort: { order: DESC, fields: [frontmatter___date] }

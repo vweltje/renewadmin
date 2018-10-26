@@ -597,7 +597,54 @@ collections: # A list of collections the CMS should be able to edit
             searchFields: ['title']
             valueField: 'title'
       - { label: short Description, name: shortDescription, widget: text }
-      - { label: Content, name: body, widget: markdown }
+      - {
+          label: Content,
+          name: body,
+          widget: markdown,
+          buttons:
+            {
+              bold,
+              italic,
+              code,
+              link,
+              heading-one,
+              heading-two,
+              quote,
+              code-block,
+              bulleted-list,
+              numbered-list,
+            },
+        }
+      - label: 'Info Section'
+        name: 'infoSection'
+        widget: 'object'
+        fields:
+          - label: 'Images'
+            name: 'images'
+            widget: 'list'
+            required: false
+            fields:
+              - { label: image, name: Image, widget: image }
+              - { label: description, name: description, widget: string }
+      - {
+          label: Content optional,
+          name: bodyOptional,
+          widget: markdown,
+          required: false,
+          buttons:
+            {
+              bold,
+              italic,
+              code,
+              link,
+              heading-one,
+              heading-two,
+              quote,
+              code-block,
+              bulleted-list,
+              numbered-list,
+            },
+        }
       - label: 'Meta'
         required: false
         name: 'meta'

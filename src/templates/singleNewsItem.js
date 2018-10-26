@@ -15,8 +15,8 @@ export const SingleNewsItemTemplate = ({
   featuredImage,
   body,
   shortDescription,
-  // nextNewsItemURL,
-  // prevNewsItemURL,
+  contentImages,
+  bodyOptional,
   services = []
 }) => (
   <main>
@@ -78,6 +78,19 @@ export const SingleNewsItemTemplate = ({
             <div className="SingleNewsItem--InnerContent">
               <p className="larger">{shortDescription}</p>
               <Content source={body} />
+              <div className="SingleNewsItem--ContentImages">
+                {contentImages &&
+                  contentImages.images.map((image, i) => (
+                    <div key={'SingleNewsItem--ContentImages-' + i}>
+                      <Image
+                        src={image.Image}
+                        alt={'SingleNewsItem--ContentImages-' + i}
+                      />
+                      {image.description}
+                    </div>
+                  ))}
+              </div>
+              <Content source={bodyOptional} />
             </div>
             <ShareWidget />
           </div>

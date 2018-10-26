@@ -4,26 +4,59 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import GetInTouchBlock from '../components/GetInTouchBlock'
+import PostCategoriesNav from '../components/PostCategoriesNav'
+import PostSection from '../components/PostSection'
 
 import './News.css'
 
 // Export Template for use in CMS preview
-export const NewsTemplate = ({ title, sectionGetInTouch = {} }) => {
+export const NewsTemplate = ({
+  title,
+  sectionGetInTouch = {},
+  newsItems = {},
+  services = {},
+  contentType
+}) => {
+  const isFilter = contentType === 'postCategories'
+  const byService = newsItem =>
+    newsItem.service &&
+    newsItem.service.filter(ser => ser.service === title).length
+  const filteredItems = isFilter ? newsItems.filter(byService) : newsItems
   return (
-    <main class="blog">
+    <main className="blog">
       <Helmet>
         <title>{title}</title>
       </Helmet>
-      <section className="section About--TitleSection">
+
+      <section className="section">
         <div className="container">
           <h1>{title}</h1>
         </div>
       </section>
-      <section className="section Service--Contact">
-        <div className="container">
-          <GetInTouchBlock content={sectionGetInTouch} />
-        </div>
-      </section>
+
+      {!!services.length && (
+        <section className="section thin">
+          <div className="container">
+            <PostCategoriesNav categories={services} />
+          </div>
+        </section>
+      )}
+
+      {!!newsItems.length && (
+        <section className="section">
+          <div className="container">
+            <PostSection posts={filteredItems} />
+          </div>
+        </section>
+      )}
+
+      {!!sectionGetInTouch && (
+        <section className="section">
+          <div className="container">
+            <GetInTouchBlock content={sectionGetInTouch} />
+          </div>
+        </section>
+      )}
     </main>
   )
 }
@@ -35,7 +68,20 @@ const News = ({ data }) => {
   }
   return (
     <Layout>
-      <NewsTemplate {...page} {...page.frontmatter} />
+      <NewsTemplate
+        {...page}
+        {...page.frontmatter}
+        newsItems={data.newsItems.edges.map(item => ({
+          ...item.node,
+          ...item.node.frontmatter,
+          ...item.node.fields
+        }))}
+        services={data.services.edges.map(service => ({
+          ...service.node,
+          ...service.node.frontmatter,
+          ...service.node.fields
+        }))}
+      />
     </Layout>
   )
 }
@@ -50,6 +96,9 @@ export const pageQuery = graphql`
   query News($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
+      fields {
+        contentType
+      }
       frontmatter {
         title
         sectionGetInTouch {
@@ -62,6 +111,42 @@ export const pageQuery = graphql`
           button2 {
             text
             link
+          }
+        }
+      }
+    }
+    newsItems: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "news" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            services {
+              service
+            }
+            shortDescription
+            featuredImage
+          }
+        }
+      }
+    }
+    services: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "services" } } }
+      sort: { order: ASC, fields: [frontmatter___title] }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
           }
         }
       }

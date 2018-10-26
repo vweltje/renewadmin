@@ -1,0 +1,28 @@
+.About--teamBlocks {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.About--TeamMember {
+  width: 36rem;
+  height: 33rem;
+  background: var(--white);
+  border: 1px solid var(--secondary);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 4rem 4rem 4rem;
+}
+
+.About--TeamMember img {
+  height: 19rem;
+  width: 19rem;
+  margin: 0 auto;
+  transform: translateY(-9.5rem);
+  border-radius: 19rem;
+  border: 0.75rem solid var(--midGrey);
+  background: var(--midGrey);
+}

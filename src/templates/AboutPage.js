@@ -5,7 +5,10 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
 import InlineBanner from '../components/InlineBanner'
+import Image from '../components/Image'
+import ShareWidget from '../components/ShareWidget'
 import CertificationsSection from '../components/Certifications'
+
 import './AboutPage.css'
 
 // Export Template for use in CMS preview
@@ -17,7 +20,8 @@ export const AboutPageTemplate = ({
   teamTitle,
   servicesSection = {},
   inlineBanner = {},
-  certificationsSection = {}
+  certificationsSection = {},
+  team = {}
 }) => {
   const contentData = {
     shortDescription: shortDescription,
@@ -36,11 +40,29 @@ export const AboutPageTemplate = ({
           <ContentBlock content={contentData} />
         </div>
       </section>
-      <section className="section About--Team">
-        <div className="container">
-          <h1>{teamTitle}</h1>
-        </div>
-      </section>
+      {team && (
+        <section className="section About--Team">
+          <div className="container">
+            <h1>{teamTitle}</h1>
+            <div className="About--teamBlocks">
+              {team.map((TeamMember, i) => {
+                const member = {
+                  ...TeamMember.node.frontmatter
+                }
+                return (
+                  <div className="About--TeamMember" key={'teamMember-' + i}>
+                    <Image src={member.photo} alt={member.title} />
+                    <h4>{member.title}</h4>
+                    <span>{member.function}</span>
+                    <button className="Button Secondary">know more</button>
+                    <ShareWidget />
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
       {servicesSection && (
         <section className="section About--Services">
           <div className="container">
@@ -58,9 +80,9 @@ export const AboutPageTemplate = ({
 // Export Default AboutPage for front-end
 const AboutPage = ({ data }) => {
   const page = {
-    ...data.page
+    ...data.page,
+    team: [...data.teamMembers.edges]
   }
-
   return (
     <Layout>
       <AboutPageTemplate {...page} {...page.frontmatter} />
@@ -102,6 +124,26 @@ export const pageQuery = graphql`
           description
           shortDescription
           title
+        }
+      }
+    }
+    teamMembers: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "teamMembers" } } }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            photo
+            function
+            bio
+            socialMediaLinks {
+              googlePlus
+              linkedin
+              twitter
+            }
+            additionalInfo
+          }
         }
       }
     }

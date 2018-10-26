@@ -123,6 +123,13 @@ export const pageQuery = graphql`
           service
         }
         shortDescription
+        contentImages {
+          images {
+            Image
+            description
+          }
+        }
+        bodyOptional
         featuredImage
       }
     }

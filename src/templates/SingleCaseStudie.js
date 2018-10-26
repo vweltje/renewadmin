@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Helmet from 'react-helmet'
 import _kebabCase from 'lodash/kebabCase'
 import YouTube from 'react-youtube'
 
@@ -32,6 +33,10 @@ export const SingleCaseStudieTemplate = ({
 }) => {
   return (
     <main>
+      <Helmet>
+        <title>{caseStudie.title}</title>
+      </Helmet>
+
       <section className="section Case--Content">
         <div className="container">
           <h1>{caseStudie.title}</h1>

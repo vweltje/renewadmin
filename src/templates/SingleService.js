@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -23,6 +24,10 @@ export const SingleServiceTemplate = ({
   }
   return (
     <main>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <section className="section Service--TitleSection">
         <div className="container">
           <ContentBlock content={blockData} />

@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import _truncate from 'lodash/truncate'
 
@@ -13,24 +14,30 @@ import './HomePage.css'
 
 export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   return (
-    <section className="section Home--TitleSection">
-      <div className="container">
-        <h2>{subtitle}</h2>
-        <h1>{title}</h1>
-        <div className="ButtonBox">
-          <Link to={button1.link} className="Button Bordered">
-            {button1.text}
-          </Link>
-          <Link to={button2.link} className="Button">
-            {button2.text}
-          </Link>
+    <main>
+      <Helmet>
+        <title>{'Home'}</title>
+      </Helmet>
+
+      <section className="section Home--TitleSection">
+        <div className="container">
+          <h2>{subtitle}</h2>
+          <h1>{title}</h1>
+          <div className="ButtonBox">
+            <Link to={button1.link} className="Button Bordered">
+              {button1.text}
+            </Link>
+            <Link to={button2.link} className="Button">
+              {button2.text}
+            </Link>
+          </div>
+          <Image
+            src="/images/homeHeadingIllustration.png"
+            alt="Heading Illustration"
+          />
         </div>
-        <Image
-          src="/images/homeHeadingIllustration.png"
-          alt="Heading Illustration"
-        />
-      </div>
-    </section>
+      </section>
+    </main>
   )
 }
 

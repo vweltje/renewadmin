@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -16,14 +17,18 @@ export const niceTitle = title => {
 
 // Export Template for use in CMS preview
 export const CaseStudiesTemplate = ({
+  title,
   businessesSection = {},
   titleSection = {},
   sectionGetInTouch = {},
   caseStudies = {}
 }) => {
-  console.log(caseStudies)
   return (
     <main>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <section className="section CaseStudies--TitleSection">
         <div className="container">
           <div className="blockSmaller">
@@ -117,6 +122,7 @@ export const pageQuery = graphql`
     page: markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        title
         titleSection {
           title
           shortDescription

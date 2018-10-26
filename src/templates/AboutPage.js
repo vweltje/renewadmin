@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
@@ -25,6 +26,10 @@ export const AboutPageTemplate = ({
   }
   return (
     <main>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>

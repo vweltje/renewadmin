@@ -1,11 +1,12 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import Image from "../components/Image";
-import ContactForm from "../components/ContactForm";
+import Layout from '../components/Layout'
+import Image from '../components/Image'
+import ContactForm from '../components/ContactForm'
 
-import "./ContactPage.css";
+import './ContactPage.css'
 
 // Export Template for use in CMS preview
 export const ContactPageTemplate = ({
@@ -21,6 +22,10 @@ export const ContactPageTemplate = ({
 }) => {
   return (
     <main>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <section className="section ContactPage">
         <div className="container">
           <h1>{title}</h1>
@@ -46,15 +51,15 @@ export const ContactPageTemplate = ({
               <p>{contactInfo}</p>
             </div>
             <div>
-              {" "}
-              <ContactForm />{" "}
+              {' '}
+              <ContactForm />{' '}
             </div>
           </div>
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 // Export Default ContactPage for front-end
 const ContactPage = ({ data: { page } }) => {
@@ -62,10 +67,10 @@ const ContactPage = ({ data: { page } }) => {
     <Layout>
       <ContactPageTemplate {...page} {...page.frontmatter} />
     </Layout>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage
 
 export const pageQuery = graphql`
   ## Query for ContactPage data
@@ -88,4 +93,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

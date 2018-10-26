@@ -351,6 +351,7 @@ collections: # A list of collections the CMS should be able to edit
               default: CaseStudies,
             }
           - { label: Slug, name: slug, widget: hidden, default: case-studies }
+          - { label: Title, name: title, widget: string }
           - label: 'Title Section'
             name: 'titleSection'
             widget: 'object'

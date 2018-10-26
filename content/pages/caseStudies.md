@@ -1,6 +1,7 @@
 ---
 template: CaseStudiesIndex
 pageTitle: Case Studies
+title: Case Studies
 slug: case-studies
 titleSection:
   title: Join [1,000+] businesses on Renew Admin

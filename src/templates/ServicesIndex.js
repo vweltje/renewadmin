@@ -1,11 +1,12 @@
-import React from "react";
-import { graphql } from "gatsby";
+import React from 'react'
+import Helmet from 'react-helmet'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/Layout";
-import ContentBlock from "../components/ContentBlock";
-import ServicesGrid from "../components/ServicesGrid";
-import InlineBanner from "../components/InlineBanner";
-import "./Services.css";
+import Layout from '../components/Layout'
+import ContentBlock from '../components/ContentBlock'
+import ServicesGrid from '../components/ServicesGrid'
+import InlineBanner from '../components/InlineBanner'
+import './Services.css'
 
 // Export Template for use in CMS preview
 export const ServicesTemplate = ({
@@ -20,9 +21,13 @@ export const ServicesTemplate = ({
     shortDescription: shortDescription,
     description: description,
     image: image
-  };
+  }
   return (
     <main>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
+
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
@@ -32,27 +37,27 @@ export const ServicesTemplate = ({
         </div>
       </section>
     </main>
-  );
-};
+  )
+}
 
 // Export Default Services for front-end
 const Services = ({ data }) => {
-  const page = data.page;
-  let services = [];
+  const page = data.page
+  let services = []
   data.services.edges.map((service, index) => {
     return services.push({
       ...service.node.fields,
       ...service.node.frontmatter
-    });
-  });
+    })
+  })
   return (
     <Layout>
       <ServicesTemplate {...page} {...page.frontmatter} services={services} />
     </Layout>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
 
 export const pageQuery = graphql`
   ## Query for Services data
@@ -94,4 +99,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

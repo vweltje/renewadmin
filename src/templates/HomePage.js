@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import _truncate from 'lodash/truncate'
+import Slider from 'react-slick'
 
 import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
@@ -9,7 +10,10 @@ import ServicesGrid from '../components/ServicesGrid'
 import InlineBanner from '../components/InlineBanner'
 import Image from '../components/Image'
 import CertificationsSection from '../components/Certifications'
+import PostCard from '../components/PostCard'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 import './HomePage.css'
 
 export const TitleSection = ({ title, subtitle, button1, button2 }) => {
@@ -111,20 +115,48 @@ export const CaseStudiesSection = ({
   )
 }
 
-export const NewsSection = ({ title, description }) => {
-  let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+export const NewsSection = ({ title, description, newsItems = {} }) => {
   return (
-    <section className="section Home--NewsSection">
-      <div className="container">
-        <h2 className="taCenter">{title}</h2>
-        <p className="taCenter">{description}</p>
-        <div style={styles}>placeholder</div>
-      </div>
-    </section>
+    !!newsItems && (
+      <section className="section Home--NewsSection">
+        <div className="container">
+          <h2 className="taCenter">{title}</h2>
+          <p className="taCenter">{description}</p>
+        </div>
+        <div className="Home--NewsItems">
+          <Slider
+            {...{
+              dots: true,
+              infinite: true,
+              draggable: false,
+              initialSlide: 0,
+              slidesToScroll: 1,
+              slide: 'PostCard',
+              variableWidth: true,
+              centerMode: true,
+              arrows: true,
+              focusOnSelect: true,
+              autoplay: true,
+              autoplaySpeed: 2000
+            }}
+          >
+            {newsItems.map((item, index) => {
+              item = {
+                expect: item.node.frontmatter.shortDescription,
+                ...item.node.fields,
+                ...item.node.frontmatter
+              }
+              console.log(item)
+              return (
+                <div key={item.title + index}>
+                  <PostCard {...item} />
+                </div>
+              )
+            })}
+          </Slider>
+        </div>
+      </section>
+    )
   )
 }
 
@@ -140,7 +172,6 @@ export const HomePageTemplate = ({
   certificationsSection,
   services
 }) => {
-  console.log(caseStudiesSection)
   const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
   return (
     <main className="Home">
@@ -171,6 +202,10 @@ const HomePage = ({ data }) => {
       ...service.node.frontmatter
     })
   })
+  page.frontmatter.newsSection = {
+    ...page.frontmatter.newsSection,
+    newsItems: [...data.newsItems.edges]
+  }
   return (
     <Layout>
       <HomePageTemplate {...page} {...page.frontmatter} />
@@ -270,6 +305,28 @@ export const pageQuery = graphql`
           frontmatter {
             title
             shortDescription
+          }
+        }
+      }
+    }
+    newsItems: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "news" } } }
+      sort: { order: DESC, fields: [frontmatter___date] }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+            contentType
+          }
+          frontmatter {
+            title
+            categories {
+              category
+            }
+            shortDescription
+            featuredImage
           }
         }
       }

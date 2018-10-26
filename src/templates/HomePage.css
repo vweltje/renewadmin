@@ -120,3 +120,81 @@
   opacity: 0.3;
   transform: scale(1.05);
 }
+
+.slick-slider {
+  position: relative;
+}
+
+.slick-slide {
+  width: calc(33.33% - 2rem);
+  max-width: 37rem;
+}
+
+.slick-dots {
+  bottom: -5rem;
+}
+
+.slick-dots li button:before {
+  font-size: 1.2rem;
+}
+
+.slick-slide .PostCard {
+  display: block;
+  margin: 0 1rem;
+}
+
+.slick-arrow.slick-prev {
+  height: auto;
+  width: auto;
+  left: 5rem;
+  z-index: 1;
+}
+
+.slick-arrow.slick-next {
+  height: auto;
+  width: auto;
+  right: 5rem;
+  z-index: 1;
+}
+
+.slick-arrow.slick-prev::before,
+.slick-arrow.slick-next::before {
+  font-size: 5rem;
+}
+
+@supports (display: grid) {
+  .Home--NewsItemsGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 4rem;
+  }
+
+  .Home--NewsItemsGrid > * {
+    width: auto;
+    margin: 0;
+  }
+}
+
+.PostSection--Title {
+  width: 100%;
+  max-width: 200px;
+  margin: 0 auto 4rem auto;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 888px) {
+  .Home--NewsItemsGrid > * {
+    width: 100%;
+    max-width: 50rem;
+    margin: 0 auto 4rem;
+    display: block;
+  }
+
+  @supports (display: grid) {
+    .Home--NewsItemsGrid {
+      display: block;
+      grid-template-columns: 1;
+      grid-gap: 0;
+    }
+  }
+}

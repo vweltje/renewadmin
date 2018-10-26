@@ -12,8 +12,8 @@
   --danger: #ff3d3d;
   --white: #fff;
   --whiteFaded: rgba(255, 255, 255, 0.2);
-  --font-primary: "Open Sans", sans-serif;
-  --font-secondary: "Montserrat", sans-serif;
+  --font-primary: 'Open Sans', sans-serif;
+  --font-secondary: 'Montserrat', sans-serif;
   --font-system: system-ui; /* postcssPresetEnv */
   --borderRadius: 3px;
 }
@@ -36,6 +36,7 @@ body {
   letter-spacing: 0.01em;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 a {
@@ -56,7 +57,7 @@ strong {
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 h1,
@@ -125,7 +126,7 @@ code {
 code:before,
 code:after {
   letter-spacing: -0.2em;
-  content: "\00a0";
+  content: '\00a0';
 }
 pre code {
   font-size: inherit;
@@ -277,7 +278,7 @@ section:first-of-type {
   border: 2px solid var(--secondary);
 }
 .Button::after {
-  content: "";
+  content: '';
   display: block;
   position: absolute;
   top: -0.7rem;

@@ -23,7 +23,7 @@ export const SingleNewsItemTemplate = ({
     <article
       className="SingleNewsItem section light"
       itemScope
-      itemType="http://schema.org/BlogNewsIteming"
+      itemType="http://schema.org/blogPost"
     >
       <Helmet>
         <title>{title}</title>
@@ -108,19 +108,17 @@ export const SingleNewsItemTemplate = ({
 const SingleNewsItem = ({ data, pageContext }) => {
   // const { newsItem, allNewsItems } = data
   // const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
-  // return (
-  // <Layout>
-  //   <SingleNewsItemTemplate
-  //     {...newsItem}
-  //     {...newsItem.frontmatter}
-  //     body={newsItem.html}
-  //     nextNewsItemURL={_get(thisEdge, 'next.fields.slug')}
-  //     prevNewsItemURL={_get(thisEdge, 'previous.fields.slug')}
-  //   />
-  // </Layout>
-  // )
-
-  return ''
+  return (
+    <Layout>
+      {/* <SingleNewsItemTemplate
+      {...newsItem}
+      {...newsItem.frontmatter}
+      body={newsItem.html}
+      nextNewsItemURL={_get(thisEdge, 'next.fields.slug')}
+      prevNewsItemURL={_get(thisEdge, 'previous.fields.slug')}
+    /> */}
+    </Layout>
+  )
 }
 
 export default SingleNewsItem
@@ -134,6 +132,43 @@ export const pageQuery = graphql`
     newsItem: markdownRemark(id: { eq: $id }) {
       html
       id
+      frontmatter {
+        title
+        template
+        date
+        services {
+          service
+        }
+        shortDescription
+        featuredImage
+      }
     }
+
+    # allNewsItems: allMarkdownRemark(
+    #   filter: { fields: { contentType: { eq: "news" } } }
+    #   sort: { order: DESC, fields: [frontmatter___date] }
+    # ) {
+    #   edges {
+    #     node {
+    #       id
+    #     }
+    #     next {
+    #       fields {
+    #         slug
+    #       }
+    #       frontmatter {
+    #         title
+    #       }
+    #     }
+    #     previous {
+    #       fields {
+    #         slug
+    #       }
+    #       frontmatter {
+    #         title
+    #       }
+    #     }
+    #   }
+    # }
   }
 `

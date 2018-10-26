@@ -10,7 +10,7 @@ shortDescription: >-
   Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
   neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
   tincidunt. Proin tristique, turpis in consequat ullamcorper.
-infoSection:
+contentImages:
   images:
     - Image: 'https://ucarecdn.com/f5691196-91d0-4d3b-ac97-516f7ae2fd34/'
       description: this is a caption id
@@ -37,6 +37,7 @@ bodyOptional: >-
   condimentum, non pellentesque odio porttitor. Morbi commodo urna sollicitudin
   risus euismod mollis.
 ---
+
 Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac tincidunt. Proin tristique, turpis in consequat ullamcorper, felis urna pharetra est, in scelerisque quam nibh facilisis tortor. Proin commodo urna sit amet eleifend consectetur. Morbi non enim euismod, pretium augue vitae, mattis leo.
 
 Duis tempus, diam eu finibus tincidunt, enim risus dignissim ante, nec vestibulum nulla lacus ut arcu. Morbi at lacus ante. Donec in pharetra dolor. Nulla et ante nisl. Morbi semper auctor nibh ac tempor. Mauris eu dolor ac nisi gravida lacinia non non urna. Etiam gravida odio sit amet quam condimentum, non pellentesque odio porttitor. Morbi commodo urna sollicitudin risus euismod mollis.

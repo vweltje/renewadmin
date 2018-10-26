@@ -10,7 +10,7 @@ shortDescription: >-
   Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
   neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
   tincidunt. Proin tristique, turpis in consequat ullamcorper.
-infoSection:
+contentImages:
   images:
     - Image: 'https://ucarecdn.com/f5691196-91d0-4d3b-ac97-516f7ae2fd34/'
       description: this is a caption id

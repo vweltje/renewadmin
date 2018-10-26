@@ -12,10 +12,12 @@ services:
   Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
   neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
   tincidunt. Proin tristique, turpis in consequat ullamcorper.
-  infoSection:
-  images: - Image: 'https://ucarecdn.com/f5691196-91d0-4d3b-ac97-516f7ae2fd34/'
-  description: this is a caption id - Image: 'https://ucarecdn.com/7851a46b-682c-418c-adc4-4884c0418001/'
-  description: this is another caption id
+  contentImages:
+    images:
+      - Image: 'https://ucarecdn.com/f5691196-91d0-4d3b-ac97-516f7ae2fd34/'
+        description: this is a caption id
+      - Image: 'https://ucarecdn.com/7851a46b-682c-418c-adc4-4884c0418001/'
+        description: this is another caption id
   bodyOptional: >-
   Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
   neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac

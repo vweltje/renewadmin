@@ -3,26 +3,48 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  padding-top: 20rem;
 }
 
 .About--TeamMember {
+  position: relative;
   width: 36rem;
   height: 33rem;
   background: var(--white);
   border: 1px solid var(--secondary);
   border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   padding: 0 4rem 4rem 4rem;
+  text-align: center;
+}
+
+.About--TeamMember .Button {
+  margin: 0 auto;
 }
 
 .About--TeamMember img {
-  height: 19rem;
-  width: 19rem;
+  transform: translateY(-50%);
+  height: 17rem;
+  width: 17rem;
   margin: 0 auto;
-  transform: translateY(-9.5rem);
+  display: block;
+  position: relative;
   border-radius: 19rem;
   border: 0.75rem solid var(--midGrey);
   background: var(--midGrey);
+}
+
+.About--TeamMember > div {
+  transform: translateY(calc(-50% + 2.5rem));
+}
+
+.About--TeamMember span {
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+.About--TeamMember .ShareWidget {
+  transform: none;
+  left: 0;
 }

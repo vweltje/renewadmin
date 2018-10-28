@@ -16,3 +16,7 @@
 .ShareWidget a svg {
   transform: scale(0.9);
 }
+
+.ShareWidget a:last-of-type {
+  margin-right: 0;
+}

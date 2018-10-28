@@ -52,10 +52,12 @@ export const AboutPageTemplate = ({
                 return (
                   <div className="About--TeamMember" key={'teamMember-' + i}>
                     <Image src={member.photo} alt={member.title} />
-                    <h4>{member.title}</h4>
-                    <span>{member.function}</span>
-                    <button className="Button Secondary">know more</button>
-                    <ShareWidget />
+                    <div>
+                      <h3>{member.title}</h3>
+                      <span>{member.function}</span>
+                      <button className="Button Secondary">know more</button>
+                      <ShareWidget noHeading />
+                    </div>
                   </div>
                 )
               })}

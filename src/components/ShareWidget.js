@@ -6,7 +6,7 @@ export default class ShareWidget extends React.Component {
   render() {
     return (
       <div className="ShareWidget">
-        <h4>Share on</h4>
+        {!this.props.noHeading && <h4>Share on</h4>}
         <a
           href="https://twitter.com/"
           target="_blank"

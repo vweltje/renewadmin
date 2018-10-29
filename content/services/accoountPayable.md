@@ -14,7 +14,7 @@ description: >-
   est, ac varius urna consequat non. Sed auctor, libero sit amet tempor
   fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet
   lorem.
-image: "https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/"
+image: 'https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/'
 infoSection:
   infoblocks:
     - title: Title for excesive info goes here
@@ -61,10 +61,18 @@ infoSection:
 getInTouchSection:
   button1:
     text: create account
-    link: ""
+    link: ''
   button2:
     text: contact us
-    link: ""
+    link: ''
   subtitle: Ready to get started?
   title: Get in touch or create an account.
+howItWorks:
+  steps:
+    - title: Create sales invoices
+    - title: Send to receipt bank or hubdoc
+    - title: receipts/invoices are coded to account software
+    - title: coded to account software
+    - title: if payments scheduled bookkeeper creates
+    - title: Pay unvoices
 ---

@@ -1,6 +1,7 @@
 ---
 template: SingleService
 title: Work Flow Efficiency
+status: Published
 shortDescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
   nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis

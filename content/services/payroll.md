@@ -1,6 +1,7 @@
 ---
 template: SingleService
 title: Payroll
+status: Featured
 shortDescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
   nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis
@@ -66,4 +67,3 @@ howItWorks:
     - title: if payments scheduled bookkeeper creates
     - title: Pay unvoices
 ---
-

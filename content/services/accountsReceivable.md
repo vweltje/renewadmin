@@ -1,6 +1,7 @@
 ---
 template: SingleService
 title: Accounts Receivable
+status: Featured
 shortDescription: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
   nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis

@@ -8,6 +8,91 @@ import ServicesGrid from '../components/ServicesGrid'
 
 import './HowItWorksPage.css'
 
+export class StepSection extends React.Component {
+  static defaultProps = {
+    services: {}
+  }
+
+  state = {
+    activeService: 0
+  }
+
+  handleServiceNavClick = index => {
+    const activeService =
+      this.state.activeService === index ? this.state.activeService : index
+    this.setState({ activeService })
+  }
+
+  getIconSrc(slug) {
+    let icon
+    if (slug.includes('account-payable')) icon = 'payable'
+    else if (slug.includes('accounts-receivable')) icon = 'receive'
+    else if (slug.includes('bas')) icon = 'bas'
+    else if (slug.includes('month-end')) icon = 'month'
+    else if (slug.includes('payg')) icon = 'pay'
+    else if (slug.includes('payroll')) icon = 'payroll'
+    else if (slug.includes('reconciliations')) icon = 'reconciliantion'
+    else if (slug.includes('superannuation')) icon = 'super'
+    else if (slug.includes('work-flow-efficiency')) icon = 'flow'
+    return icon
+  }
+
+  render() {
+    let services =
+      !!this.props.services &&
+      this.props.services.filter(item => item.status === 'Featured')
+
+    return (
+      <div className="ServiceSteps">
+        <div className="ServiceStepsNav">
+          {services.map((service, i) => {
+            return (
+              <div
+                className={
+                  'ServiceNavItem ' +
+                  (this.state.activeService === i ? 'active' : '')
+                }
+                key={'ServiceNavItem-' + i}
+                onClick={() => this.handleServiceNavClick(i)}
+              >
+                <div
+                  className={'Service--Icon ' + this.getIconSrc(service.slug)}
+                />
+                <span>{service.title}</span>
+              </div>
+            )
+          })}
+        </div>
+        <div className="ServiceStepsContentBlocks">
+          {services.map((service, i) => {
+            return (
+              <div
+                className={
+                  'ServiceStepsContentBlock ' +
+                  (this.state.activeService === i ? 'active' : '')
+                }
+                key={'ServiceStepsContentBlock-' + i}
+              >
+                {service.howItWorks.steps.map((step, num) => {
+                  return (
+                    <div
+                      className="ServiceStepsContentBlockItem"
+                      key={'step-' + num}
+                    >
+                      <span>{num + 1}</span>
+                      <p>{step.title}</p>
+                    </div>
+                  )
+                })}
+              </div>
+            )
+          })}
+        </div>
+      </div>
+    )
+  }
+}
+
 // Export Template for use in CMS preview
 export const HowItWorksPageTemplate = ({
   title,
@@ -21,11 +106,7 @@ export const HowItWorksPageTemplate = ({
     description: description,
     image: image
   }
-  let styles = {
-    width: '100%',
-    height: '650px',
-    background: '#33495b'
-  }
+
   return (
     <main>
       <Helmet>
@@ -38,7 +119,7 @@ export const HowItWorksPageTemplate = ({
           <ContentBlock content={contentData} />
           <section className="section Home--CaseStudiesSection">
             <div className="container">
-              <div style={styles}>placeholder</div>
+              <StepSection services={services} />
             </div>
           </section>
           <ServicesGrid services={services} />
@@ -96,7 +177,13 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            status
             shortDescription
+            howItWorks {
+              steps {
+                title
+              }
+            }
           }
         }
       }

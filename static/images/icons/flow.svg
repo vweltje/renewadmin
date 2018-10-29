@@ -1,6 +1,5 @@
 <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg">
   <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
-    <circle stroke="#5C8098" stroke-width="2" cx="25" cy="25" r="25"/>
     <path fill="#5C8098" d="M28 12v1.95h-4.55v9.75H21.5v-1.95H15v6.5h6.5V26.3h1.95v9.75H28V38h6.5v-6.5H28v1.95h-1.95V26.3H28v1.95h6.5v-6.5H28v1.95h-1.95v-7.15H28v1.95h6.5V12z"/>
   </g>
 </svg>

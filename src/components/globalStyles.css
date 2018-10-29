@@ -352,3 +352,44 @@ section:first-of-type {
   align-items: center;
   justify-content: center;
 }
+
+/*
+  Service icons
+*/
+.Service--Icon.payable {
+  mask-image: url('/images/icons/payable.svg');
+}
+.Service--Icon.receive {
+  mask-image: url('/images/icons/receive.svg');
+}
+.Service--Icon.bas {
+  mask-image: url('/images/icons/bas.svg');
+}
+.Service--Icon.month {
+  mask-image: url('/images/icons/month.svg');
+}
+.Service--Icon.pay {
+  mask-image: url('/images/icons/pay.svg');
+}
+.Service--Icon.payroll {
+  mask-image: url('/images/icons/payroll.svg');
+}
+.Service--Icon.reconciliantion {
+  mask-image: url('/images/icons/reconciliantion.svg');
+}
+.Service--Icon.super {
+  mask-image: url('/images/icons/super.svg');
+}
+.Service--Icon.flow {
+  mask-image: url('/images/icons/flow.svg');
+}
+
+.Service--Icon {
+  background-color: var(--secondary);
+  position: relative;
+  width: 5.2rem;
+  height: 5.2rem;
+  max-width: 6rem;
+  margin-bottom: 2rem;
+  transition: ease all 0.3s;
+}

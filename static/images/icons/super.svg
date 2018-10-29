@@ -2,8 +2,7 @@
   <defs>
     <path id="a" d="M0 0h15.347v21.135H0z"/>
   </defs>
-  <g transform="translate(1 1)" fill="none" fill-rule="evenodd">
-    <circle stroke="#5C8098" stroke-width="2" cx="25" cy="25" r="25"/>
+  <g transform="translate(1 1)" fill="none" fill-rule="evenodd">  
     <path d="M17 33.12l.25-.045-.001-.075-.249.12z" fill="#000"/>
     <path d="M26.892 16.783a2.892 2.892 0 1 0 0-5.783 2.892 2.892 0 0 0 0 5.783" fill="#5C8098"/>
     <g transform="translate(17 17.182)">

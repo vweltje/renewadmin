@@ -146,7 +146,6 @@ export const NewsSection = ({ title, description, newsItems = {} }) => {
                 ...item.node.fields,
                 ...item.node.frontmatter
               }
-              console.log(item)
               return (
                 <div key={item.title + index}>
                   <PostCard {...item} />

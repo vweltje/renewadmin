@@ -67,15 +67,17 @@ export const SingleCaseStudieTemplate = ({
             </div>
             <div>
               <Image src={caseStudie.image} alt={caseStudie.title} />
-              <YouTube
-                videoId={YouTubeGetID(caseStudie.youtubeVideo)}
-                opts={{
-                  playerVars: {
-                    // https://developers.google.com/youtube/player_parameters
-                    autoplay: false
-                  }
-                }}
-              />
+              {!!caseStudie.youtubeVide && (
+                <YouTube
+                  videoId={YouTubeGetID(caseStudie.youtubeVideo)}
+                  opts={{
+                    playerVars: {
+                      // https://developers.google.com/youtube/player_parameters
+                      autoplay: false
+                    }
+                  }}
+                />
+              )}
             </div>
           </div>
         </div>
@@ -85,7 +87,11 @@ export const SingleCaseStudieTemplate = ({
           <div className="edges">
             {(() => {
               const prev = edges.previous
-              if (prev !== null) {
+              if (
+                prev !== null &&
+                typeof prev === 'object' &&
+                prev.hasOwnProperty('fields')
+              ) {
                 return (
                   <Link to={prev.fields.slug} className="edge">
                     <Image
@@ -107,7 +113,11 @@ export const SingleCaseStudieTemplate = ({
             })()}
             {(() => {
               const next = edges.next
-              if (edges.next !== null) {
+              if (
+                next !== null &&
+                typeof next === 'object' &&
+                next.hasOwnProperty('fields')
+              ) {
                 return (
                   <Link to={next.fields.slug} className="edge">
                     <Image

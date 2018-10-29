@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 
 // import 'intersection-observer'
 // import Observer from '@researchgate/react-intersection-observer'
 
-import "./Image.css";
+import './Image.css'
 
 class Image extends React.Component {
   // state = {
@@ -19,25 +19,25 @@ class Image extends React.Component {
   // }
 
   checkIfIsLocalSrc(src) {
-    if (src.includes("ucarecdn.com")) return false;
-    return true;
+    if (src && src.includes('ucarecdn.com')) return false
+    return true
   }
 
   render() {
     let {
       background,
-      backgroundSize = "cover",
-      resolutions = "1000x",
-      className = "",
+      backgroundSize = 'cover',
+      resolutions = '1000x',
+      className = '',
       src,
       // secSet = "",
       fullSrc,
       // smallSrc,
       onClick,
-      alt = ""
-    } = this.props;
+      alt = ''
+    } = this.props
 
-    const isLocalImg = this.checkIfIsLocalSrc(src);
+    const isLocalImg = this.checkIfIsLocalSrc(src)
     /* create source set for images */
     // if (!isLocalImg) {
     //   secSet = `
@@ -55,32 +55,32 @@ class Image extends React.Component {
     // }
 
     /* add resolutions options for inline images */
-    if (resolutions === "small") {
-      resolutions = "800x";
-    } else if (resolutions === "medium") {
-      resolutions = "1000x";
-    } else if (resolutions === "large") {
-      resolutions = "2000x";
+    if (resolutions === 'small') {
+      resolutions = '800x'
+    } else if (resolutions === 'medium') {
+      resolutions = '1000x'
+    } else if (resolutions === 'large') {
+      resolutions = '2000x'
     }
 
     fullSrc = `${src}${
       isLocalImg
-        ? ""
-        : "-/progressive/yes/-/format/auto/-/resize/" + resolutions + "/"
-    }`;
+        ? ''
+        : '-/progressive/yes/-/format/auto/-/resize/' + resolutions + '/'
+    }`
     // smallSrc = `${src}${
     //   isLocalImg ? '' : '-/progressive/yes/-/format/auto/-/resize/10x/'
     // }`
 
     if (background) {
-      let style = {};
+      let style = {}
       style = {
         // backgroundImage: `url(${
         //   this.state.isIntersecting ? fullSrc : smallSrc
         // })`,
         backgroundImage: `url(${fullSrc})`,
         backgroundSize
-      };
+      }
       return (
         // <Observer onChange={this.handleIntersection}>
         <div
@@ -88,7 +88,7 @@ class Image extends React.Component {
           style={style}
         />
         // </Observer>
-      );
+      )
     }
 
     return (
@@ -99,17 +99,17 @@ class Image extends React.Component {
         // srcSet={secSet}
         // src={this.state.isIntersecting ? fullSrc : smallSrc}
         // srcSet={this.state.isIntersecting ? secSet : ''}
-        sizes={"100vw"}
+        sizes={'100vw'}
         onClick={onClick}
         alt={alt}
       />
       // </Observer>
-    );
+    )
   }
 }
 
 Image.propTypes = {
   alt: PropTypes.string.isRequired
-};
+}
 
-export default Image;
+export default Image

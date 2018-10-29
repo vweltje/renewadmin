@@ -246,6 +246,33 @@ collections: # A list of collections the CMS should be able to edit
                   options: { media_library: { config: { multiple: true } } },
                 }
 
+      - file: 'content/pages/howItWorks.md'
+        label: 'How It Works Page'
+        name: 'how-it-works-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: HowItWorksPage,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: How It Works,
+            }
+          - {
+              label: Slug,
+              name: slug,
+              widget: hidden,
+              default: 'how-it-works-page',
+            }
+          - { label: title, name: title, widget: string }
+          - { label: short description, name: shortDescription, widget: text }
+          - { label: description, name: description, widget: text }
+          - { label: Image, name: image, widget: image }
+
       - file: 'content/pages/contact.md'
         label: 'Contact Page'
         name: 'contact-page'
@@ -547,6 +574,15 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: 'title', name: 'title', widget: 'string' }
               - { label: description, name: description, widget: text }
+      - label: 'How It Works'
+        name: 'howItWorks'
+        widget: 'object'
+        fields:
+          - label: 'Steps'
+            name: 'steps'
+            widget: 'list'
+            fields:
+              - { label: 'title', name: 'title', widget: 'string' }
 
   - name: case-studie
     label: Case Studie

@@ -48,3 +48,110 @@
   transform: none;
   left: 0;
 }
+
+.About--TeamPopover {
+  position: fixed;
+  opacity: 0;
+  background-color: var(--secondaryFaded);
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+.About--TeamPopover.active {
+  opacity: 1;
+  top: 0;
+}
+
+.About--TeamPopoverContent {
+  position: relative;
+  width: 96rem;
+  height: 62rem;
+  border: 1px solid var(--secondary);
+  border-radius: 1rem;
+  background-color: var(--white);
+  margin: 0 auto;
+  padding: 0 10rem 8rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.About--TeamPopoverContent img {
+  transform: translateY(-50%);
+  height: 17rem;
+  width: 17rem;
+  margin: 0 auto;
+  display: block;
+  position: relative;
+  border-radius: 19rem;
+  border: 0.75rem solid var(--midGrey);
+  background: var(--midGrey);
+}
+
+.About--TeamPopoverContent > div {
+  margin-top: -5rem;
+}
+
+.About--TeamPopoverContent h3,
+.About--TeamPopoverContent > div > span {
+  text-align: center;
+}
+
+.About--TeamPopoverContent > div > span {
+  width: 100%;
+  display: inline-block;
+  color: var(--primary);
+  text-transform: uppercase;
+}
+
+.About--TeamPopoverContentSplitVieuw {
+  display: flex;
+  flex-direction: row;
+}
+
+.About--TeamPopoverContentSplitVieuw > div:first-child {
+  width: 75%;
+  padding-right: 5rem;
+}
+
+.About--TeamPopoverContentSplitVieuw > div:first-child .ShareWidget {
+  left: 0;
+  transform: none;
+  margin-top: 2rem;
+}
+
+.About--TeamPopoverContentSplitVieuw > div:first-child .ShareWidget h4 {
+  margin-bottom: 2rem;
+}
+
+.Content p strong {
+  color: var(--secondary);
+}
+
+.Content * {
+  color: var(--darkerGreyLessFaded);
+}
+
+.About--TeamPopoverContentClose {
+  background-image: url('/images/icons/crossIcon.svg');
+  border: none;
+  background-color: none;
+  height: 3rem;
+  width: 3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  transition: 0.3s all ease-in-out;
+}
+
+.About--TeamPopoverContentClose:hover {
+  transform: rotate(-180deg);
+}

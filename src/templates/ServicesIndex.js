@@ -31,8 +31,8 @@ export const ServicesTemplate = ({
       <section className="section About--TitleSection">
         <div className="container">
           <h1>{title}</h1>
-          <ContentBlock content={contentData} />
-          <ServicesGrid services={services} />
+          {!!contentData && <ContentBlock content={contentData} />}
+          {!!services && <ServicesGrid services={services} />}
           {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
         </div>
       </section>

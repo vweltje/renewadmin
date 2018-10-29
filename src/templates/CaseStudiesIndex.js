@@ -29,71 +29,84 @@ export const CaseStudiesTemplate = ({
         <title>{title}</title>
       </Helmet>
 
-      <section className="section CaseStudies--TitleSection">
-        <div className="container">
-          <div className="blockSmaller">
-            <h1
-              dangerouslySetInnerHTML={{
-                __html: niceTitle(titleSection.title)
-              }}
-            />
-            <p className="larger">{titleSection.shortDescription}</p>
-            <p>{titleSection.description}</p>
+      {!!titleSection && (
+        <section className="section CaseStudies--TitleSection">
+          <div className="container">
+            <div className="blockSmaller">
+              <h1
+                dangerouslySetInnerHTML={{
+                  __html: niceTitle(titleSection.title)
+                }}
+              />
+              <p className="larger">{titleSection.shortDescription}</p>
+              <p>{titleSection.description}</p>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
-          <div className="CaseStudies--Cases">
-            {caseStudies.map((studie, i) => {
-              studie = {
-                ...studie.node.fields,
-                ...studie.node.frontmatter
-              }
-              return (
-                <Link
-                  to={studie.slug}
-                  className="caseStudie"
-                  key={_kebabCase(studie.slug) + '-' + i}
-                >
+        </section>
+      )}
+
+      {!!caseStudies && (
+        <section className="section">
+          <div className="container">
+            <div className="CaseStudies--Cases">
+              {caseStudies.map((studie, i) => {
+                studie = {
+                  ...studie.node.fields,
+                  ...studie.node.frontmatter
+                }
+                return (
+                  <Link
+                    to={studie.slug}
+                    className="caseStudie"
+                    key={_kebabCase(studie.slug) + '-' + i}
+                  >
+                    <Image
+                      background
+                      src={studie.image}
+                      className="BackgroundOverlay"
+                    />
+                    <Image
+                      src={studie.clientLogo}
+                      alt={_kebabCase(studie.slug)}
+                      className="clientLogo"
+                    />
+                    <button className="Button Quaternary">
+                      See case studie
+                    </button>
+                  </Link>
+                )
+              })}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {!!businessesSection && (
+        <section className="section CaseStudies--BusinessLogos">
+          <div className="container">
+            <h2>{businessesSection.title}</h2>
+            <div>
+              {businessesSection.logos.map((logo, index) => {
+                return (
                   <Image
-                    background
-                    src={studie.image}
-                    className="BackgroundOverlay"
+                    src={logo}
+                    alt={'Logo ' + index}
+                    key={'BusinessLogo-' + index}
                   />
-                  <Image
-                    src={studie.clientLogo}
-                    alt={_kebabCase(studie.slug)}
-                    className="clientLogo"
-                  />
-                  <button className="Button Quaternary">See case studie</button>
-                </Link>
-              )
-            })}
+                )
+              })}
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="section CaseStudies--BusinessLogos">
-        <div className="container">
-          <h2>{businessesSection.title}</h2>
-          <div>
-            {businessesSection.logos.map((logo, index) => {
-              return (
-                <Image
-                  src={logo}
-                  alt={'Logo ' + index}
-                  key={'BusinessLogo-' + index}
-                />
-              )
-            })}
+        </section>
+      )}
+
+      {!!sectionGetInTouch && (
+        <section className="section">
+          <div className="container">
+            <GetInTouchBlock content={sectionGetInTouch} />
           </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="container">
-          <GetInTouchBlock content={sectionGetInTouch} />
-        </div>
-      </section>
+        </section>
+      )}
     </main>
   )
 }

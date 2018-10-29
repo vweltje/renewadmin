@@ -33,21 +33,25 @@ export const SingleServiceTemplate = ({
           <ContentBlock content={blockData} />
         </div>
       </section>
-      <section className="section Service--Info">
-        <div className="container">
-          <h3 className="taCenter">{infoSection.title}</h3>
-          <Accordion items={infoSection.infoblocks} />
-        </div>
-      </section>
-      <section className="section Service--Contact">
-        <div className="container">
-          <GetInTouchBlock
-            content={
-              getInTouchSection.edges[0].node.frontmatter.sectionGetInTouch
-            }
-          />
-        </div>
-      </section>
+      {!!infoSection && (
+        <section className="section Service--Info">
+          <div className="container">
+            <h3 className="taCenter">{infoSection.title}</h3>
+            <Accordion items={infoSection.infoblocks} />
+          </div>
+        </section>
+      )}
+      {!!getInTouchSection && (
+        <section className="section Service--Contact">
+          <div className="container">
+            <GetInTouchBlock
+              content={
+                getInTouchSection.edges[0].node.frontmatter.sectionGetInTouch
+              }
+            />
+          </div>
+        </section>
+      )}
     </main>
   )
 }

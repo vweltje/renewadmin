@@ -56,7 +56,7 @@ export const ServicesSection = ({
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
-        <ServicesGrid services={services} showDescription />
+        {!!services && <ServicesGrid services={services} showDescription />}
         <Link to={button.link} className="Button">
           {button.text}
         </Link>

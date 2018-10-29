@@ -51,13 +51,16 @@ export class AboutPageTemplate extends React.Component {
           <title>{page.title}</title>
         </Helmet>
 
-        <section className="section About--TitleSection">
-          <div className="container">
-            <h1>{page.title}</h1>
-            <ContentBlock content={contentData} />
-          </div>
-        </section>
-        {page.team && (
+        {!!contentData && (
+          <section className="section About--TitleSection">
+            <div className="container">
+              <h1>{page.title}</h1>
+              <ContentBlock content={contentData} />
+            </div>
+          </section>
+        )}
+
+        {!!page.team && (
           <section className="section About--Team">
             <div className="container">
               <h1>{page.teamTitle}</h1>
@@ -123,7 +126,8 @@ export class AboutPageTemplate extends React.Component {
             </div>
           </section>
         )}
-        {page.servicesSection && (
+
+        {!!page.servicesSection && (
           <section className="section About--Services">
             <div className="container">
               <h1>{page.servicesSection.title}</h1>
@@ -131,10 +135,14 @@ export class AboutPageTemplate extends React.Component {
             </div>
           </section>
         )}
-        {page.inlineBanner && (
+
+        {!!page.inlineBanner && (
           <InlineBanner className="light" {...page.inlineBanner} />
         )}
-        <CertificationsSection {...page.certificationsSection} />
+
+        {!!page.certificationsSection && (
+          <CertificationsSection {...page.certificationsSection} />
+        )}
       </main>
     )
   }

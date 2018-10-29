@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'gatsby'
+import { Menu, X } from 'react-feather'
 // import 'intersection-observer'
 // import Observer from '@researchgate/react-intersection-observer'
 
@@ -88,6 +89,12 @@ export default class Nav extends Component {
               <span>Signup</span>
             </NavLink>
           </div>
+          <button
+            className="Button-blank Nav--MenuButton"
+            onClick={this.handleMenuToggle}
+          >
+            {active ? <X /> : <Menu />}
+          </button>
         </div>
       </nav>
     )

@@ -3,8 +3,7 @@
   top: 0;
   z-index: 1;
   border-bottom: 1px solid var(--lightGrey);
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.025); */
-  padding: 3rem;
+  padding: 3rem 0;
 }
 
 .Nav--Container {
@@ -22,13 +21,21 @@
   flex-direction: row;
 }
 
-.Nav--Links > * + * {
-  margin-left: 3rem;
+@media (min-width: 1440px) {
+  .Nav--Links > * + * {
+    margin-left: 3rem;
+  }
 }
 
 .Nav .Logo {
-  margin-right: 3rem;
   position: relative;
+}
+
+@media (min-width: 1440px) {
+  .Nav .Logo {
+    margin-right: 3rem;
+    position: relative;
+  }
 }
 
 .Nav--MenuButton {
@@ -87,7 +94,7 @@
   margin-top: 0.4rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1024px) {
   .Nav--Container {
     display: flex;
   }
@@ -157,6 +164,19 @@
   }
   .Nav .NavLink:nth-of-type(7) {
     animation-delay: 0.6s;
+  }
+
+  .NavLink.ButtonSignup {
+    width: 25rem;
+    margin-left: 0;
+  }
+
+  .NavLink.ButtonSignup::after {
+    display: none;
+  }
+
+  .NavLink.ButtonSignup svg {
+    margin-top: 1.4rem;
   }
 }
 

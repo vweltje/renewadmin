@@ -6,6 +6,12 @@
   padding: 3rem 0;
 }
 
+@media (max-width: 1024px) {
+  .Nav {
+    padding: 1rem 0;
+  }
+}
+
 .Nav--Container {
   display: flex;
   justify-content: space-between;

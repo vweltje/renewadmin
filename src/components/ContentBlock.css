@@ -45,3 +45,43 @@
   width: 21rem;
   margin-top: 2rem;
 }
+
+@media (max-width: 768px) {
+  .ContentBlock {
+    flex-direction: column;
+  }
+
+  .ContentBlock:nth-of-type(2n + 2) {
+    flex-direction: column;
+    margin-top: 15rem;
+  }
+
+  .ContentBlock > div {
+    width: 100%;
+  }
+
+  .ContentBlock > div:first-of-type {
+    padding-right: 0;
+  }
+
+  .ContentBlock > div:last-of-type {
+    margin-top: 4rem;
+    padding-left: 0;
+  }
+
+  .ContentBlock > div:last-of-type img {
+    display: none;
+  }
+
+  .ContentBlock:nth-of-type(2n + 2) > div:last-of-type {
+    padding-right: 0;
+  }
+
+  .ContentBlock:nth-of-type(2n + 2) > div:first-of-type {
+    padding-left: 0;
+  }
+
+  .ContentBlock:nth-of-type(2n + 2) {
+    margin-top: 0;
+  }
+}

@@ -97,3 +97,30 @@
   bottom: 0;
   right: 0;
 }
+
+@media (max-width: 768px) {
+  .ServicesGrid--service {
+    width: 50%;
+  }
+
+  .ServicesGrid--service {
+    border-top: 1px solid var(--darkerGrey);
+  }
+
+  .ServicesGrid--service:nth-of-type(3) {
+    border-top: 1px solid var(--darkerGrey);
+  }
+
+  .ServicesGrid--service:nth-of-type(2),
+  .ServicesGrid--service:nth-of-type(4),
+  .ServicesGrid--service:nth-of-type(6),
+  .ServicesGrid--service:nth-of-type(8) {
+    border-right: 0;
+    border-left: 1px solid var(--darkerGrey);
+  }
+
+  .ServicesGrid--service:nth-of-type(5) {
+    border-right: 0;
+    border-left: 0;
+  }
+}

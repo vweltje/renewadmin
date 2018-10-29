@@ -177,13 +177,14 @@ export const HomePageTemplate = ({
       <TitleSection {...titleSection} />
       <ContentBlock content={infoSectionData} multiple />
       <ServicesSection {...servicesSection} services={services} />
-      <InlineBanner {...inlineBanner} />
-      <CaseStudiesSection {...caseStudiesSection} />
-      <NewsSection {...newsSection} />
-      <CertificationsSection {...certificationsSection} />
     </main>
   )
 }
+
+// <InlineBanner {...inlineBanner} />
+// <CaseStudiesSection {...caseStudiesSection} />
+// <NewsSection {...newsSection} />
+// <CertificationsSection {...certificationsSection} />
 
 // Export Default HomePage for front-end
 const HomePage = ({ data }) => {

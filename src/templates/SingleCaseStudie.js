@@ -55,14 +55,15 @@ export const SingleCaseStudieTemplate = ({
               </div>
               <blockquote>{caseStudie.quote}</blockquote>
 
-              {caseStudie.contentBlock.map((item, i) => {
-                return (
-                  <div key={_kebabCase(item.title) + '-' + i}>
-                    <h3>{item.title}</h3>
-                    <p>{item.text}</p>
-                  </div>
-                )
-              })}
+              {!!caseStudie.contentBlock &&
+                caseStudie.contentBlock.map((item, i) => {
+                  return (
+                    <div key={_kebabCase(item.title) + '-' + i}>
+                      <h3>{item.title}</h3>
+                      <p>{item.text}</p>
+                    </div>
+                  )
+                })}
             </div>
             <div>
               <Image src={caseStudie.image} alt={caseStudie.title} />

@@ -78,6 +78,7 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
                 href="https://twitter.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Twitter"
               >
                 <svg width="16" height="14" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -90,6 +91,7 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Facebook"
               >
                 <svg width="9" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -102,6 +104,7 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
                 href="https://plus.google.com/"
                 target="_blank"
                 rel="noopener noreferrer"
+                title="Google Plug"
               >
                 <svg width="25" height="16" xmlns="http://www.w3.org/2000/svg">
                   <path

@@ -19,6 +19,7 @@ export default ({ children }) => (
       <Layout>
         <Helmet>
           <title>404 – Page Not Found</title>
+          <html lang="en" />
         </Helmet>
         <section className="section thick">
           <div className="container skinny taCenter">

@@ -33,6 +33,7 @@ export default ({ children }) => {
               defaultTitle={siteTitle}
               titleTemplate={`%s | ${siteTitle}`}
             >
+              <html lang="en" />
               <link
                 href="https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700|Open+Sans:400,400i,600,700"
                 rel="stylesheet"

@@ -23,32 +23,34 @@ export default class Grid extends React.Component {
     const showDescription = this.props.showDescription || false
     return (
       <div className="ServicesGrid">
-        {services.map((service, index) => {
-          return (
-            <div
-              className="ServicesGrid--service"
-              key={service.title + ' ' + index}
-            >
-              <div className="imageBorder">
-                <div
-                  className={'Service--Icon ' + this.getIconSrc(service.slug)}
-                />
+        {!!services &&
+          services.length &&
+          services.map((service, index) => {
+            return (
+              <div
+                className="ServicesGrid--service"
+                key={service.title + ' ' + index}
+              >
+                <div className="imageBorder">
+                  <div
+                    className={'Service--Icon ' + this.getIconSrc(service.slug)}
+                  />
+                </div>
+                <h3>{service.title}</h3>
+                {(() => {
+                  if (showDescription) {
+                    return <p>{service.shortDescription}</p>
+                  } else {
+                    return (
+                      <Link to={service.slug} className="Button Secondary">
+                        know more
+                      </Link>
+                    )
+                  }
+                })()}
               </div>
-              <h3>{service.title}</h3>
-              {(() => {
-                if (showDescription) {
-                  return <p>{service.shortDescription}</p>
-                } else {
-                  return (
-                    <Link to={service.slug} className="Button Secondary">
-                      know more
-                    </Link>
-                  )
-                }
-              })()}
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
     )
   }

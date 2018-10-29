@@ -6,11 +6,11 @@ import { HomePageTemplate } from '../templates/HomePage'
 import { AboutPageTemplate } from '../templates/AboutPage'
 import { ContactPageTemplate } from '../templates/ContactPage'
 import { ServicesTemplate } from '../templates/ServicesIndex'
-import { CaseStudiesIndex } from '../templates/CaseStudiesIndex'
-import { HowItWorksPage } from '../templates/HowItWorksPage'
-import { NewsIndex } from '../templates/NewsIndex'
-import { SingleService } from '../templates/SingleService'
-import { NewsItem } from '../templates/SingleNewsItem'
+import { CaseStudiesTemplate } from '../templates/CaseStudiesIndex'
+import { HowItWorksPageTemplate } from '../templates/HowItWorksPage'
+import { NewsTemplate } from '../templates/NewsIndex'
+import { SingleServiceTemplate } from '../templates/SingleService'
+import { SingleNewsItemTemplate } from '../templates/SingleNewsItem'
 
 if (
   window.location.hostname === 'localhost' &&
@@ -36,17 +36,17 @@ CMS.registerPreviewTemplate('services-index', ({ entry }) => (
   <ServicesTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('case-studies-index', ({ entry }) => (
-  <CaseStudiesIndex {...entry.toJS().data} />
+  <CaseStudiesTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('how-it-works-page', ({ entry }) => (
-  <HowItWorksPage {...entry.toJS().data} />
+  <HowItWorksPageTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('news-index', ({ entry }) => (
-  <NewsIndex {...entry.toJS().data} />
+  <NewsTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('single-service', ({ entry }) => (
-  <SingleService {...entry.toJS().data} />
+  <SingleServiceTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('news', ({ entry }) => (
-  <NewsItem {...entry.toJS().data} />
+  <SingleNewsItemTemplate {...entry.toJS().data} />
 ))

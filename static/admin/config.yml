@@ -639,7 +639,7 @@ collections: # A list of collections the CMS should be able to edit
           label: Template,
           name: template,
           widget: hidden,
-          default: singleNewsItem,
+          default: SingleNewsItem,
         }
       - { label: Title, name: title, widget: string }
       - label: 'Status'

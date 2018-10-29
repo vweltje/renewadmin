@@ -1,5 +1,5 @@
 ---
-template: singleNewsItem
+template: SingleNewsItem
 title: Latest Updates from Renew Admin
 status: Published
 date: 2018-10-20T23:57:22.593Z

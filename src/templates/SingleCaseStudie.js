@@ -9,7 +9,7 @@ import Image from '../components/Image'
 import ShareWidget from '../components/ShareWidget'
 import GetInTouchBlock from '../components/GetInTouchBlock'
 
-import './singleCase.css'
+import './SingleCase.css'
 
 export const YouTubeGetID = url => {
   var ID = ''

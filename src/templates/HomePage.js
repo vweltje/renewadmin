@@ -77,35 +77,37 @@ export const CaseStudiesSection = ({
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
         <div className="Home-caseStudies">
-          {caseStudies.map((caseStudie, i) => {
-            const studie = {
-              ...caseStudie.node.fields,
-              ...caseStudie.node.frontmatter
-            }
-            return (
-              <Link
-                to={studie.slug}
-                className="Home--Case"
-                key={studie.slug + '-' + i}
-              >
-                <div>
-                  <div className="square">
-                    <Image src={studie.image} alt="erger" />
+          {caseStudies &&
+            caseStudies.length &&
+            caseStudies.map((caseStudie, i) => {
+              const studie = {
+                ...caseStudie.node.fields,
+                ...caseStudie.node.frontmatter
+              }
+              return (
+                <Link
+                  to={studie.slug}
+                  className="Home--Case"
+                  key={studie.slug + '-' + i}
+                >
+                  <div>
+                    <div className="square">
+                      <Image src={studie.image} alt="erger" />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <h4>{studie.title}</h4>
-                  <p>
-                    {_truncate(studie.contentBlock[0].text, {
-                      length: 150,
-                      separator: ' '
-                    })}
-                    <span>Read more+</span>
-                  </p>
-                </div>
-              </Link>
-            )
-          })}
+                  <div>
+                    <h4>{studie.title}</h4>
+                    <p>
+                      {_truncate(studie.contentBlock[0].text, {
+                        length: 150,
+                        separator: ' '
+                      })}
+                      <span>Read more+</span>
+                    </p>
+                  </div>
+                </Link>
+              )
+            })}
         </div>
         <Link to={button.link} className="Button">
           {button.text}
@@ -117,7 +119,8 @@ export const CaseStudiesSection = ({
 
 export const NewsSection = ({ title, description, newsItems = {} }) => {
   return (
-    !!newsItems && (
+    !!newsItems &&
+    newsItems.length && (
       <section className="section Home--NewsSection">
         <div className="container">
           <h2 className="taCenter">{title}</h2>

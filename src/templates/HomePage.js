@@ -172,7 +172,6 @@ export const HomePageTemplate = ({
   services
 }) => {
   const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
-  return ''
   return (
     <main className="Home">
       <TitleSection {...titleSection} />

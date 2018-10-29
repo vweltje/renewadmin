@@ -19,6 +19,22 @@
   --borderRadius: 3px;
 }
 
+::-webkit-scrollbar {
+  width: 0.4rem;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px var(--secondaryFaded);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+}
+
+::selection {
+  background: rgba(94, 242, 136, 0.8);
+}
+
 html {
   box-sizing: border-box;
   font-size: 62.5%;

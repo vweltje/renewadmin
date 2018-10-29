@@ -34,8 +34,8 @@
 }
 
 .ContentBlock > div img {
-  max-height: 60rem;
-  max-width: 51.5rem;
+  max-height: 100%;
+  max-width: 100%;
   width: auto;
   height: auto;
   margin: 0 auto;

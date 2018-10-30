@@ -2,7 +2,7 @@
 template: AboutPage
 pageTitle: About Page
 slug: about
-title: '- About Us -'
+title: About Us
 shortDescription: >-
   Emily Irish, Charles Coathup and James Coathup met while working at Renew
   Solutions. We found that our individual fields complemented each other’s in
@@ -41,3 +41,4 @@ certificationsSection:
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
 ---
+

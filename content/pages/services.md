@@ -2,7 +2,7 @@
 template: ServicesIndex
 pageTitle: Services
 slug: services
-title: Services -
+title: Services
 shortDescription: >-
   Emily Irish, Charles Coathup and James Coathup met while working at Renew
   Solutions. We found that our individual fields complemented each other’s in
@@ -21,3 +21,4 @@ inlineBanner:
   title: Know how it works
   description: Know how it works
 ---
+

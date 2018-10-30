@@ -39,6 +39,9 @@ CMS.registerPreviewTemplate('services-index', ({ entry }) => (
 CMS.registerPreviewTemplate('case-studies-index', ({ entry }) => (
   <CaseStudiesTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('case-studie-page', ({ entry }) => (
+  <CaseStudiesTemplate {...entry.toJS().data} />
+))
 CMS.registerPreviewTemplate('how-it-works-page', ({ entry }) => (
   <HowItWorksPageTemplate {...entry.toJS().data} />
 ))

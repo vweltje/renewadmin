@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
@@ -40,6 +40,7 @@ export class StepSection extends React.Component {
   render() {
     let services =
       !!this.props.services &&
+      this.props.services.length &&
       this.props.services.filter(item => item.status === 'Featured')
 
     return (
@@ -119,12 +120,17 @@ export const HowItWorksPageTemplate = ({
         <div className="container">
           <h1>{title}</h1>
           <ContentBlock content={contentData} />
-          <section className="section Home--CaseStudiesSection">
-            <div className="container">
-              <StepSection services={services} />
-            </div>
-          </section>
-          <ServicesGrid services={services} />
+          {!!services &&
+            services.length && (
+              <Fragment>
+                <section className="section Home--CaseStudiesSection">
+                  <div className="container">
+                    <StepSection services={services} />
+                  </div>
+                </section>
+                <ServicesGrid services={services} />
+              </Fragment>
+            )}
         </div>
       </section>
     </main>

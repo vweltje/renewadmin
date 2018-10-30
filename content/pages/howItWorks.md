@@ -2,7 +2,7 @@
 template: HowItWorksPage
 pageTitle: How It Works
 slug: how-it-works
-title: How It Works -
+title: How It Works
 status: Published
 shortDescription: >-
   Emily Irish, Charles Coathup and James Coathup met while working at Renew

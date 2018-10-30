@@ -36,7 +36,7 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
 CMS.registerPreviewTemplate('services-index', ({ entry }) => (
   <ServicesTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('case-studie-page', ({ entry }) => (
+CMS.registerPreviewTemplate('case-studies-index', ({ entry }) => (
   <CaseStudiesTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('how-it-works-page', ({ entry }) => (

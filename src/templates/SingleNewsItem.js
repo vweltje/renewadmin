@@ -203,22 +203,5 @@ export const pageQuery = graphql`
         }
       }
     }
-    page: allMarkdownRemark(
-      filter: {
-        fields: { contentType: { eq: "pages" } }
-        frontmatter: { template: { eq: "SingleNewsItem" } }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            sectionGetInTouch {
-              title
-              subtitle
-            }
-          }
-        }
-      }
-    }
   }
 `

@@ -4,7 +4,7 @@ pageTitle: Home Page
 slug: ''
 titleSection:
   subtitle: Taking the load off the mundane administration.
-  title: '- Giving you time back for your business -'
+  title: Giving you time back for your business
 servicesSection:
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam

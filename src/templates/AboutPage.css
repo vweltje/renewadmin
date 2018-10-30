@@ -17,6 +17,10 @@
   text-align: center;
 }
 
+.About--TeamMember:not(:nth-child(-n + 5)) {
+  margin-top: 15rem;
+}
+
 .About--TeamMember .Button {
   margin: 0 auto;
 }

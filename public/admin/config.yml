@@ -148,16 +148,6 @@ collections: # A list of collections the CMS should be able to edit
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
               - { label: Background, name: background, widget: image }
-              - label: 'Button'
-                name: 'button'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
           - label: 'Certifications Section'
             name: 'certificationsSection'
             widget: 'object'
@@ -285,16 +275,6 @@ collections: # A list of collections the CMS should be able to edit
               - { label: title, name: title, widget: string }
               - { label: description, name: description, widget: string }
               - { label: Background, name: background, widget: image }
-              - label: 'Button'
-                name: 'button'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
 
       - file: 'content/pages/caseStudies.md'
         label: 'Case Studies Page'
@@ -342,26 +322,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
-              - label: 'Button 1'
-                name: 'button1'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
-              - label: 'Button 2'
-                name: 'button2'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
 
       - file: 'content/pages/singleService.md'
         label: 'Single Service Page'
@@ -386,26 +346,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
-              - label: 'Button 1'
-                name: 'button1'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
-              - label: 'Button 2'
-                name: 'button2'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
 
       - file: 'content/pages/singleCaseStudie.md'
         label: 'Single case studie Page'
@@ -431,26 +371,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
-              - label: 'Button 1'
-                name: 'button1'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
-              - label: 'Button 2'
-                name: 'button2'
-                widget: 'object'
-                fields:
-                  - label: 'Link'
-                    name: 'link'
-                    widget: 'string'
-                    default: ''
-                    hint: 'Copy past a url'
-                  - { label: text, name: text, widget: string }
 
   - name: team-member
     label: Team Member

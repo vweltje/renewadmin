@@ -33,7 +33,13 @@ export const ServicesTemplate = ({
           <h1>{title}</h1>
           {!!contentData && <ContentBlock content={contentData} />}
           {!!services && <ServicesGrid services={services} />}
-          {inlineBanner && <InlineBanner className="light" {...inlineBanner} />}
+          {inlineBanner && (
+            <InlineBanner
+              className="light"
+              {...inlineBanner}
+              button={{ text: 'see how it works', link: '/how-it-works' }}
+            />
+          )}
         </div>
       </section>
     </main>
@@ -74,10 +80,6 @@ export const pageQuery = graphql`
         image
         inlineBanner {
           background
-          button {
-            link
-            text
-          }
           title
           description
         }

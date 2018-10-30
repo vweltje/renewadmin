@@ -107,7 +107,21 @@ export const CaseStudiesTemplate = ({
       {!!sectionGetInTouch && (
         <section className="section">
           <div className="container">
-            <GetInTouchBlock content={sectionGetInTouch} />
+            <GetInTouchBlock
+              content={{
+                ...sectionGetInTouch,
+                ...{
+                  button1: {
+                    text: 'Create acount',
+                    link: '/contact'
+                  },
+                  button2: {
+                    text: 'contact us',
+                    link: '/contact'
+                  }
+                }
+              }}
+            />
           </div>
         </section>
       )}
@@ -152,14 +166,6 @@ export const pageQuery = graphql`
         sectionGetInTouch {
           title
           subtitle
-          button1 {
-            text
-            link
-          }
-          button2 {
-            text
-            link
-          }
         }
       }
     }

@@ -157,7 +157,21 @@ export const SingleCaseStudieTemplate = ({
         )}
       <section className="section">
         <div className="container">
-          <GetInTouchBlock content={page} />
+          <GetInTouchBlock
+            content={{
+              ...page,
+              ...{
+                button1: {
+                  text: 'Create acount',
+                  link: '/contact'
+                },
+                button2: {
+                  text: 'contact us',
+                  link: '/contact'
+                }
+              }
+            }}
+          />
         </div>
       </section>
     </main>
@@ -245,14 +259,6 @@ export const pageQuery = graphql`
             sectionGetInTouch {
               title
               subtitle
-              button1 {
-                text
-                link
-              }
-              button2 {
-                text
-                link
-              }
             }
           }
         }

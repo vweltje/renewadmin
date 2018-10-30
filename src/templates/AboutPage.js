@@ -135,7 +135,11 @@ export class AboutPageTemplate extends React.Component {
         )}
 
         {!!page.inlineBanner && (
-          <InlineBanner className="light" {...page.inlineBanner} />
+          <InlineBanner
+            className="light"
+            {...page.inlineBanner}
+            button={{ text: 'see how it works', link: '/how-it-works' }}
+          />
         )}
 
         {!!page.certificationsSection && (
@@ -184,10 +188,6 @@ export const pageQuery = graphql`
         }
         inlineBanner {
           background
-          button {
-            link
-            text
-          }
           title
           description
         }

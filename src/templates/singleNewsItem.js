@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import _format from 'date-fns/format'
 import { graphql } from 'gatsby'
@@ -60,20 +60,17 @@ export const SingleNewsItemTemplate = ({
               </h1>
             )}
             <div className="SingleNewsItem--Service">
-              {services && (
-                <Fragment>
-                  {services.map((item, index) => (
-                    <span
-                      key={item.service}
-                      className="SingleNewsItem--Meta--Service"
-                    >
-                      {item.service}
-                      {/* Add a comma on all but last service */}
-                      {index !== services.length - 1 ? ',' : ''}
-                    </span>
-                  ))}
-                </Fragment>
-              )}
+              {services &&
+                services.map((item, index) => (
+                  <span
+                    key={item.service}
+                    className="SingleNewsItem--Meta--Service"
+                  >
+                    {item.service}
+                    {/* Add a comma on all but last service */}
+                    {index !== services.length - 1 ? ',' : ''}
+                  </span>
+                ))}
             </div>
             <div className="SingleNewsItem--InnerContent">
               <p className="larger">{shortDescription}</p>

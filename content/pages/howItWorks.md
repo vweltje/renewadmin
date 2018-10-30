@@ -1,9 +1,9 @@
 ---
-
 template: HowItWorksPage
 pageTitle: How It Works
 slug: how-it-works
-title: How It Works
+title: How It Works -
+status: Published
 shortDescription: >-
   Emily Irish, Charles Coathup and James Coathup met while working at Renew
   Solutions. We found that our individual fields complemented each other’s in
@@ -17,3 +17,5 @@ description: >-
   that you will protect it as if it were your own. That is the energy that sets
   us apart.
 image: 'https://ucarecdn.com/00e506c7-65ab-4ac6-bb3e-50ff7022aa87/'
+---
+

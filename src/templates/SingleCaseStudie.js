@@ -89,7 +89,7 @@ export const SingleCaseStudieTemplate = ({
         </div>
       </section>
       {!!edges &&
-        edges.length && (
+        (edges.hasOwnProperty('previous') || edges.hasOwnProperty('next')) && (
           <section className="section Case--Edges">
             <div className="container">
               <div className="edges">
@@ -155,25 +155,28 @@ export const SingleCaseStudieTemplate = ({
             </div>
           </section>
         )}
-      <section className="section">
-        <div className="container">
-          <GetInTouchBlock
-            content={{
-              ...page,
-              ...{
-                button1: {
-                  text: 'Create acount',
-                  link: '/contact'
-                },
-                button2: {
-                  text: 'contact us',
-                  link: '/contact'
-                }
-              }
-            }}
-          />
-        </div>
-      </section>
+      {!!page &&
+        page.hasOwnProperty('title') && (
+          <section className="section">
+            <div className="container">
+              <GetInTouchBlock
+                content={{
+                  ...page,
+                  ...{
+                    button1: {
+                      text: 'Create acount',
+                      link: '/contact'
+                    },
+                    button2: {
+                      text: 'contact us',
+                      link: '/contact'
+                    }
+                  }
+                }}
+              />
+            </div>
+          </section>
+        )}
     </main>
   )
 }

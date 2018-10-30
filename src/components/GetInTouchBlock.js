@@ -32,7 +32,6 @@ export const GetInTouchBlockTemplate = ({
 
 export default class GetInTouchBlock extends React.Component {
   render() {
-    console.log(this.props.content)
     if (this.props.content && Object.keys(this.props.content).length) {
       return <GetInTouchBlockTemplate {...this.props.content} />
     }

@@ -1,7 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import _format from 'date-fns/format'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Content from '../components/Content'
 import Image from '../components/Image'
@@ -17,7 +17,8 @@ export const SingleNewsItemTemplate = ({
   shortDescription,
   contentImages,
   bodyOptional,
-  services = []
+  services = [],
+  edges
 }) => (
   <main>
     <article
@@ -92,23 +93,56 @@ export const SingleNewsItemTemplate = ({
             <ShareWidget />
           </div>
         </div>
+
+        {!!edges &&
+          (edges.hasOwnProperty('previous') ||
+            edges.hasOwnProperty('next')) && (
+            <div className="edges">
+              {(() => {
+                const prev = edges.previous
+                if (
+                  prev !== null &&
+                  typeof prev === 'object' &&
+                  prev.hasOwnProperty('fields')
+                ) {
+                  return (
+                    <Link to={prev.fields.slug} className="edge">
+                      <span>Previous item</span>
+                    </Link>
+                  )
+                }
+              })()}
+              {(() => {
+                const next = edges.next
+                if (
+                  next !== null &&
+                  typeof next === 'object' &&
+                  next.hasOwnProperty('fields')
+                ) {
+                  return (
+                    <Link to={next.fields.slug} className="edge">
+                      <span>Next item</span>
+                    </Link>
+                  )
+                }
+              })()}
+            </div>
+          )}
       </div>
     </article>
   </main>
 )
 
 // Export Default SingleNewsItem for front-end
-const SingleNewsItem = ({ data, pageContext }) => {
-  const { newsItem } = data
-  // const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
+const SingleNewsItem = ({ data: { newsItem, allNewsItems } }) => {
+  const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
   return (
     <Layout>
       <SingleNewsItemTemplate
         {...newsItem}
         {...newsItem.frontmatter}
         body={newsItem.html}
-        // nextNewsItemURL={_get(thisEdge, 'next.fields.slug')}
-        // prevNewsItemURL={_get(thisEdge, 'previous.fields.slug')}
+        edges={thisEdge}
       />
     </Layout>
   )

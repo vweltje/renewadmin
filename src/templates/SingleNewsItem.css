@@ -124,3 +124,13 @@
   line-height: 4.2rem;
   margin: 0;
 }
+
+.SingleNewsItem .edges {
+  text-align: center;
+  margin-top: 5rem;
+}
+
+.SingleNewsItem .edges .edge {
+  padding: 0 2rem;
+  text-decoration: none;
+}

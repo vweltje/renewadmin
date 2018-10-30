@@ -60,12 +60,6 @@ infoSection:
         eros.
   title: More info
 getInTouchSection:
-  button1:
-    text: create account
-    link: ''
-  button2:
-    text: contact us
-    link: ''
   subtitle: Ready to get started?
   title: Get in touch or create an account.
 howItWorks:

@@ -24,9 +24,6 @@ servicesSection:
     facilisis augue, et venenatis urna interdum in.
 inlineBanner:
   background: 'https://ucarecdn.com/844428d5-2084-4fef-84ed-63e1f620fcea/'
-  button:
-    link: ''
-    text: see how it works
   title: Know how it works
   description: Know how it works
 certificationsSection:
@@ -44,4 +41,3 @@ certificationsSection:
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
 ---
-

@@ -18,10 +18,6 @@ description: >-
 image: 'https://ucarecdn.com/00e506c7-65ab-4ac6-bb3e-50ff7022aa87/'
 inlineBanner:
   background: 'https://ucarecdn.com/844428d5-2084-4fef-84ed-63e1f620fcea/'
-  button:
-    link: ''
-    text: see how it works
   title: Know how it works
   description: Know how it works
 ---
-

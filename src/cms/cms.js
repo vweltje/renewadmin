@@ -51,6 +51,9 @@ CMS.registerPreviewTemplate('news-index', ({ entry }) => (
 CMS.registerPreviewTemplate('single-service-page', ({ entry }) => (
   <CaseStudiesTemplate {...entry.toJS().data} />
 ))
+CMS.registerPreviewTemplate('news-page', ({ entry }) => (
+  <CaseStudiesTemplate {...entry.toJS().data} />
+))
 CMS.registerPreviewTemplate('service', ({ entry }) => (
   <SingleServiceTemplate {...entry.toJS().data} />
 ))

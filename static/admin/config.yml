@@ -372,6 +372,31 @@ collections: # A list of collections the CMS should be able to edit
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
 
+      - file: 'content/pages/news.md'
+        label: 'News page'
+        name: 'news-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: newsIndex,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: News page,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: news-page }
+          - { label: Title, name: title, widget: string, default: News }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
+
   - name: team-member
     label: Team Member
     editor:

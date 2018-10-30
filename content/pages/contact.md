@@ -2,7 +2,7 @@
 template: ContactPage
 pageTitle: Contact Page
 slug: contact
-title: Contact -
+title: Contact
 contactTextTitle: Get in touch!
 text: >-
   Emily Irish, Charles Coathup and James Coathup met while working at Renew

@@ -170,7 +170,16 @@ export const HomePageTemplate = ({
   newsSection,
   certificationsSection
 }) => {
-  const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
+  const infoSectionData = [
+    {
+      ...aboutUsSection,
+      button: { link: '/about', text: 'about us' }
+    },
+    {
+      ...howItWorksSection,
+      button: { link: '/how-it-works', text: 'how it works' }
+    }
+  ]
   inlineBanner = {
     ...inlineBanner,
     button: {

@@ -27,36 +27,42 @@ export const YouTubeGetID = url => {
 
 // Export Template for use in CMS preview
 export const SingleCaseStudieTemplate = ({
-  caseStudie = {},
+  title,
+  service,
+  clientLogo,
+  quote,
+  contentBlock,
+  image,
+  youtubeVideo,
   page = {},
   edges = {}
 }) => {
   return (
     <main>
       <Helmet>
-        <title>{caseStudie.title}</title>
+        <title>{title}</title>
       </Helmet>
 
       <section className="section Case--Content">
         <div className="container">
-          <h1>{caseStudie.title}</h1>
+          <h1>{title}</h1>
           <div className="Case--ContentBlock">
             <div>
               <div className="Case--InfoBlock">
                 <div>
                   <h4>Service</h4>
-                  <p>{caseStudie.service}</p>
+                  <p>{service}</p>
                 </div>
                 <div>
                   <h4>Client</h4>
-                  <Image src={caseStudie.clientLogo} alt="Client logo" />
+                  <Image src={clientLogo} alt="Client logo" />
                 </div>
                 <ShareWidget />
               </div>
-              <blockquote>{caseStudie.quote}</blockquote>
+              <blockquote>{quote}</blockquote>
 
-              {!!caseStudie.contentBlock &&
-                caseStudie.contentBlock.map((item, i) => {
+              {!!contentBlock &&
+                contentBlock.map((item, i) => {
                   return (
                     <div key={_kebabCase(item.title) + '-' + i}>
                       <h3>{item.title}</h3>
@@ -66,10 +72,10 @@ export const SingleCaseStudieTemplate = ({
                 })}
             </div>
             <div>
-              <Image src={caseStudie.image} alt={caseStudie.title} />
-              {!!caseStudie.youtubeVide && (
+              <Image src={image} alt={title} />
+              {!!youtubeVideo && (
                 <YouTube
-                  videoId={YouTubeGetID(caseStudie.youtubeVideo)}
+                  videoId={YouTubeGetID(youtubeVideo)}
                   opts={{
                     playerVars: {
                       // https://developers.google.com/youtube/player_parameters
@@ -82,64 +88,73 @@ export const SingleCaseStudieTemplate = ({
           </div>
         </div>
       </section>
-      <section className="section Case--Edges">
-        <div className="container">
-          <div className="edges">
-            {(() => {
-              const prev = edges.previous
-              if (
-                prev !== null &&
-                typeof prev === 'object' &&
-                prev.hasOwnProperty('fields')
-              ) {
-                return (
-                  <Link to={prev.fields.slug} className="edge">
-                    <Image
-                      background
-                      src={prev.frontmatter.image}
-                      alt="backgroundImage"
-                    />
-                    <Image src={prev.frontmatter.clientLogo} alt="clientLogo" />
-                    <span>Previous Case</span>
-                  </Link>
-                )
-              } else {
-                return (
-                  <div className="edge default">
-                    <span>Nothing to show</span>
-                  </div>
-                )
-              }
-            })()}
-            {(() => {
-              const next = edges.next
-              if (
-                next !== null &&
-                typeof next === 'object' &&
-                next.hasOwnProperty('fields')
-              ) {
-                return (
-                  <Link to={next.fields.slug} className="edge">
-                    <Image
-                      background
-                      src={next.frontmatter.image}
-                      alt="backgroundImage"
-                    />
-                    <Image src={next.frontmatter.clientLogo} alt="clientLogo" />
-                    <span>Next Case</span>
-                  </Link>
-                )
-              } else {
-                return (
-                  <div className="edge default">
-                    <span>Nothing to show</span>
-                  </div>
-                )
-              }
-            })()}
-          </div>
-        </div>
-      </section>
+      {!!edges &&
+        edges.length && (
+          <section className="section Case--Edges">
+            <div className="container">
+              <div className="edges">
+                {(() => {
+                  const prev = edges.previous
+                  if (
+                    prev !== null &&
+                    typeof prev === 'object' &&
+                    prev.hasOwnProperty('fields')
+                  ) {
+                    return (
+                      <Link to={prev.fields.slug} className="edge">
+                        <Image
+                          background
+                          src={prev.frontmatter.image}
+                          alt="backgroundImage"
+                        />
+                        <Image
+                          src={prev.frontmatter.clientLogo}
+                          alt="clientLogo"
+                        />
+                        <span>Previous Case</span>
+                      </Link>
+                    )
+                  } else {
+                    return (
+                      <div className="edge default">
+                        <span>Nothing to show</span>
+                      </div>
+                    )
+                  }
+                })()}
+                {(() => {
+                  const next = edges.next
+                  if (
+                    next !== null &&
+                    typeof next === 'object' &&
+                    next.hasOwnProperty('fields')
+                  ) {
+                    return (
+                      <Link to={next.fields.slug} className="edge">
+                        <Image
+                          background
+                          src={next.frontmatter.image}
+                          alt="backgroundImage"
+                        />
+                        <Image
+                          src={next.frontmatter.clientLogo}
+                          alt="clientLogo"
+                        />
+                        <span>Next Case</span>
+                      </Link>
+                    )
+                  } else {
+                    return (
+                      <div className="edge default">
+                        <span>Nothing to show</span>
+                      </div>
+                    )
+                  }
+                })()}
+              </div>
+            </div>
+          </section>
+        )}
       <section className="section">
         <div className="container">
           <GetInTouchBlock content={page} />
@@ -157,7 +172,7 @@ const SingleCaseStudie = ({ data }) => {
   return (
     <Layout>
       <SingleCaseStudieTemplate
-        caseStudie={data.case.frontmatter}
+        {...data.case.frontmatter}
         page={data.page.edges[0].node.frontmatter.sectionGetInTouch}
         edges={thisEdge}
       />

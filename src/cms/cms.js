@@ -36,11 +36,8 @@ CMS.registerPreviewTemplate('contact-page', ({ entry }) => (
 CMS.registerPreviewTemplate('services-index', ({ entry }) => (
   <ServicesTemplate {...entry.toJS().data} />
 ))
-CMS.registerPreviewTemplate('case-studies-index', ({ entry }) => (
-  <CaseStudiesTemplate {...entry.toJS().data} />
-))
 CMS.registerPreviewTemplate('case-studie-page', ({ entry }) => (
-  <SingleCaseStudieTemplate {...entry.toJS().data} />
+  <CaseStudiesTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('how-it-works-page', ({ entry }) => (
   <HowItWorksPageTemplate {...entry.toJS().data} />
@@ -49,7 +46,7 @@ CMS.registerPreviewTemplate('news-index', ({ entry }) => (
   <NewsTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('single-service-page', ({ entry }) => (
-  <SingleServiceTemplate {...entry.toJS().data} />
+  <CaseStudiesTemplate {...entry.toJS().data} />
 ))
 CMS.registerPreviewTemplate('service', ({ entry }) => (
   <SingleServiceTemplate {...entry.toJS().data} />

@@ -2,14 +2,15 @@
 template: SingleCaseStudie
 pageTitle: Single Case Studie
 slug: case-studie-page
-title: Case Studie
+date: 2018-10-30T05:07:39.703Z
 sectionGetInTouch:
-  title: Get in touch or create an account.
-  subtitle: Ready to get started?
   button1:
     link: ''
     text: create account
   button2:
     link: ''
     text: Contact us
+  subtitle: Ready to get started?
+  title: Get in touch or create an account -
 ---
+

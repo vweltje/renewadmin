@@ -45,48 +45,50 @@ export class StepSection extends React.Component {
     return (
       <div className="ServiceSteps">
         <div className="ServiceStepsNav">
-          {services.map((service, i) => {
-            return (
-              <div
-                className={
-                  'ServiceNavItem ' +
-                  (this.state.activeService === i ? 'active' : '')
-                }
-                key={'ServiceNavItem-' + i}
-                onClick={() => this.handleServiceNavClick(i)}
-              >
+          {!!services &&
+            services.map((service, i) => {
+              return (
                 <div
-                  className={'Service--Icon ' + this.getIconSrc(service.slug)}
-                />
-                <span>{service.title}</span>
-              </div>
-            )
-          })}
+                  className={
+                    'ServiceNavItem ' +
+                    (this.state.activeService === i ? 'active' : '')
+                  }
+                  key={'ServiceNavItem-' + i}
+                  onClick={() => this.handleServiceNavClick(i)}
+                >
+                  <div
+                    className={'Service--Icon ' + this.getIconSrc(service.slug)}
+                  />
+                  <span>{service.title}</span>
+                </div>
+              )
+            })}
         </div>
         <div className="ServiceStepsContentBlocks">
-          {services.map((service, i) => {
-            return (
-              <div
-                className={
-                  'ServiceStepsContentBlock ' +
-                  (this.state.activeService === i ? 'active' : '')
-                }
-                key={'ServiceStepsContentBlock-' + i}
-              >
-                {service.howItWorks.steps.map((step, num) => {
-                  return (
-                    <div
-                      className="ServiceStepsContentBlockItem"
-                      key={'step-' + num}
-                    >
-                      <span>{num + 1}</span>
-                      <p>{step.title}</p>
-                    </div>
-                  )
-                })}
-              </div>
-            )
-          })}
+          {!!services &&
+            services.map((service, i) => {
+              return (
+                <div
+                  className={
+                    'ServiceStepsContentBlock ' +
+                    (this.state.activeService === i ? 'active' : '')
+                  }
+                  key={'ServiceStepsContentBlock-' + i}
+                >
+                  {service.howItWorks.steps.map((step, num) => {
+                    return (
+                      <div
+                        className="ServiceStepsContentBlockItem"
+                        key={'step-' + num}
+                      >
+                        <span>{num + 1}</span>
+                        <p>{step.title}</p>
+                      </div>
+                    )
+                  })}
+                </div>
+              )
+            })}
         </div>
       </div>
     )

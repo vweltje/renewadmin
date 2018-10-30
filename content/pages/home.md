@@ -3,18 +3,9 @@ template: HomePage
 pageTitle: Home Page
 slug: ''
 titleSection:
-  button1:
-    link: ''
-    text: sign up
-  button2:
-    link: ''
-    text: how it works
   subtitle: Taking the load off the mundane administration.
   title: Giving you time back for your business
 aboutUsSection:
-  button:
-    link: ''
-    text: about us
   description: >-
     We thrive on watching your business grow and are here for you, to free up
     your time so that you can focus on your professional skills.  Together we
@@ -26,9 +17,6 @@ aboutUsSection:
     have created your business today.
   title: We are administration experts
 howItWorksSection:
-  button:
-    link: ''
-    text: how it works
   description: >-
     Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
     Proin lacus enim, luctus volutpat accumsan vel, tincidunt eget purus.
@@ -40,26 +28,17 @@ howItWorksSection:
     Proin lacus enim, luctus volutpat
   title: 'Bookkeeping + Workflow Efficiency '
 servicesSection:
-  button:
-    link: ''
-    text: see all services
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
     facilisis augue, et venenatis urna interdum in.
   title: Our services
 inlineBanner:
   background: 'https://ucarecdn.com/5c0e8b60-c345-43ae-8a5e-7c6ffe5f5914/'
-  button:
-    link: ''
-    text: book now
   description: >-
     Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
     Proin lacus enim, luctus volutpat
   title: Book an appointment now
 caseStudiesSection:
-  button:
-    link: ''
-    text: see more cases
   description: >-
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
     facilisis augue, et venenatis urna interdum in.

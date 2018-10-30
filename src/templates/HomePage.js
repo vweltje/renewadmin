@@ -2,21 +2,21 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import _truncate from 'lodash/truncate'
-import Slider from 'react-slick'
 
 import Layout from '../components/Layout'
+import Image from '../components/Image'
 import ContentBlock from '../components/ContentBlock'
 import ServicesGrid from '../components/ServicesGrid'
 import InlineBanner from '../components/InlineBanner'
-import Image from '../components/Image'
-import CertificationsSection from '../components/Certifications'
+import Slider from 'react-slick'
 import PostCard from '../components/PostCard'
+import CertificationsSection from '../components/Certifications'
 
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import './HomePage.css'
 
-export const TitleSection = ({ title, subtitle, button1, button2 }) => {
+export const TitleSection = ({ title, subtitle }) => {
   return (
     <main>
       <Helmet>
@@ -28,11 +28,11 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
           <h2>{subtitle}</h2>
           <h1>{title}</h1>
           <div className="ButtonBox">
-            <Link to={button1.link} className="Button Bordered">
-              {button1.text}
+            <Link to="/contact" className="Button Bordered">
+              sign up
             </Link>
-            <Link to={button2.link} className="Button">
-              {button2.text}
+            <Link to="/how-it-works" className="Button">
+              how it works
             </Link>
           </div>
           <Image
@@ -45,20 +45,15 @@ export const TitleSection = ({ title, subtitle, button1, button2 }) => {
   )
 }
 
-export const ServicesSection = ({
-  title,
-  description,
-  button = [],
-  services = {}
-}) => {
+export const ServicesSection = ({ title, description, services = {} }) => {
   return (
     <section className="section Home--ServicesSecction">
       <div className="container">
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
         {!!services && <ServicesGrid services={services} showDescription />}
-        <Link to={button.link} className="Button">
-          {button.text}
+        <Link to="/services" className="Button">
+          see all services
         </Link>
       </div>
     </section>
@@ -68,7 +63,6 @@ export const ServicesSection = ({
 export const CaseStudiesSection = ({
   title,
   description,
-  button = [],
   caseStudies = {}
 }) => {
   return (
@@ -77,7 +71,7 @@ export const CaseStudiesSection = ({
         <h2 className="taCenter">{title}</h2>
         <p className="taCenter">{description}</p>
         <div className="Home-caseStudies">
-          {caseStudies &&
+          {!!caseStudies &&
             caseStudies.length &&
             caseStudies.map((caseStudie, i) => {
               const studie = {
@@ -109,8 +103,8 @@ export const CaseStudiesSection = ({
               )
             })}
         </div>
-        <Link to={button.link} className="Button">
-          {button.text}
+        <Link to="case-studies" className="Button">
+          see more cases
         </Link>
       </div>
     </section>
@@ -119,62 +113,71 @@ export const CaseStudiesSection = ({
 
 export const NewsSection = ({ title, description, newsItems = {} }) => {
   return (
-    !!newsItems &&
-    newsItems.length && (
-      <section className="section Home--NewsSection">
-        <div className="container">
-          <h2 className="taCenter">{title}</h2>
-          <p className="taCenter">{description}</p>
-        </div>
-        <div className="Home--NewsItems">
-          <Slider
-            {...{
-              dots: true,
-              infinite: true,
-              draggable: false,
-              initialSlide: 0,
-              slidesToScroll: 1,
-              slide: 'PostCard',
-              variableWidth: true,
-              centerMode: true,
-              arrows: true,
-              focusOnSelect: true,
-              autoplay: true,
-              autoplaySpeed: 3000
-            }}
-          >
-            {newsItems.map((item, index) => {
-              item = {
-                expect: item.node.frontmatter.shortDescription,
-                ...item.node.fields,
-                ...item.node.frontmatter
-              }
-              return (
-                <div key={item.title + index}>
-                  <PostCard {...item} />
-                </div>
-              )
-            })}
-          </Slider>
-        </div>
-      </section>
-    )
+    <section className="section Home--NewsSection">
+      <div className="container">
+        <h2 className="taCenter">{title}</h2>
+        <p className="taCenter">{description}</p>
+      </div>
+      {!!newsItems &&
+        newsItems.length && (
+          <div className="Home--NewsItems">
+            <Slider
+              {...{
+                dots: true,
+                infinite: true,
+                draggable: false,
+                initialSlide: 0,
+                slidesToScroll: 1,
+                slide: 'PostCard',
+                variableWidth: true,
+                centerMode: true,
+                arrows: true,
+                focusOnSelect: true,
+                autoplay: true,
+                autoplaySpeed: 3000
+              }}
+            >
+              {!!newsItems &&
+                newsItems.length &&
+                newsItems.map((item, index) => {
+                  item = {
+                    expect: item.node.frontmatter.shortDescription,
+                    ...item.node.fields,
+                    ...item.node.frontmatter
+                  }
+                  return (
+                    <div key={item.title + index}>
+                      <PostCard {...item} />
+                    </div>
+                  )
+                })}
+            </Slider>
+          </div>
+        )}
+    </section>
   )
 }
 
 // Export Template for use in CMS preview
 export const HomePageTemplate = ({
-  titleSection,
-  aboutUsSection,
-  howItWorksSection,
-  servicesSection,
+  titleSection = {},
+  aboutUsSection = {},
+  howItWorksSection = {},
+  servicesSection = {},
+  services,
   inlineBanner,
   caseStudiesSection,
   newsSection,
-  certificationsSection,
-  services
+  certificationsSection
 }) => {
   const infoSectionData = [{ ...aboutUsSection }, { ...howItWorksSection }]
+  inlineBanner = {
+    ...inlineBanner,
+    button: {
+      link: '/contact',
+      text: 'book now'
+    }
+  }
   return (
     <main className="Home">
       <TitleSection {...titleSection} />
@@ -229,57 +232,29 @@ export const pageQuery = graphql`
         titleSection {
           title
           subtitle
-          button1 {
-            link
-            text
-          }
-          button2 {
-            link
-            text
-          }
         }
         aboutUsSection {
-          button {
-            link
-            text
-          }
           description
           image
           shortDescription
           title
         }
         howItWorksSection {
-          button {
-            link
-            text
-          }
           description
           image
           shortDescription
           title
         }
         servicesSection {
-          button {
-            link
-            text
-          }
           description
           title
         }
         inlineBanner {
           background
-          button {
-            link
-            text
-          }
           description
           title
         }
         caseStudiesSection {
-          button {
-            link
-            text
-          }
           description
           title
         }

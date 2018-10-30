@@ -65,63 +65,61 @@ export class AboutPageTemplate extends React.Component {
             <div className="container">
               <h1>{page.teamTitle}</h1>
               <div className="About--teamBlocks">
-                {page.team.map((TeamMember, i) => {
-                  const member = {
-                    ...TeamMember.node.frontmatter
-                  }
-                  return (
-                    <Fragment key={'f-' + i}>
-                      <div
-                        className="About--TeamMember"
-                        key={'teamMember-' + i}
-                      >
-                        <Image src={member.photo} alt={member.title} />
-                        <div>
-                          <h3>{member.title}</h3>
-                          <span>{member.function}</span>
-                          <button
-                            className="Button Secondary"
-                            onClick={() => this.handlePopup(i)}
-                          >
-                            know more
-                          </button>
-                          <ShareWidget heading={''} />
-                        </div>
-                      </div>
-                      <div
-                        className={
-                          'About--TeamPopover ' +
-                          (this.state.activePopup === i ? 'active' : '')
-                        }
-                        key={'teamMemberPopover-' + i}
-                      >
-                        <div className="About--TeamPopoverContent">
+                {page.team.length &&
+                  page.team.map((member, i) => {
+                    return (
+                      <Fragment key={'f-' + i}>
+                        <div
+                          className="About--TeamMember"
+                          key={'teamMember-' + i}
+                        >
                           <Image src={member.photo} alt={member.title} />
-                          <button
-                            className="About--TeamPopoverContentClose"
-                            onClick={() => this.handlePopup(i)}
-                          />
                           <div>
                             <h3>{member.title}</h3>
                             <span>{member.function}</span>
-                            <div className="About--TeamPopoverContentSplitVieuw">
-                              <div>
-                                <h4>Bio</h4>
-                                <p>{member.bio}</p>
-                                <ShareWidget
-                                  heading={'Folow ' + member.title}
-                                />
-                              </div>
-                              <div>
-                                <Content source={member.additionalInfo} />
+                            <button
+                              className="Button Secondary"
+                              onClick={() => this.handlePopup(i)}
+                            >
+                              know more
+                            </button>
+                            <ShareWidget heading={''} />
+                          </div>
+                        </div>
+                        <div
+                          className={
+                            'About--TeamPopover ' +
+                            (this.state.activePopup === i ? 'active' : '')
+                          }
+                          key={'teamMemberPopover-' + i}
+                        >
+                          <div className="About--TeamPopoverContent">
+                            <Image src={member.photo} alt={member.title} />
+                            <button
+                              className="About--TeamPopoverContentClose"
+                              onClick={() => this.handlePopup(i)}
+                            />
+                            <div>
+                              <h3>{member.title}</h3>
+                              <span>{member.function}</span>
+                              <div className="About--TeamPopoverContentSplitVieuw">
+                                <div>
+                                  <h4>Bio</h4>
+                                  <p>{member.bio}</p>
+                                  <ShareWidget
+                                    heading={'Folow ' + member.title}
+                                  />
+                                </div>
+                                <div>
+                                  <Content source={member.additionalInfo} />
+                                </div>
                               </div>
                             </div>
                           </div>
                         </div>
-                      </div>
-                    </Fragment>
-                  )
-                })}
+                      </Fragment>
+                    )
+                  })}
               </div>
             </div>
           </section>
@@ -149,14 +147,17 @@ export class AboutPageTemplate extends React.Component {
 }
 
 // Export Default AboutPage for front-end
-const AboutPage = ({ data }) => {
-  const page = {
-    ...data.page,
-    team: [...data.teamMembers.edges]
-  }
+const AboutPage = ({ data: { page, teamMembers } }) => {
   return (
     <Layout>
-      <AboutPageTemplate {...page} {...page.frontmatter} />
+      <AboutPageTemplate
+        {...page}
+        {...page.frontmatter}
+        team={teamMembers.edges.map(edge => ({
+          ...edge.node.frontmatter,
+          ...edge.node.fields
+        }))}
+      />
     </Layout>
   )
 }

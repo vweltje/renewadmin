@@ -408,8 +408,8 @@ collections: # A list of collections the CMS should be able to edit
                   - { label: text, name: text, widget: string }
 
       - file: 'content/pages/singleCaseStudie.md'
-        label: 'Single Service Page'
-        name: 'single-service-page'
+        label: 'Single case studie Page'
+        name: 'case-studie-page'
         fields:
           - {
               label: Template,
@@ -455,7 +455,7 @@ collections: # A list of collections the CMS should be able to edit
   - name: team-member
     label: Team Member
     editor:
-      preview: true
+      preview: false
     folder: content/teamMembers
     slug: '{{slug}}'
     create: true # Allow users to create new documents in this collection

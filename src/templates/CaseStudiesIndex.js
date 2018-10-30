@@ -10,8 +10,10 @@ import _kebabCase from 'lodash/kebabCase'
 import './CaseStudies.css'
 
 export const niceTitle = title => {
-  title = title.replace('[', '<span>')
-  title = title.replace(']', '</span>')
+  if (title) {
+    title = title.replace('[', '<span>')
+    title = title.replace(']', '</span>')
+  }
   return title
 }
 
@@ -45,60 +47,62 @@ export const CaseStudiesTemplate = ({
         </section>
       )}
 
-      {!!caseStudies && (
-        <section className="section">
-          <div className="container">
-            <div className="CaseStudies--Cases">
-              {caseStudies.map((studie, i) => {
-                studie = {
-                  ...studie.node.fields,
-                  ...studie.node.frontmatter
-                }
-                return (
-                  <Link
-                    to={studie.slug}
-                    className="caseStudie"
-                    key={_kebabCase(studie.slug) + '-' + i}
-                  >
-                    <Image
-                      background
-                      src={studie.image}
-                      className="BackgroundOverlay"
-                    />
-                    <Image
-                      src={studie.clientLogo}
-                      alt={_kebabCase(studie.slug)}
-                      className="clientLogo"
-                    />
-                    <button className="Button Quaternary">
-                      See case studie
-                    </button>
-                  </Link>
-                )
-              })}
+      {!!caseStudies &&
+        caseStudies.length && (
+          <section className="section">
+            <div className="container">
+              <div className="CaseStudies--Cases">
+                {caseStudies.map((studie, i) => {
+                  studie = {
+                    ...studie.node.fields,
+                    ...studie.node.frontmatter
+                  }
+                  return (
+                    <Link
+                      to={studie.slug}
+                      className="caseStudie"
+                      key={_kebabCase(studie.slug) + '-' + i}
+                    >
+                      <Image
+                        background
+                        src={studie.image}
+                        className="BackgroundOverlay"
+                      />
+                      <Image
+                        src={studie.clientLogo}
+                        alt={_kebabCase(studie.slug)}
+                        className="clientLogo"
+                      />
+                      <button className="Button Quaternary">
+                        See case studie
+                      </button>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
-      {!!businessesSection && (
-        <section className="section CaseStudies--BusinessLogos">
-          <div className="container">
-            <h2>{businessesSection.title}</h2>
-            <div>
-              {businessesSection.logos.map((logo, index) => {
-                return (
-                  <Image
-                    src={logo}
-                    alt={'Logo ' + index}
-                    key={'BusinessLogo-' + index}
-                  />
-                )
-              })}
+      {!!businessesSection &&
+        businessesSection.length && (
+          <section className="section CaseStudies--BusinessLogos">
+            <div className="container">
+              <h2>{businessesSection.title}</h2>
+              <div>
+                {businessesSection.logos.map((logo, index) => {
+                  return (
+                    <Image
+                      src={logo}
+                      alt={'Logo ' + index}
+                      key={'BusinessLogo-' + index}
+                    />
+                  )
+                })}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {!!sectionGetInTouch && (
         <section className="section">

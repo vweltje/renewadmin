@@ -44,11 +44,15 @@ export const SingleServiceTemplate = ({
       {!!getInTouchSection && (
         <section className="section Service--Contact">
           <div className="container">
-            <GetInTouchBlock
-              content={
-                getInTouchSection.edges[0].node.frontmatter.sectionGetInTouch
-              }
-            />
+            {!!getInTouchSection.edges &&
+              getInTouchSection.edges.length && (
+                <GetInTouchBlock
+                  content={
+                    getInTouchSection.edges[0].node.frontmatter
+                      .sectionGetInTouch
+                  }
+                />
+              )}
           </div>
         </section>
       )}

@@ -200,7 +200,7 @@ const SingleCaseStudie = ({ data }) => {
 export default SingleCaseStudie
 
 export const pageQuery = graphql`
-  ## Query for SingleService data
+  ## Query for SingleCaseStudie data
   ## Use GraphiQL interface (http://localhost:8000/___graphql)
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file

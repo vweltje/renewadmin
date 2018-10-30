@@ -400,6 +400,30 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
+      - file: 'content/pages/singleService.md'
+        label: 'Single Service Page'
+        name: 'single-service-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: SingleService,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: singleService,
+            }
+          - { label: Slug, name: slug, widget: hidden, default: single-service }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
+
       - file: 'content/pages/caseStudies.md'
         label: 'Case Studies Page'
         name: 'case-studies-index'
@@ -472,55 +496,6 @@ collections: # A list of collections the CMS should be able to edit
                   required: false,
                 }
 
-      - file: 'content/pages/singleService.md'
-        label: 'Single Service Page'
-        name: 'single-service-page'
-        fields:
-          - {
-              label: Template,
-              name: template,
-              widget: hidden,
-              default: SingleServiceP,
-            }
-          - {
-              label: PageTitle,
-              name: pageTitle,
-              widget: hidden,
-              default: singleService,
-            }
-          - { label: Slug, name: slug, widget: hidden, default: single-service }
-          - label: 'get In Touch Section'
-            name: 'sectionGetInTouch'
-            widget: 'object'
-            fields:
-              - { label: title, name: title, widget: string }
-              - { label: subtitle, name: subtitle, widget: string }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
-
       - file: 'content/pages/singleCaseStudie.md'
         label: 'Single case studie Page'
         name: 'case-studie-page'
@@ -545,31 +520,6 @@ collections: # A list of collections the CMS should be able to edit
             fields:
               - { label: title, name: title, widget: string }
               - { label: subtitle, name: subtitle, widget: string }
-          - label: 'Meta'
-            required: false
-            name: 'meta'
-            widget: 'object'
-            fields:
-              - { label: Title, name: title, widget: string, required: false }
-              - {
-                  label: Description,
-                  name: description,
-                  widget: text,
-                  required: false,
-                  pattern: ['.{,300}', 'Must not exceed 300 characters'],
-                }
-              - {
-                  label: Canonical Link,
-                  name: canonicalLink,
-                  widget: string,
-                  required: false,
-                }
-              - {
-                  label: Noindex,
-                  name: noindex,
-                  widget: boolean,
-                  required: false,
-                }
 
       - file: 'content/pages/news.md'
         label: 'News page'
@@ -620,6 +570,36 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
+
+      - file: 'content/pages/singleNewsItem.md'
+        label: 'Single news item page'
+        name: 'single-news-item-page'
+        fields:
+          - {
+              label: Template,
+              name: template,
+              widget: hidden,
+              default: singleNewsItem,
+            }
+          - {
+              label: PageTitle,
+              name: pageTitle,
+              widget: hidden,
+              default: single News Item,
+            }
+          - {
+              label: Slug,
+              name: slug,
+              widget: hidden,
+              default: single-news-item-page,
+            }
+          - { label: Date / Order, name: date, widget: date }
+          - label: 'get In Touch Section'
+            name: 'sectionGetInTouch'
+            widget: 'object'
+            fields:
+              - { label: title, name: title, widget: string }
+              - { label: subtitle, name: subtitle, widget: string }
 
   - name: team-member
     label: Team Member

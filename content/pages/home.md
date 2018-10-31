@@ -63,4 +63,3 @@ certificationsSection:
     can be provided upon request.
   title: 'Certifications '
 ---
-

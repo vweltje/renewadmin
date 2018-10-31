@@ -7,6 +7,7 @@ import Content from '../components/Content'
 import Image from '../components/Image'
 import ShareWidget from '../components/ShareWidget'
 import Layout from '../components/Layout'
+import GetInTouchBlock from '../components/GetInTouchBlock'
 import './SingleNewsItem.css'
 
 export const SingleNewsItemTemplate = ({
@@ -18,7 +19,8 @@ export const SingleNewsItemTemplate = ({
   contentImages,
   bodyOptional,
   services = [],
-  edges
+  edges,
+  sectionGetInTouch
 }) => (
   <main>
     <article
@@ -130,15 +132,38 @@ export const SingleNewsItemTemplate = ({
           )}
       </div>
     </article>
+
+    {!!sectionGetInTouch && (
+      <section className="section">
+        <div className="container">
+          <GetInTouchBlock
+            content={{
+              ...sectionGetInTouch,
+              ...{
+                button1: {
+                  text: 'Create acount',
+                  link: '/contact'
+                },
+                button2: {
+                  text: 'contact us',
+                  link: '/contact'
+                }
+              }
+            }}
+          />
+        </div>
+      </section>
+    )}
   </main>
 )
 
 // Export Default SingleNewsItem for front-end
-const SingleNewsItem = ({ data: { newsItem, allNewsItems } }) => {
+const SingleNewsItem = ({ data: { newsItem, allNewsItems, page } }) => {
   const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
   return (
     <Layout>
       <SingleNewsItemTemplate
+        {...page.edges[0].node.frontmatter}
         {...newsItem}
         {...newsItem.frontmatter}
         body={newsItem.html}
@@ -199,6 +224,23 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+          }
+        }
+      }
+    }
+    page: allMarkdownRemark(
+      filter: {
+        fields: { contentType: { eq: "pages" } }
+        frontmatter: { template: { eq: "NewsIndex" } }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            sectionGetInTouch {
+              title
+              subtitle
+            }
           }
         }
       }

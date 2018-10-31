@@ -129,4 +129,14 @@
   .ServicesGrid--service {
     flex: 0 0 100%;
   }
+  .ServicesGrid--service:nth-of-type(2),
+  .ServicesGrid--service:nth-of-type(4),
+  .ServicesGrid--service:nth-of-type(6),
+  .ServicesGrid--service:nth-of-type(8) {
+    border-right: 0;
+    border-left: 0px solid var(--darkerGrey);
+  }
+  .ServicesGrid--service:nth-of-type(-n + 3) {
+    border-top: 1px solid var(--darkerGrey);
+  }
 }

@@ -47,7 +47,7 @@
 }
 
 @media (max-width: 768px) {
-  .ContentBlock {
+  .ContentBlock{
     flex-direction: column;
     text-align: center;
   }
@@ -59,6 +59,10 @@
 
   .ContentBlock > div {
     width: 100%;
+  }
+
+  .ContentBlock > div .Button {
+    margin: 2rem auto 0;
   }
 
   .ContentBlock > div:first-of-type {

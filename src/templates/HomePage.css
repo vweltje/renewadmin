@@ -237,3 +237,9 @@
     border-bottom: 1px solid var(--secondary);
   }
 }
+
+@media only screen and (max-width: 475px) {
+  .slick-track, .slick-list {
+    max-height: 480px;
+  }
+}

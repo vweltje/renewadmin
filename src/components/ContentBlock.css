@@ -49,6 +49,7 @@
 @media (max-width: 768px) {
   .ContentBlock {
     flex-direction: column;
+    text-align: center;
   }
 
   .ContentBlock:nth-of-type(2n + 2) {

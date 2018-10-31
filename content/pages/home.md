@@ -1,50 +1,65 @@
 ---
 template: HomePage
+pageTitle: Home Page
 slug: ''
-title: 'Your Comfort is Our Top Priority - '
-subtitle: Book your visit today
-featuredImage: 'https://ucarecdn.com/346a69e2-1824-4380-a0c5-636481e8931e/'
-description: >-
-  Passion Family Dental North Lakes is your friendly family orientated dental
-  practice.
-
-  Our caring, warm and professional dental team aim to provide you and your
-  family with gentle dental care of the highest quality in a calm and relaxing
-  atmosphere.  
-
-  We are here to build trusting lifetime relationships with you. 
+titleSection:
+  subtitle: Taking the load off the mundane administration.
+  title: Giving you time back for your business
 servicesSection:
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
+    facilisis augue, et venenatis urna interdum in.
+  title: Our services
+aboutUsSection:
+  description: >-
+    We thrive on watching your business grow and are here for you, to free up
+    your time so that you can focus on your professional skills.  Together we
+    will work as part of your team. Cheering you on!
+  image: 'https://ucarecdn.com/d2656287-b128-412f-bb1b-5a24df0c60a6/'
   shortDescription: >-
-    At Passion Family Dental, we are committed to understand and work together
-    with you to help you
-
-    take control of your oral health.
-  title: How we can help you
-benefitsSection:
-  benetits:
-    - benefit: Personal
-      title: >-
-        We are professional team consisting of lorem ipsum dolor sit amet,
-        consectetur adipiscing elit.
-      featuredImage: 'https://ucarecdn.com/1d99d76f-11f7-43f8-9ad1-01dcc8973aca/'
-    - benefit: Technology
-      title: >-
-        We are using te most advanced equipment so you feel more comfortable
-        didunt ut labore.
-      featuredImage: 'https://ucarecdn.com/ccfd9dad-0fb8-4c47-a070-0d1ab80b80cc/'
-    - benefit: Environment
-      title: >-
-        Friendly and cosy environment. dicta sunt rem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed.
-      featuredImage: 'https://ucarecdn.com/0048b4f3-d200-4f8c-8aab-cfb3b7a46736/'
-    - benefit: Convenient
-      title: >-
-        We offer the convenience of on-the-spot HICAPS claims and quotes for
-        your private health insurance.
-      featuredImage: 'https://ucarecdn.com/7f55ec8d-c876-4fb4-af46-3a356b45acf4/'
+    Let our professional team take care of your Administration tasks. Relinquish
+    these mundane tasks to revive your business and renew your passions that
+    have created your business today.
+  title: We are administration experts
+howItWorksSection:
+  description: >-
+    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
+    Proin lacus enim, luctus volutpat accumsan vel, tincidunt eget purus.
+    Quisque ullamcorper nec est at scelerisque. Integer vel elementum risus.
+    Cras id dolor ante.
+  image: 'https://ucarecdn.com/553d1034-1ced-498d-ac73-fe39ee64083c/'
   shortDescription: >-
-    Our caring team look forward to welcome you and your family to visit our
-    modern, state-of-the-art dental practice. 
-  title: Our benefits
+    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
+    Proin lacus enim, luctus volutpat
+  title: 'Bookkeeping + Workflow Efficiency '
+inlineBanner:
+  background: 'https://ucarecdn.com/5c0e8b60-c345-43ae-8a5e-7c6ffe5f5914/'
+  description: >-
+    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
+    Proin lacus enim, luctus volutpat
+  title: Book an appointment now
+caseStudiesSection:
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
+    facilisis augue, et venenatis urna interdum in.
+  title: Case studies
+newsSection:
+  description: >-
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
+    facilisis augue, et venenatis urna interdum in.
+  title: Latest news
+certificationsSection:
+  description: >-
+    Renew Solutions has adopted an internal operating system to meet the
+    Australian Standards for Quality ISO 9001:2008, Occupational Health and
+    Safety AS/NZS 4801;2001 and Environmental ISO 14001:2004 requirements.
+  logos:
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/'
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
+    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
+  shortDescription: >-
+    Renew Solutions is fully insured for all Professional Indemnity and Public
+    and Product Liability. Further confirmation of other associated insurances
+    can be provided upon request.
+  title: 'Certifications '
 ---
-

@@ -40,5 +40,8 @@ certificationsSection:
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/'
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
+meta:
+  title: About page of Renew admin
+  description: This is the about page of the website renew admin
 ---
 

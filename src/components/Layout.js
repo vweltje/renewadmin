@@ -9,7 +9,7 @@ import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
 
-export default ({ children }) => {
+export default ({ children, meta }) => {
   return (
     <StaticQuery
       query={graphql`
@@ -47,6 +47,7 @@ export default ({ children }) => {
                 socialMediaCard.image &&
                 siteUrl + socialMediaCard.image
               }
+              {...meta}
             />
 
             <Nav />

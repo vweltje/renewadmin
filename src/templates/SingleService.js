@@ -71,21 +71,15 @@ export const SingleServiceTemplate = ({
 }
 
 // Export Default SingleService for front-end
-const SingleService = ({ data }) => {
-  const service = {
-    ...data.service
-  }
-
-  return (
-    <Layout>
-      <SingleServiceTemplate
-        {...service}
-        {...service.frontmatter}
-        getInTouchSection={data.page}
-      />
-    </Layout>
-  )
-}
+const SingleService = ({ data: { service, page } }) => (
+  <Layout meta={service.frontmatter.meta || false}>
+    <SingleServiceTemplate
+      {...service}
+      {...service.frontmatter}
+      getInTouchSection={page}
+    />
+  </Layout>
+)
 
 export default SingleService
 
@@ -96,6 +90,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query SingleService($id: String!) {
     service: markdownRemark(id: { eq: $id }) {
+      ...Meta
       html
       frontmatter {
         title

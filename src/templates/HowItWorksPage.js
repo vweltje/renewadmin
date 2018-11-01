@@ -138,21 +138,16 @@ export const HowItWorksPageTemplate = ({
 }
 
 // Export Default HowItWorksPage for front-end
-const HowItWorksPage = ({ data }) => {
-  const page = data.page
-  let services = []
-  data.services.edges.map((service, index) => {
-    return services.push({
-      ...service.node.fields,
-      ...service.node.frontmatter
-    })
-  })
+const HowItWorksPage = ({ data: { page, services } }) => {
   return (
-    <Layout>
+    <Layout meta={page.frontmatter.meta || false}>
       <HowItWorksPageTemplate
         {...page}
         {...page.frontmatter}
-        services={services}
+        services={services.edges.map((service, index) => ({
+          ...service.node.fields,
+          ...service.node.frontmatter
+        }))}
       />
     </Layout>
   )
@@ -168,6 +163,7 @@ export const pageQuery = graphql`
   query HowItWorksPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
+      ...Meta
       frontmatter {
         title
         shortDescription

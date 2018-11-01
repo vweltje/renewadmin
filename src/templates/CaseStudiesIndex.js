@@ -130,14 +130,14 @@ export const CaseStudiesTemplate = ({
 }
 
 // Export Default CaseStudies for front-end
-const CaseStudies = ({ data }) => {
-  const page = {
-    ...data.page,
-    caseStudies: data.allCaseStudies.edges
-  }
+const CaseStudies = ({ data: { page, allCaseStudies } }) => {
   return (
-    <Layout>
-      <CaseStudiesTemplate {...page} {...page.frontmatter} />
+    <Layout meta={page.frontmatter.meta || false}>
+      <CaseStudiesTemplate
+        {...page}
+        {...page.frontmatter}
+        caseStudies={allCaseStudies.edges}
+      />
     </Layout>
   )
 }
@@ -152,6 +152,7 @@ export const pageQuery = graphql`
   query CaseStudies($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
+      ...Meta
       frontmatter {
         title
         titleSection {

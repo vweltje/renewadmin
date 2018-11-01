@@ -153,7 +153,7 @@ export class AboutPageTemplate extends React.Component {
 // Export Default AboutPage for front-end
 const AboutPage = ({ data: { page, teamMembers } }) => {
   return (
-    <Layout>
+    <Layout meta={page.frontmatter.meta || false}>
       <AboutPageTemplate
         {...page}
         {...page.frontmatter}
@@ -176,6 +176,7 @@ export const pageQuery = graphql`
   query AboutPage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
+      ...Meta
       frontmatter {
         title
         shortDescription

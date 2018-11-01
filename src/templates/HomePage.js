@@ -206,6 +206,7 @@ const HomePage = ({ data }) => {
     ...data.page,
     services: []
   }
+  console.log(data)
   page.frontmatter.caseStudiesSection = {
     ...page.frontmatter.caseStudiesSection,
     caseStudies: data.allCaseStudies.edges
@@ -221,7 +222,7 @@ const HomePage = ({ data }) => {
     newsItems: [...data.newsItems.edges]
   }
   return (
-    <Layout>
+    <Layout meta={page.frontmatter.meta || false}>
       <HomePageTemplate {...page} {...page.frontmatter} />
     </Layout>
   )
@@ -237,6 +238,7 @@ export const pageQuery = graphql`
   query HomePage($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
       html
+      ...Meta
       frontmatter {
         titleSection {
           title

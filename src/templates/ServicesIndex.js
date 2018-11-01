@@ -47,21 +47,18 @@ export const ServicesTemplate = ({
 }
 
 // Export Default Services for front-end
-const Services = ({ data }) => {
-  const page = data.page
-  let services = []
-  data.services.edges.map((service, index) => {
-    return services.push({
-      ...service.node.fields,
-      ...service.node.frontmatter
-    })
-  })
-  return (
-    <Layout>
-      <ServicesTemplate {...page} {...page.frontmatter} services={services} />
-    </Layout>
-  )
-}
+const Services = ({ data: { page, services } }) => (
+  <Layout meta={page.frontmatter.meta || false}>
+    <ServicesTemplate
+      {...page}
+      {...page.frontmatter}
+      services={services.edges.map((service, index) => ({
+        ...service.node.fields,
+        ...service.node.frontmatter
+      }))}
+    />
+  </Layout>
+)
 
 export default Services
 
@@ -72,6 +69,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query Services($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
+      ...Meta
       html
       frontmatter {
         title

@@ -182,20 +182,17 @@ export const SingleCaseStudieTemplate = ({
 }
 
 // Export Default SingleCaseStudie for front-end
-const SingleCaseStudie = ({ data }) => {
-  const thisEdge = data.allCaseStudies.edges.find(
-    edge => edge.node.id === data.case.id
-  )
-  return (
-    <Layout>
-      <SingleCaseStudieTemplate
-        {...data.case.frontmatter}
-        page={data.page.edges[0].node.frontmatter.sectionGetInTouch}
-        edges={thisEdge}
-      />
-    </Layout>
-  )
-}
+const SingleCaseStudie = ({ data: { caseStudie, allCaseStudies, page } }) => (
+  <Layout meta={caseStudie.frontmatter.meta || false}>
+    <SingleCaseStudieTemplate
+      {...caseStudie.frontmatter}
+      page={page.edges[0].node.frontmatter.sectionGetInTouch}
+      edges={{
+        ...allCaseStudies.edges.find(edge => edge.node.id === caseStudie.id)
+      }}
+    />
+  </Layout>
+)
 
 export default SingleCaseStudie
 
@@ -205,8 +202,9 @@ export const pageQuery = graphql`
   ## $id is processed via gatsby-node.js
   ## query name must be unique to this file
   query SingleCaseStudie($id: String!) {
-    case: markdownRemark(id: { eq: $id }) {
+    caseStudie: markdownRemark(id: { eq: $id }) {
       id
+      ...Meta
       frontmatter {
         title
         service

@@ -82,30 +82,25 @@ export const NewsTemplate = ({
 }
 
 // Export Default News for front-end
-const News = ({ data }) => {
-  const page = {
-    ...data.page
-  }
-  return (
-    <Layout>
-      <NewsTemplate
-        {...page}
-        {...page.fields}
-        {...page.frontmatter}
-        newsItems={data.newsItems.edges.map(item => ({
-          ...item.node,
-          ...item.node.frontmatter,
-          ...item.node.fields
-        }))}
-        newsCategories={data.newsCategories.edges.map(category => ({
-          ...category.node,
-          ...category.node.frontmatter,
-          ...category.node.fields
-        }))}
-      />
-    </Layout>
-  )
-}
+const News = ({ data: { page, newsItems, newsCategories } }) => (
+  <Layout meta={page.frontmatter.meta || false}>
+    <NewsTemplate
+      {...page}
+      {...page.fields}
+      {...page.frontmatter}
+      newsItems={newsItems.edges.map(item => ({
+        ...item.node,
+        ...item.node.frontmatter,
+        ...item.node.fields
+      }))}
+      newsCategories={newsCategories.edges.map(category => ({
+        ...category.node,
+        ...category.node.frontmatter,
+        ...category.node.fields
+      }))}
+    />
+  </Layout>
+)
 
 export default News
 
@@ -116,6 +111,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query News($id: String!) {
     page: markdownRemark(id: { eq: $id }) {
+      ...Meta
       fields {
         contentType
       }

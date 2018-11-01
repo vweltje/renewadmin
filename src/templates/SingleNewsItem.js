@@ -158,20 +158,17 @@ export const SingleNewsItemTemplate = ({
 )
 
 // Export Default SingleNewsItem for front-end
-const SingleNewsItem = ({ data: { newsItem, allNewsItems, page } }) => {
-  const thisEdge = allNewsItems.edges.find(edge => edge.node.id === newsItem.id)
-  return (
-    <Layout>
-      <SingleNewsItemTemplate
-        {...page.edges[0].node.frontmatter}
-        {...newsItem}
-        {...newsItem.frontmatter}
-        body={newsItem.html}
-        edges={thisEdge}
-      />
-    </Layout>
-  )
-}
+const SingleNewsItem = ({ data: { newsItem, allNewsItems, page } }) => (
+  <Layout meta={newsItem.frontmatter.meta || false}>
+    <SingleNewsItemTemplate
+      {...page.edges[0].node.frontmatter}
+      {...newsItem}
+      {...newsItem.frontmatter}
+      body={newsItem.html}
+      edges={allNewsItems.edges.find(edge => edge.node.id === newsItem.id)}
+    />
+  </Layout>
+)
 
 export default SingleNewsItem
 
@@ -182,6 +179,7 @@ export const pageQuery = graphql`
   ## query name must be unique to this file
   query SingleNewsItem($id: String!) {
     newsItem: markdownRemark(id: { eq: $id }) {
+      ...Meta
       html
       id
       frontmatter {

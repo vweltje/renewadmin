@@ -62,4 +62,8 @@ certificationsSection:
     and Product Liability. Further confirmation of other associated insurances
     can be provided upon request.
   title: 'Certifications '
+meta:
+  description: This is the home page of renew admin
+  title: Home page
 ---
+

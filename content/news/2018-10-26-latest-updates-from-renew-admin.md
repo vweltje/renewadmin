@@ -37,6 +37,9 @@ bodyOptional: >-
   nisi gravida lacinia non non urna. Etiam gravida odio sit amet quam
   condimentum, non pellentesque odio porttitor. Morbi commodo urna sollicitudin
   risus euismod mollis.
+meta:
+  description: this is a newsitem of our website
+  title: Latest Updates from Renew Admin
 ---
 
 Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac tincidunt. Proin tristique, turpis in consequat ullamcorper, felis urna pharetra est, in scelerisque quam nibh facilisis tortor. Proin commodo urna sit amet eleifend consectetur. Morbi non enim euismod, pretium augue vitae, mattis leo.

@@ -25,5 +25,8 @@ contentBlock:
     title: Results
 image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
 youtubeVideo: 'https://www.youtube.com/watch?v=SFySjst-TlA'
+meta:
+  description: And this is the description
+  title: This is a case studie
 ---
 

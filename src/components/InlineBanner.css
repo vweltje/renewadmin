@@ -40,3 +40,12 @@
   margin: 0 auto;
   margin-top: 3rem;
 }
+
+@media only screen and (max-width: 460px) {
+  .InlineBanner h2 {
+    font-size: 2.5rem;
+  }
+  .InlineBanner p {
+    font-size: 1.8rem;
+  }
+}

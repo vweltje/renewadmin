@@ -46,11 +46,25 @@
   margin-top: 2rem;
 }
 
-/* @media only screen and (max-width: 1080px) {
-  .ContentBlock > div:last-of-type {
+@media only screen and (max-width: 1080px) {
+  .ContentBlock > div:first-of-type  {
+    text-align: center;
     flex: 0 0 100%;
+    padding-right: 0;
   }
-} */
+  .ContentBlock > div:last-of-type {
+    margin: 0 auto;
+    margin-top: 3rem;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .ContentBlock {
+    margin-top: 2rem;
+  }
+}
 
 @media (max-width: 768px) {
   .ContentBlock{

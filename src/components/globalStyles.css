@@ -229,6 +229,13 @@ section:first-of-type {
   padding: 0;
 }
 
+@media
+ screen and (max-width: 770px) {
+  section:first-of-type {
+    padding-bottom: 0;
+  }
+}
+
 @media (max-width: 600px) {
   .section {
     width: 100%;
@@ -245,7 +252,7 @@ section:first-of-type {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 5%;
 }
 .container.skinny {
   max-width: 888px;
@@ -271,7 +278,7 @@ section:first-of-type {
   transition: all 0.2s ease;
   cursor: pointer;
   border-radius: 3rem;
-  min-width: 20rem;
+  /* min-width: 20rem; */
   text-align: center;
   justify-content: center;
   display: flex;

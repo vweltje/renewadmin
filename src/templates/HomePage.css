@@ -231,10 +231,24 @@
   }
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 768px) {
+  .section.Home--ServicesSecction {
+    padding-top: 0;
+  }
   .Home-caseStudies .Home--Case {
     flex: 0 0 100%;
     border-bottom: 1px solid var(--secondary);
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .Home-caseStudies .Home--Case {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .Home-caseStudies .Home--Case h4 {
+    margin-top: 3rem;
   }
 }
 

@@ -39,7 +39,7 @@ footer {
 
 .FooterBox .FooterFormBox {
   position: relative;
-  width: 30%;
+  /* width: 30%; */
 }
 
 .FooterBox .FooterNav p,
@@ -81,10 +81,88 @@ footer {
   margin-right: 1.2rem;
 }
 
+.FooterBox ul li a:last-of-type svg {
+  margin-right: 0;
+}
+
 .FooterBox .ListHeading {
   color: var(--white);
   font-weight: bold;
   text-transform: uppercase;
   min-height: 2.2rem;
   padding-bottom: 1.2rem;
+}
+
+@media only screen and (max-width: 1080px) {
+  .Footer {
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 900px){
+  .Footer {
+    margin-top: 0;
+    padding: 2rem 0;
+  }
+  .FooterBox .FooterNav .FooterNavItems {
+    flex-wrap: wrap;
+  }
+  .FooterBox ul {
+    flex: 0 0 100%;
+  }
+}
+
+@media only screen and (max-width: 882px) {
+  .FooterBox .ListHeading {
+    width: 20rem;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .Footer .FooterBox {
+    flex-direction: column;
+  }
+
+  .FooterBox .FooterNav {
+    width: 100%;
+  }
+
+  .FooterBox .FooterNav ul, .FooterBox .FooterNav p {
+    text-align: center;
+  }
+
+  .FooterBox .FooterNav p {
+    margin-top: 2rem;
+  }
+
+  .FooterForm .FormGroup {
+    flex-direction: column;
+  }
+
+  .FooterForm .FormGroup label {
+    width: 100%;
+  }
+
+  .FooterForm .Form--SubmitButton {
+    align-self: center;
+  }
+
+  .FooterBox .FooterFormBox ul {
+    text-align: center;
+    width: 100%;
+  }
+
+  .FooterBox .FooterFormBox {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  .FooterBox .FooterFormBox p {
+    margin-top: 4rem;
+    text-align: center;
+  }
+  .FooterBox .ListHeading {
+    width: auto;
+  }
 }

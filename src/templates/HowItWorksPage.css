@@ -103,3 +103,31 @@
   color: var(--secondary);
   padding-right: 2rem;
 }
+
+@media only screen and (max-width: 1080px) {
+  .ServiceStepsContentBlockItem {
+    flex: 0 0 50%;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .ServiceStepsContentBlockItem {
+    flex: 0 0 100%;
+    text-align: center;
+  }
+  .ServiceStepsContentBlockItem p {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .ServiceStepsContentBlock {
+    padding: 0 1rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .ServiceSteps {
+    display: inline;
+  }
+}

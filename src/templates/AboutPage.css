@@ -160,8 +160,20 @@
   transform: rotate(-180deg);
 }
 
-@media only screen and (max-width: 744px) {
+@media only screen and (max-width: 1080px) {
+  .About--teamBlocks {
+    padding-top: 10rem;
+  }
+}
+
+@media only screen and (max-width: 810px) {
   .About--teamBlocks {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  h1 {
+    font-size: 3.4rem;
   }
 }

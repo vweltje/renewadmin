@@ -120,14 +120,41 @@
   }
 }
 
+@media only screen and (max-width: 960px) {
+.ServiceNavItem.active {
+    text-align: center;
+  }
+  .ServiceStepsNav {
+    font-size: 1.2rem;
+    padding-left: 1rem;
+  }
+  .ServiceNavItem .Service--Icon {
+    display: none;
+  }
+  .ServiceStepsContentBlockItem p {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .ServiceStepsContentBlockItem p {
+    font-size: 1.5rem;
+  }
+}
 @media only screen and (max-width: 460px) {
   .ServiceStepsContentBlock {
     padding: 0 1rem;
+    margin-top: 3rem;
+  }
+  .Home--CaseStudiesSection {
+    padding: 0;
   }
 }
 
 @media only screen and (max-width: 400px) {
   .ServiceSteps {
     display: inline;
+  }
+  .ServiceStepsContentBlockItem {
+    margin-top: 2rem;
   }
 }

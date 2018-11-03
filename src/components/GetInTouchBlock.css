@@ -40,3 +40,26 @@
     text-align: center;
   }
 }
+
+@media only screen and (max-width: 580px) {
+  .GetInTouchBlock h2 {
+    font-size: 2.5rem;
+  }
+  .GetInTouchBlock > div:last-of-type .Button {
+    width: 15rem;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .GetInTouchBlock > div:last-of-type .Button {
+    width: 10rem;
+    font-size: .9rem;
+  }
+  .GetInTouchBlock h2 {
+    font-size: 2rem;
+  }
+  .GetInTouchBlock h3 {
+    line-height: 3.5rem;
+  }
+}

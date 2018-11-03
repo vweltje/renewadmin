@@ -31,3 +31,9 @@
   width: 20rem;
   margin: 2rem;
 }
+
+@media only screen and (max-width: 768px) {
+  .GetInTouchBlock {
+    justify-content: center;
+  }
+}

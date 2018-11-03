@@ -98,7 +98,10 @@
 }
 
 @media only screen and (max-width: 768px) {
-  /* .CaseStudies--TitleSection .blockSmaller {
+  .CaseStudies--TitleSection .blockSmaller {
     text-align: center;
-  } */
+  }
+  .GetInTouchBlock h3 {
+    text-align: center;
+  }
 }

@@ -97,44 +97,28 @@ footer {
   .Footer {
     margin-top: 0;
   }
+  
+  .FooterBox .FooterNav .FooterNavItems ul {
+    margin-right: 2rem;
+  }
 }
 
 @media only screen and (max-width: 900px){
   .Footer {
     margin-top: 0;
-    padding: 2rem 0;
+    padding: 3.5rem 0;
   }
+
   .FooterBox .FooterNav .FooterNavItems {
     flex-wrap: wrap;
   }
+
   .FooterBox ul {
     flex: 0 0 100%;
   }
 }
 
-@media only screen and (max-width: 882px) {
-  .FooterBox .ListHeading {
-    width: 20rem;
-  }
-}
-
-@media only screen and (max-width: 440px) {
-  .Footer .FooterBox {
-    flex-direction: column;
-  }
-
-  .FooterBox .FooterNav {
-    width: 100%;
-  }
-
-  .FooterBox .FooterNav ul, .FooterBox .FooterNav p {
-    text-align: center;
-  }
-
-  .FooterBox .FooterNav p {
-    margin-top: 2rem;
-  }
-
+@media only screen and (max-width: 768px) {
   .FooterForm .FormGroup {
     flex-direction: column;
   }
@@ -156,13 +140,40 @@ footer {
     flex-direction: column;
     width: 100%;
     text-align: center;
+    padding-left: 9rem;
   }
 
   .FooterBox .FooterFormBox p {
     margin-top: 4rem;
     text-align: center;
   }
+
   .FooterBox .ListHeading {
     width: auto;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .Footer .FooterBox {
+    flex-direction: column;
+  }
+
+  .FooterBox .FooterNav {
+    width: 100%;
+  }
+
+  .FooterBox .FooterNav ul, .FooterBox .FooterNav p {
+    text-align: center;
+  }
+
+  .FooterBox .FooterNav p {
+    margin-top: 2rem;
+  }
+
+  .FooterBox .FooterFormBox {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
   }
 }

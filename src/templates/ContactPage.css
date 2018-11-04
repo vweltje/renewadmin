@@ -104,12 +104,12 @@
 }
 
 .ContactPage-splitview > div:last-of-type {
-  padding-left: 2rem;
+  padding-left: 10rem;
 }
 
 @media only screen and (max-width: 1170px) {
-  .ContactPage-splitview > div:first-of-type {
-    padding-left: 2rem;
+  .ContactPage-splitview > div:last-of-type {
+    padding-left: 0;
   }
 }
 

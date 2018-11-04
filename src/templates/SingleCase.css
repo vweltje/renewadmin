@@ -123,3 +123,54 @@
 .Case--Edges .edge:hover .BackgroundImage {
   transform: scale(1.05);
 }
+@media only screen and (max-width: 1024px) {
+  .Case--ContentBlock {
+    flex-wrap: wrap;
+  }
+  .Case--ContentBlock > div:first-child {
+    flex: 0 0 100%;
+  }
+  .Case--ContentBlock > div:last-child {
+    margin: 4rem auto;
+    width: 100%;
+    padding-left: 0;
+  }
+  .Case--ContentBlock div:last-child iframe {
+    height: 50vw;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .Case--ContentBlock {
+    text-align: center;
+  }
+  .Case--InfoBlock {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .Case--InfoBlock div:first-child {
+    flex: 0 0 100%;
+  }
+  div:nth-of-type(2) {
+    flex: 0 0 100%;
+  }
+  .Case--InfoBlock img {
+    margin: 0 auto;
+  }
+  .Case--ContentBlock > div:first-child {
+    padding-right: 0;
+  }
+  .ShareWidget a svg:last-of-type {
+    margin-right: 0;
+  }
+  .Case--InfoBlock img {
+    margin: 0 auto 1em auto;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .Case--ContentBlock blockquote {
+    font-size: 2rem;
+  }
+}

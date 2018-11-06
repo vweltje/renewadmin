@@ -127,45 +127,19 @@
 }
 
 @media (max-width: 560px) {
+  .ServicesGrid {
+    border: none;
+  }
+
   .ServicesGrid--service {
-    border-bottom: 0px solid var(--darkerGrey);
-    border-right: 0px solid var(--darkerGrey);
+    border: 1px solid var(--darkerGrey) !important;
     align-items: center;
     text-align: center;
-  }
-
-  .ServicesGrid--service:nth-of-type(2),
-  .ServicesGrid--service:nth-of-type(4),
-  .ServicesGrid--service:nth-of-type(6),
-  .ServicesGrid--service:nth-of-type(8) {
-    border-right: 0;
-    border-left: 0px solid var(--darkerGrey);
-  }
-
-  .ServicesGrid--service:nth-of-type(-n + 3) {
-    border-top: 1px solid var(--darkerGrey);
+    margin-bottom: 3rem;
   }
 
   .ServicesGrid--service p {
     text-align: center;
   }
 
-  .ServicesGrid div:nth-of-type(4) {
-    border-left: 1px solid var(--darkerGrey);
-  }
-
-  .ServicesGrid div:nth-of-type(6) {
-    border-left: 1px solid var(--darkerGrey);
-  }
-
-  .ServicesGrid div:nth-of-type(2) {
-    border-left: 1px solid var(--darkerGrey);
-    border-right: 1px solid var(--darkerGrey);
-    border-top: 0px solid var(--darkerGrey);
-  }
-
-  .ServicesGrid div:nth-of-type(1) {
-    border-right: 1px solid var(--darkerGrey);
-    border-top: 0px solid var(--darkerGrey);
-  }
 }

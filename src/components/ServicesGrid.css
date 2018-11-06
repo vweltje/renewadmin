@@ -18,17 +18,15 @@
 .ServicesGrid--service {
   position: relative;
   border-top: 1px solid var(--darkerGrey);
+  border-right: 1px solid var(--darkerGrey);
 }
 
 .ServicesGrid--service:nth-of-type(-n + 3) {
   border-top: 0;
 }
 
-.ServicesGrid--service:nth-of-type(2),
-.ServicesGrid--service:nth-of-type(5),
-.ServicesGrid--service:nth-of-type(8) {
-  border-right: 1px solid var(--darkerGrey);
-  border-left: 1px solid var(--darkerGrey);
+.ServicesGrid--service:nth-of-type(3n+3) {
+  border-right: none;
 }
 
 .ServicesGrid--service .Service--Icon .ServicesGrid--service p {
@@ -102,35 +100,29 @@
 @media only screen and (max-width: 980px) {
   .ServicesGrid--service {
     flex: 0 0 50%;
-  }
-
-  .ServicesGrid div:nth-of-type(1) {
+    border-top: none;
     border-bottom: 1px solid var(--darkerGrey);
-    border-left: 1px solid var(--darkerGrey);
   }
 
-  .ServicesGrid div:nth-of-type(3) {
-    border-right: 1px solid var(--darkerGrey);
-    border-left: 1px solid var(--darkerGrey);
+  .ServicesGrid {
+    border: 1px solid var(--darkerGrey);
+    border-bottom: none;
   }
 
-  .ServicesGrid div:nth-of-type(4) {
+  .ServicesGrid .ServicesGrid--service:nth-of-type(3n+3) {
     border-right: 1px solid var(--darkerGrey);
   }
 
-  .ServicesGrid div:nth-of-type(6) {
-    border-right: 1px solid var(--darkerGrey);
+  .ServicesGrid .ServicesGrid--service:nth-of-type(2n+2) {
+    border-right: none;
   }
 }
 
 @media (max-width: 768px) {
   .ServicesGrid--service {
-    width: 50%;
+    width: 100%;
     flex: 0 0 100%;
-    border-top: 1px solid var(--darkerGrey);
-    border-right: 1px solid var(--darkerGrey);
-    border-bottom: 1px solid var(--darkerGrey);
-    border-left: 1px solid var(--darkerGrey);
+    border-right: none !important;
   }
 }
 

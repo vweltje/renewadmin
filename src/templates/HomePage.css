@@ -257,3 +257,7 @@
     max-height: 480px;
   }
 }
+
+.Home--NewsSection .container {
+  padding-bottom: 2rem;
+}

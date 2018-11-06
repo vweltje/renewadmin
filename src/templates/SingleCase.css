@@ -152,7 +152,7 @@
   .Case--InfoBlock div:first-child {
     flex: 0 0 100%;
   }
-  div:nth-of-type(2) {
+  .Case--InfoBlock div:nth-of-type(2) {
     flex: 0 0 100%;
   }
   .Case--InfoBlock img {

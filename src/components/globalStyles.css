@@ -212,7 +212,7 @@ blockquote {
 
 /* Layout */
 section:first-of-type {
-  padding-top: 1rem;
+  padding-top: 7rem;
 }
 
 .section {
@@ -229,8 +229,7 @@ section:first-of-type {
   padding: 0;
 }
 
-@media
- screen and (max-width: 770px) {
+@media screen and (max-width: 770px) {
   section:first-of-type {
     padding-bottom: 0;
   }
@@ -437,7 +436,7 @@ section:first-of-type {
 
 @media (max-width: 768px) {
   .section {
-    padding: 2rem 0;
+    padding: 3rem 0;
   }
 }
 

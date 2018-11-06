@@ -75,13 +75,11 @@
 }
 
 .ContactPage-splitview > div:first-of-type {
-  width: 100%;
-  max-width: 40rem;
+  flex: 0 0 40%;
 }
 
 .ContactPage-splitview > div:last-of-type {
-  width: 100%;
-  max-width: 65rem;
+  flex: 0 0 60%;
 }
 
 .ContactPage p {
@@ -109,7 +107,7 @@
 
 @media only screen and (max-width: 1170px) {
   .ContactPage-splitview > div:last-of-type {
-    padding-left: 0;
+    padding-left: 5rem;
   }
 }
 
@@ -118,10 +116,12 @@
     padding-left: 0;
     margin: 0 auto;
     text-align: center;
+    flex: 0 0 100%;
   }
   .ContactPage-splitview > div:last-of-type {
     padding-left: 0;
     margin: 0 auto;
+    flex: 0 0 100%;
   }
   .ContactForm .Form--SubmitButton {
     margin: 3rem auto 1rem;

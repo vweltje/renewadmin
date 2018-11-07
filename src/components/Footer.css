@@ -42,6 +42,10 @@ footer {
   /* width: 30%; */
 }
 
+.FooterBox .FooterFormBox ul {
+  width: 100%;
+}
+
 .FooterBox .FooterNav p,
 .FooterBox .FooterFormBox p {
   color: var(--white);
@@ -97,7 +101,7 @@ footer {
   .Footer {
     margin-top: 0;
   }
-  
+
   .FooterBox .FooterNav .FooterNavItems ul {
     margin-right: 2rem;
   }
@@ -160,6 +164,10 @@ footer {
 
   .FooterBox .FooterNav {
     width: 100%;
+  }
+
+  .FooterBox ul {
+    margin-top: 2rem;
   }
 
   .FooterBox .FooterNav ul, .FooterBox .FooterNav p {

@@ -1,9 +1,11 @@
 .Nav {
-  position: relative;
+  position: sticky;
   top: 0;
+  left: 0;
   z-index: 1;
   border-bottom: 1px solid var(--lightGrey);
   padding: 3rem 0;
+  background: var(--lightGrey);
 }
 
 @media (max-width: 1024px) {
@@ -17,7 +19,7 @@
   justify-content: space-between;
   align-items: center;
   height: 6rem;
-  max-width: 130rem;
+  max-width: 140rem;
 }
 
 .Nav--Links {
@@ -174,7 +176,8 @@
 
   .NavLink.ButtonSignup {
     width: 25rem;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .NavLink.ButtonSignup::after {

@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 20rem;
+  padding-top: 12rem;
 }
 
 .About--TeamMember {
@@ -161,6 +161,10 @@
 }
 
   .About--Team .container {
+    max-width: none;
+  }
+
+  .About--TitleSection .container {
     max-width: none;
   }
 

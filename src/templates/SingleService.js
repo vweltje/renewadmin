@@ -16,19 +16,22 @@ import 'slick-carousel/slick/slick-theme.css'
 import './SingleService.css'
 
 export const getRelatedCases = (cases, filter) => {
-  cases = { ...(cases.edges || false) }
-  let casesFiltered = []
-  if (cases) {
-    Object.keys(cases).map((key, index) => {
-      let item = {
-        ...cases[key].node.fields,
-        ...cases[key].node.frontmatter
-      }
-      if (_kebabCase(item.service) === _kebabCase(filter)) {
-        casesFiltered.push(item)
-      }
-      return casesFiltered
-    })
+  let casesFiltered = false
+  if (cases && cases.hasOwnProperty('edges')) {
+    casesFiltered = []
+    cases = { ...(cases.edges || false) }
+    if (cases) {
+      Object.keys(cases).map((key, index) => {
+        let item = {
+          ...cases[key].node.fields,
+          ...cases[key].node.frontmatter
+        }
+        if (_kebabCase(item.service) === _kebabCase(filter)) {
+          casesFiltered.push(item)
+        }
+        return casesFiltered
+      })
+    }
   }
   return casesFiltered
 }

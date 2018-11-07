@@ -47,42 +47,43 @@ export const CaseStudiesTemplate = ({
         </section>
       )}
 
-      {!!caseStudies && (
-        <section className="section">
-          <div className="container">
-            <div className="CaseStudies--Cases">
-              {caseStudies.map((studie, i) => {
-                studie = {
-                  ...studie.node.fields,
-                  ...studie.node.frontmatter
-                }
-                return (
-                  <Link
-                    to={studie.slug}
-                    className="caseStudie"
-                    key={_kebabCase(studie.slug) + '-' + i}
-                  >
-                    <Image
-                      background
-                      src={studie.image}
-                      className="BackgroundOverlay"
-                      alt="Background"
-                    />
-                    <Image
-                      src={studie.clientLogo}
-                      alt={_kebabCase(studie.slug)}
-                      className="clientLogo"
-                    />
-                    <button className="Button Quaternary">
-                      See case studie
-                    </button>
-                  </Link>
-                )
-              })}
+      {!!caseStudies &&
+        caseStudies.length && (
+          <section className="section">
+            <div className="container">
+              <div className="CaseStudies--Cases">
+                {caseStudies.map((studie, i) => {
+                  studie = {
+                    ...studie.node.fields,
+                    ...studie.node.frontmatter
+                  }
+                  return (
+                    <Link
+                      to={studie.slug}
+                      className="caseStudie"
+                      key={_kebabCase(studie.slug) + '-' + i}
+                    >
+                      <Image
+                        background
+                        src={studie.image}
+                        className="BackgroundOverlay"
+                        alt="Background"
+                      />
+                      <Image
+                        src={studie.clientLogo}
+                        alt={_kebabCase(studie.slug)}
+                        className="clientLogo"
+                      />
+                      <button className="Button Quaternary">
+                        See case studie
+                      </button>
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
-          </div>
-        </section>
-      )}
+          </section>
+        )}
 
       {!!businessesSection &&
         businessesSection.hasOwnProperty('logos') && (

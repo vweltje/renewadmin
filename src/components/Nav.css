@@ -100,7 +100,7 @@
   margin-top: 0.4rem;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .Nav--Container {
     display: flex;
   }

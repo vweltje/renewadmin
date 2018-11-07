@@ -70,6 +70,9 @@ export default ({ globalSettings, socialSettings, navLinks }) => (
           <p>© Copyright {new Date().getFullYear()} renew admin</p>
         </div>
         <div className="FooterFormBox">
+          <ul>
+            <li className='ListHeading'>Quick Contact</li>
+          </ul>
           <FooterForm name="Quick Contact" />
           <ul>
             <li className="ListHeading">Follow us</li>

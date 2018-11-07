@@ -1,7 +1,7 @@
 ---
 template: SingleCaseStudie
 title: Case1
-service: Account payable
+service: Payroll
 clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
 quote: >-
   "Thank You! It really saves us time and effort. Renew Admin is exactly what
@@ -29,4 +29,3 @@ meta:
   description: And this is the description
   title: This is a case studie
 ---
-

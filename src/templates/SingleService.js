@@ -1,11 +1,37 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import ContentBlock from '../components/ContentBlock'
 import Accordion from '../components/Accordion'
+import Image from '../components/Image'
 import GetInTouchBlock from '../components/GetInTouchBlock'
+import Slider from 'react-slick'
+
+import _kebabCase from 'lodash/kebabCase'
+
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import './SingleService.css'
+
+export const getRelatedCases = (cases, filter) => {
+  cases = { ...(cases.edges || false) }
+  let casesFiltered = []
+  if (cases) {
+    Object.keys(cases).map((key, index) => {
+      let item = {
+        ...cases[key].node.fields,
+        ...cases[key].node.frontmatter
+      }
+      if (_kebabCase(item.service) === _kebabCase(filter)) {
+        casesFiltered.push(item)
+      }
+      return casesFiltered
+    })
+  }
+  return casesFiltered
+}
 
 // Export Template for use in CMS preview
 export const SingleServiceTemplate = ({
@@ -14,7 +40,8 @@ export const SingleServiceTemplate = ({
   description,
   image,
   infoSection = {},
-  getInTouchSection = {}
+  getInTouchSection = {},
+  caseStudies
 }) => {
   const blockData = {
     title: title,
@@ -22,6 +49,7 @@ export const SingleServiceTemplate = ({
     description: description,
     image: image
   }
+  const relatedCaseStudies = getRelatedCases(caseStudies, title)
   return (
     <main>
       <Helmet>
@@ -41,6 +69,55 @@ export const SingleServiceTemplate = ({
           </div>
         </section>
       )}
+
+      {!!relatedCaseStudies &&
+        relatedCaseStudies.length && (
+          <section className="section Service--Cases">
+            <div className="container">
+              <Slider
+                {...{
+                  initialSlide: 0,
+                  slidesToScroll: 1,
+                  variableWidth: true,
+                  centerMode: true,
+                  arrows: true,
+                  focusOnSelect: true,
+                  autoplay: true,
+                  autoplaySpeed: 3000
+                }}
+              >
+                {relatedCaseStudies.map((item, i) => {
+                  return (
+                    <div
+                      className="Service--RelatedCase"
+                      key={'Service--RelatedCase-' + i}
+                    >
+                      <div className="Service--RelatedCaseContent">
+                        <div className="Service--RelatedCaseImageBox">
+                          <Image src={item.clientLogo} alt="Logo" />
+                          <Image
+                            src={item.image}
+                            background
+                            alt="background"
+                            className="BackgroundOverlay"
+                          />
+                        </div>
+                        <div>
+                          <strong>{item.title}</strong>
+                          <p>{item.quote}</p>
+                          <Link to={item.slug} className="Button Secondary">
+                            See related project
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </Slider>
+            </div>
+          </section>
+        )}
+
       {!!getInTouchSection && (
         <section className="section Service--Contact">
           <div className="container">
@@ -71,12 +148,13 @@ export const SingleServiceTemplate = ({
 }
 
 // Export Default SingleService for front-end
-const SingleService = ({ data: { service, page } }) => (
+const SingleService = ({ data: { service, page, caseStudies } }) => (
   <Layout meta={service.frontmatter.meta || false}>
     <SingleServiceTemplate
       {...service}
       {...service.frontmatter}
       getInTouchSection={page}
+      caseStudies={caseStudies}
     />
   </Layout>
 )
@@ -119,6 +197,24 @@ export const pageQuery = graphql`
               title
               subtitle
             }
+          }
+        }
+      }
+    }
+    caseStudies: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "caseStudies" } } }
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            service
+            title
+            clientLogo
+            quote
+            image
           }
         }
       }

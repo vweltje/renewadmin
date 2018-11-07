@@ -1,0 +1,105 @@
+.Service--Cases .slick-slider {
+  height: 30rem;
+}
+
+.Service--RelatedCase {
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
+}
+
+.Service--Cases .slick-slide {
+  width: 100rem;
+  padding: 0 5rem;
+  outline: none;
+}
+
+.Service--RelatedCase > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: var(--white);
+}
+
+.Service--RelatedCaseContent {
+  width: 100%;
+}
+
+.Service--RelatedCase .Service--RelatedCaseImageBox {
+  width: 45%;
+  position: relative;
+  display: block;
+  z-index: 1;
+}
+
+.Service--RelatedCase .Service--RelatedCaseImageBox::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  border-bottom: 30rem solid white;
+  border-left: 10rem solid transparent;
+}
+
+.Service--RelatedCase .Service--RelatedCaseImageBox .BackgroundImage {
+  z-index: -1;
+}
+
+.Service--RelatedCase .Service--RelatedCaseImageBox .Image {
+  position: relative;
+  filter: brightness(0) invert(1);
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.Service--RelatedCaseContent > div:last-of-type {
+  width: 55%;
+  min-height: 30rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.Service--RelatedCaseContent > div:last-of-type strong {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.Service--RelatedCaseContent > div:last-of-type .Button {
+  margin-left: 1rem;
+}
+
+.Service--Cases .slick-arrow {
+  background: var(--white);
+  border-radius: 0.5rem;
+  height: 5rem;
+  width: 5rem;
+  z-index: 2;
+  box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
+}
+
+.Service--Cases .slick-prev::after,
+.Service--Cases .slick-next::after {
+  position: absolute;
+  content: '';
+  height: 1.5rem;
+  width: 1.5rem;
+  top: 1.7rem;
+  transform: rotate(-45deg);
+}
+
+.Service--Cases .slick-prev::after {
+  border-top: 2px solid var(--secondary);
+  border-left: 2px solid var(--secondary);
+  left: 2rem;
+}
+
+.Service--Cases .slick-next::after {
+  border-bottom: 2px solid var(--secondary);
+  border-right: 2px solid var(--secondary);
+  right: 2rem;
+}

@@ -72,7 +72,6 @@ export const CaseStudiesTemplate = ({
                       src={studie.clientLogo}
                       alt={_kebabCase(studie.slug)}
                       className="clientLogo"
-                      alt="Logo"
                     />
                     <button className="Button Quaternary">
                       See case studie

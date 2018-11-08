@@ -16,6 +16,6 @@ description: >-
   Choosing to specialize in a field means that you are completely devoted to it;
   that you will protect it as if it were your own. That is the energy that sets
   us apart.
-image: 'https://ucarecdn.com/00e506c7-65ab-4ac6-bb3e-50ff7022aa87/'
+image: 'https://ucarecdn.com/9032623a-ce62-4217-9971-63a9c321f33c/'
 ---
 

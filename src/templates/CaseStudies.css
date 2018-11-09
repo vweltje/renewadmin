@@ -108,11 +108,17 @@
   .CaseStudies--TitleSection .blockSmaller {
     text-align: center;
   }
+
   .GetInTouchBlock h3 {
     text-align: center;
   }
+
   .CaseStudies--Cases .caseStudie {
     height: auto;
+  }
+
+  .CaseStudies--BusinessLogos img {
+    width: 10rem;
   }
 }
 
@@ -120,5 +126,11 @@
   .CaseStudies--Cases .caseStudie {
     flex: 100%;
     margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  .CaseStudies--BusinessLogos img {
+    width: 7rem;
   }
 }

@@ -28,6 +28,10 @@
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
 }
 
+  .ShareWidget {
+    text-align: center;
+  }
+
 @media screen and (max-width: 750px) {
   .SingleNewsItem--Content {
     padding: 4rem 2rem;
@@ -147,6 +151,10 @@
   .SingleNewsItem--InnerContent {
     text-align: center
   }
+
+  .SingleNewsItem--ContentImages div:last-of-type {
+    padding-left: 0;
+  }
 }
 
 @media only screen and (max-width: 520px) {
@@ -158,6 +166,12 @@
   .SingleNewsItem blockquote p {
     line-height: 3rem;
     font-size: 2.5rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .SingleNewsItem--ContentImages div img {
+    max-width: 20rem;
   }
 }
 

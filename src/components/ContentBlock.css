@@ -62,9 +62,10 @@
     padding-top: 1rem;
   }
 
-  .Button {
-    margin-left: auto;
-    margin-right: auto;
+  .Service--TitleSection .ContentBlock > div img {
+      width: 40rem;
+      height: 80rem;
+      margin: 0 auto;
   }
 }
 

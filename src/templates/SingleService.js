@@ -74,7 +74,7 @@ export const SingleServiceTemplate = ({
       )}
 
       {!!relatedCaseStudies &&
-        relatedCaseStudies.length && (
+        relatedCaseStudies.length > 0 && (
           <section className="section Service--Cases">
             <div className="container">
               <Slider

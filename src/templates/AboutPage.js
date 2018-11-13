@@ -7,6 +7,7 @@ import Content from '../components/Content'
 import ContentBlock from '../components/ContentBlock'
 import InlineBanner from '../components/InlineBanner'
 import Image from '../components/Image'
+import ServicesGrid from '../components/ServicesGrid'
 import ShareWidget from '../components/ShareWidget'
 import CertificationsSection from '../components/Certifications'
 
@@ -23,7 +24,8 @@ export class AboutPageTemplate extends React.Component {
     servicesSection: {},
     inlineBanner: {},
     certificationsSection: {},
-    team: {}
+    team: {},
+    services: {}
   }
 
   state = {
@@ -38,7 +40,7 @@ export class AboutPageTemplate extends React.Component {
 
   render() {
     const page = { ...this.props }
-
+    const services = this.props.services
     const contentData = {
       shortDescription: page.shortDescription,
       description: page.description,
@@ -130,6 +132,7 @@ export class AboutPageTemplate extends React.Component {
             <div className="container">
               <h1>{page.servicesSection.title}</h1>
               <p className="taCenter">{page.servicesSection.description}</p>
+              {!!services && <ServicesGrid services={services} hideButton />}
             </div>
           </section>
         )}
@@ -151,7 +154,14 @@ export class AboutPageTemplate extends React.Component {
 }
 
 // Export Default AboutPage for front-end
-const AboutPage = ({ data: { page, teamMembers } }) => {
+const AboutPage = ({ data: { page, teamMembers, services } }) => {
+  page.services = []
+  services.edges.map((service, index) => {
+    return page.services.push({
+      ...service.node.fields,
+      ...service.node.frontmatter
+    })
+  })
   return (
     <Layout meta={page.frontmatter.meta || false}>
       <AboutPageTemplate
@@ -219,6 +229,22 @@ export const pageQuery = graphql`
               twitter
             }
             additionalInfo
+          }
+        }
+      }
+    }
+    services: allMarkdownRemark(
+      filter: { fields: { contentType: { eq: "services" } } }
+      limit: 6
+    ) {
+      edges {
+        node {
+          fields {
+            slug
+          }
+          frontmatter {
+            title
+            shortDescription
           }
         }
       }

@@ -21,6 +21,7 @@ export default class Grid extends React.Component {
   render() {
     const services = this.props.services
     const showDescription = this.props.showDescription || false
+    const hideButton = this.props.hideButton || false
     return (
       <div className="ServicesGrid">
         {!!services &&
@@ -40,7 +41,7 @@ export default class Grid extends React.Component {
                 {(() => {
                   if (showDescription) {
                     return <p>{service.shortDescription}</p>
-                  } else {
+                  } else if (!hideButton) {
                     return (
                       <Link to={service.slug} className="Button Secondary">
                         know more

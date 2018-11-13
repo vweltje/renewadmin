@@ -212,7 +212,7 @@ blockquote {
 
 /* Layout */
 section:first-of-type {
-  padding-top: 7rem;
+  padding-top: 1rem;
 }
 
 .section {
@@ -251,7 +251,7 @@ section:first-of-type {
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 1rem;
 }
 .container.skinny {
   max-width: 888px;

@@ -70,6 +70,7 @@
 .About--TeamPopover.active {
   opacity: 1;
   top: 0;
+  visibility: visible;
 }
 
 .About--TeamPopoverContent {
@@ -83,6 +84,7 @@
   padding: 0 10rem 8rem;
   top: 50%;
   transform: translateY(-50%);
+  overflow: scroll;
 }
 
 .About--TeamPopoverContent img {
@@ -165,14 +167,6 @@
     padding-top: 0;
   }
 
-  .About--Team .container {
-    max-width: none;
-  }
-
-  .About--TitleSection .container {
-    max-width: none;
-  }
-
   .About--TitleSection {
     padding-bottom: 0;
   }
@@ -206,6 +200,17 @@
 
   .About--TeamMember:nth-last-child(2) {
     margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 970px) {
+  .About--TeamPopoverContentSplitVieuw {
+    flex-direction: column-reverse;
+    text-align: center;
+    align-items: center;
+  }
+  .About--TeamPopoverContentSplitVieuw div:nth-of-type(1) {
+    padding-right: 0;
   }
 }
 

@@ -104,6 +104,22 @@
   padding-right: 2rem;
 }
 
+.Howitworks--GraphSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.Howitworks--GraphSection .default {
+}
+
+.Howitworks--GraphSection .mobile {
+  display: none;
+}
+
 @media only screen and (max-width: 1080px) {
   .ServiceStepsContentBlockItem {
     flex: 0 0 50%;
@@ -121,7 +137,7 @@
 }
 
 @media only screen and (max-width: 960px) {
-.ServiceNavItem.active {
+  .ServiceNavItem.active {
     text-align: center;
   }
   .ServiceStepsNav {
@@ -133,6 +149,13 @@
   }
   .ServiceStepsContentBlockItem p {
     font-size: 2rem;
+  }
+  .Howitworks--GraphSection .default {
+    display: none;
+  }
+
+  .Howitworks--GraphSection .mobile {
+    display: block;
   }
 }
 @media only screen and (max-width: 550px) {

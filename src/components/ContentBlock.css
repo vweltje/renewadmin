@@ -19,6 +19,7 @@
 .ContentBlock > div:first-of-type {
   justify-content: center;
   padding-right: 5rem;
+  padding-left: 3rem;
 }
 
 .ContentBlock > div:last-of-type {
@@ -33,11 +34,10 @@
   padding-left: 5rem;
 }
 
-.ContentBlock > div img {
-  max-height: 100%;
-  max-width: 100%;
-  width: auto;
-  height: auto;
+.Service--TitleSection .ContentBlock > div img {
+    width: 30rem;
+    height: 60rem;
+    margin: 0 auto;
 }
 
 .ContentBlock > div .Button {
@@ -62,10 +62,10 @@
     padding-top: 1rem;
   }
 
-  .Service--TitleSection .ContentBlock > div img {
-      width: 40rem;
-      height: 80rem;
-      margin: 0 auto;
+  .ContentBlock > div .Button {
+    width: 21rem;
+    margin-top: 2rem;
+    margin-left: 2rem;
   }
 }
 

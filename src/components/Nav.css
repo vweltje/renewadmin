@@ -115,7 +115,7 @@
   .Nav--MenuButton {
     display: block;
     margin-left: auto;
-    z-index: 1;
+    z-index: 9999;
   }
   .Nav .Logo {
     z-index: 1;

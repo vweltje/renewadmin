@@ -33,6 +33,7 @@
   border-bottom: 0.1rem solid var(--lightGrey);
   border-bottom: 0.1rem solid #f8f8f8;
   transition: all 0.3s ease;
+  box-shadow:none !important;
 }
 
 .FooterForm .Form--Input::placeholder {

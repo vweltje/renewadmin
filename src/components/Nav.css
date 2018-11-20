@@ -8,6 +8,7 @@
   padding: 3rem 0;
   background: var(--lightGrey);
   background: #f8f8f8;
+  z-index: 99999999999999999999;
 }
 
 @media (max-width: 1024px) {

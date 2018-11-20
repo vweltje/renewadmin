@@ -4,8 +4,10 @@
   left: 0;
   z-index: 1;
   border-bottom: 1px solid var(--lightGrey);
+  border-bottom: 1px solid #f8f8f8;
   padding: 3rem 0;
   background: var(--lightGrey);
+  background: #f8f8f8;
 }
 
 @media (max-width: 1024px) {
@@ -69,6 +71,7 @@
   left: 50%;
   letter-spacing: 50%;
   background: var(--primary);
+  background: #5ef288;
   transition: 0.3s all ease;
 }
 
@@ -76,6 +79,7 @@
 .NavLink.active:not(.ButtonSignup),
 .NavLink:focus:not(.ButtonSignup) {
   color: var(--primary);
+  color: #5ef288;
 }
 .NavLink:hover:not(.ButtonSignup):after,
 .NavLink.active:not(.ButtonSignup):after,
@@ -86,6 +90,7 @@
 
 .NavLink.ButtonSignup {
   color: var(--white);
+  color: #ffffff;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

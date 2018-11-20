@@ -31,16 +31,19 @@
   border-radius: 0;
   border: 0;
   border-bottom: 0.1rem solid var(--lightGrey);
+  border-bottom: 0.1rem solid #f8f8f8;
   transition: all 0.3s ease;
 }
 
 .FooterForm .Form--Input::placeholder {
   color: var(--lightGrey);
+  color: #f8f8f8;
 }
 
 .FooterForm .Form--Input:focus {
   outline: none;
   border-color: var(--primary);
+  border-color: #5ef288;
 }
 
 .FooterForm .Form--SubmitButton {

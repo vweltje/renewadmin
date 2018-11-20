@@ -14,6 +14,7 @@
 
 .BackgroundImage.BackgroundOverlay::before {
   background-color: var(--grey);
+  background-color: #639bb9;
   opacity: 0.8;
 }
 
@@ -40,6 +41,7 @@
   line-height: 1.5rem;
   text-align: center;
   font-family: var(--font-secondary);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .SingleNewsItem--Meta > * + * {
@@ -67,12 +69,14 @@
 
 .SingleNewsItem--Service {
   color: var(--primary);
+  color: #5ef288;
   text-transform: uppercase;
   letter-spacing: 0.88px;
   line-height: 1.8rem;
   text-align: center;
   margin-bottom: 3rem;
   font-family: var(--font-secondary);
+  font-family: 'Montserrat', sans-serif;
 }
 
 .ShareWidget {

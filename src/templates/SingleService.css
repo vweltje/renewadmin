@@ -19,6 +19,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   background: var(--white);
+  background: #fff;
 }
 
 .Service--RelatedCaseContent {
@@ -75,6 +76,7 @@
 
 .Service--Cases .slick-arrow {
   background: var(--white);
+  background: #fff;
   border-radius: 0.5rem;
   height: 5rem;
   width: 5rem;
@@ -94,12 +96,16 @@
 
 .Service--Cases .slick-prev::after {
   border-top: 2px solid var(--secondary);
+  border-top: 2px solid #33495b;
   border-left: 2px solid var(--secondary);
+  border-left: 2px solid #33495b;
   left: 2rem;
 }
 
 .Service--Cases .slick-next::after {
   border-bottom: 2px solid var(--secondary);
+  border-bottom: 2px solid #33495b;
   border-right: 2px solid var(--secondary);
+  border-right: 2px solid #33495b;
   right: 2rem;
 }

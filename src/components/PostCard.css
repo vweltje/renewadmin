@@ -3,7 +3,9 @@
   background: white;
   color: inherit;
   border: 1px solid var(--lightGrey);
+  border: 1px solid #f8f8f8;
   border-radius: var(--borderRadius);
+  border-radius: 3px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.15s ease-in-out;
   overflow: hidden;
@@ -45,10 +47,12 @@
   border-radius: 1rem;
   z-index: 0;
   color: var(--white);
+  color: #fff;
 }
 
 .PostCard:hover {
   color: var(--white);
+  color: #fff;
   transform: none;
 }
 
@@ -72,6 +76,7 @@
 
 .PostCard--Image::before {
   background: var(--grey);
+  background: #639bb9;
   content: '';
   position: absolute;
   top: 0;
@@ -84,6 +89,7 @@
 }
 .PostCard:hover .PostCard--Image::before {
   background: var(--secondary);
+  background: #33495b;
   opacity: 0.9;
 }
 
@@ -107,5 +113,6 @@
 
 .PostCard--Category {
   color: var(--primary);
+  color: #5ef288;
   margin-bottom: 2rem;
 }

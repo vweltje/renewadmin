@@ -13,6 +13,7 @@
   flex-wrap: wrap;
   width: 100%;
   background: var(--white);
+  background: #fff;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.2);
@@ -21,6 +22,7 @@
 
 .ServiceNavItem .Service--Icon {
   background-color: var(--secondaryFaded);
+  background-color: rgba(51, 73, 91, 0.2);
 }
 
 .ServiceNavItem {
@@ -31,19 +33,24 @@
   flex-direction: column;
   align-items: center;
   color: var(--secondaryFaded);
+  color: rgba(51, 73, 91, 0.2);
   padding: 2rem;
   border-bottom: 0.3rem solid var(--white);
+  border-bottom: 0.3rem solid #fff;
   transition: 0.3s ease all;
   cursor: pointer;
 }
 
 .ServiceNavItem.active {
   color: var(--secondary);
+  color: #33495b;
   border-bottom: 0.3rem solid var(--secondary);
+  border-bottom: 0.3rem solid #33495b;
 }
 
 .ServiceNavItem.active .Service--Icon {
   background-color: var(--secondary);
+  background-color: #33495b;
 }
 
 .ServiceStepsContentBlocks {
@@ -85,9 +92,11 @@
 
 .ServiceStepsContentBlockItem span {
   color: var(--secondary);
+  color: #33495b;
   font-weight: bold;
   border-radius: 50%;
   border: 2px solid var(--secondary);
+  border: 2px solid #33495b;
   width: 3rem;
   height: 3rem;
   display: inline-block;
@@ -101,6 +110,7 @@
   font-weight: bold;
   line-height: 2.9rem;
   color: var(--secondary);
+  color: #33495b;
   padding-right: 2rem;
 }
 

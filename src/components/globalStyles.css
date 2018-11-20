@@ -310,6 +310,7 @@ section:first-of-type {
 }
 .Button.Tertiary {
   background: var(--midGrey);
+  background: #f3f3f3;
   color: var(--secondary);
   color: #33495b;
 }
@@ -321,11 +322,10 @@ section:first-of-type {
 }
 .Button.Bordered {
   background: var(--gray);
-  background: #639bb9;
   color: var(--secondary);
   color: #33495b;
   border: 2px solid var(--secondary);
-  border: #33495b;
+  border: 2px solid #33495b;
 }
 .Button::after {
   content: '';

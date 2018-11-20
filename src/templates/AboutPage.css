@@ -11,7 +11,9 @@
   width: 36rem;
   height: 33rem;
   background: var(--white);
+  background: #fff;
   border: 1px solid var(--secondary);
+  border: 1px solid #33495b;
   border-radius: 2px;
   padding: 0 4rem 4rem 4rem;
   text-align: center;
@@ -34,7 +36,9 @@
   position: relative;
   border-radius: 19rem;
   border: 0.75rem solid var(--midGrey);
+  border: 0.75rem solid #f3f3f3;
   background: var(--midGrey);
+  background: #f3f3f3;
 }
 
 .About--TeamMember > div {
@@ -44,6 +48,7 @@
 .About--TeamMember span {
   text-transform: uppercase;
   color: var(--primary);
+  color: #5ef288;
   margin-bottom: 2rem;
   display: inline-block;
 }
@@ -58,6 +63,7 @@
   opacity: 0;
   visibility: hidden;
   background-color: var(--secondaryFaded);
+  background-color: rgba(51, 73, 91, 0.2);
   top: 100%;
   left: 0;
   right: 0;
@@ -79,8 +85,10 @@
   max-width: 90%;
   height: 62rem;
   border: 1px solid var(--secondary);
+  border: 1px solid #33495b;
   border-radius: 1rem;
   background-color: var(--white);
+  background-color: #fff;
   margin: 0 auto;
   padding: 12rem 0 8rem;
   top: 55%;
@@ -97,7 +105,9 @@
   position: absolute;
   border-radius: 19rem;
   border: 0.75rem solid var(--midGrey);
+  border: 0.75rem solid #f3f3f3;
   background: var(--midGrey);
+  background: #f3f3f3;
   left: 0;
   right: 0;
   top: 0;
@@ -119,6 +129,7 @@
   width: 100%;
   display: inline-block;
   color: var(--primary);
+  color: #5ef288;
   text-transform: uppercase;
 }
 
@@ -144,10 +155,12 @@
 
 .Content p strong {
   color: var(--secondary);
+  color: #33495b;
 }
 
 .Content * {
   color: var(--darkerGreyLessFaded);
+  color: rgba(84, 131, 157, 0.7);
 }
 
 .About--TeamPopoverContentClose {

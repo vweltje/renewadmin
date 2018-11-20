@@ -1,5 +1,6 @@
 .Home--TitleSection h2 {
   color: var(--darkerGrey);
+  color: #54839d;
   font-size: 2.8rem;
   font-weight: bold;
   letter-spacing: -0.52px;
@@ -105,6 +106,7 @@
   border-radius: 1rem;
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.4);
   background: var(--secondary);
+  background: #33495b;
 }
 
 .Home-caseStudies .Home--Case .square .Image {
@@ -127,6 +129,7 @@
 
 .Home-caseStudies .Home--Case:hover {
   color: var(--secondary);
+  color: #33495b;
 }
 
 .Home-caseStudies .Home--Case h4 {
@@ -147,6 +150,7 @@
 .Home-caseStudies,
 .Home-caseStudies .Home--Case:nth-child(-n + 2) {
   border-bottom: 1px solid var(--secondary);
+  border-bottom: 1px solid #33495b;
 }
 
 .Home-caseStudies .Home--Case:hover .square .Image {
@@ -239,6 +243,7 @@
   .Home-caseStudies .Home--Case {
     flex: 0 0 100%;
     border-bottom: 1px solid var(--secondary);
+    border-bottom: 1px solid #33495b;
   }
 }
 

@@ -31,10 +31,12 @@
   height: 100%;
   width: 100%;
   background: var(--darkerGrey);
+  background: #54839d;
   opacity: 0.95;
 }
 
 .BackgroundOverlay.soft::before {
   opacity: 0.7;
   background: var(--grey);
+  background: #639bb9;
 }

@@ -3,7 +3,9 @@
   flex-direction: row;
   flex-wrap: wrap;
   border-top: 1px solid var(--darkerGrey);
+  border-top: 1px solid #54839d;
   border-bottom: 1px solid var(--darkerGrey);
+  border-bottom: 1px solid #54839d;
 }
 
 .ServicesGrid--service {
@@ -18,7 +20,9 @@
 .ServicesGrid--service {
   position: relative;
   border-top: 1px solid var(--darkerGrey);
+  border-top: 1px solid #54839d;
   border-right: 1px solid var(--darkerGrey);
+  border-right: 1px solid #54839d;
 }
 
 .ServicesGrid--service:nth-of-type(-n + 3) {
@@ -41,31 +45,39 @@
 
 .ServicesGrid--service:hover {
   background: var(--darkerGrey);
+  background: #54839d;
   color: var(--white);
+  color: #fff;
 }
 
 .ServicesGrid--service:hover p {
   color: var(--white);
+  color: #fff;
 }
 
 .ServicesGrid--service:hover .Service--Icon {
   background-color: var(--white);
+  background-color: #fff;
 }
 
 .ServicesGrid--service:hover .Button.Secondary {
   background: var(--primary);
+  background: #5ef288;
 }
 
 .ServicesGrid--service:hover .Button.Secondary::after {
   background: var(--primaryFaded);
+  background: rgba(94, 242, 136, 0.2);
 }
 
 .ServicesGrid--service:hover .imageBorder {
   border-color: var(--white);
+  border-color: #fff;
 }
 
 .ServicesGrid--service .Service--Icon {
   background-color: var(--secondary);
+  background-color: #33495b;
   position: relative;
   width: 5.2rem;
   height: 5.2rem;
@@ -74,12 +86,14 @@
   transition: ease all 0.3s;
   border-radius: 50%;
   border: 2px solid var(--secondary);
+  border: 2px solid #33495b;
 }
 
 .ServicesGrid--service .imageBorder {
   position: relative;
   border-radius: 5rem;
   border: 2px solid var(--secondary);
+  border: 2px solid #33495b;
   width: 5.2rem;
   height: 5.2rem;
   display: flex;
@@ -102,15 +116,18 @@
     flex: 0 0 50%;
     border-top: none;
     border-bottom: 1px solid var(--darkerGrey);
+    border-bottom: 1px solid #54839d;
   }
 
   .ServicesGrid {
     border: 1px solid var(--darkerGrey);
+    border: 1px solid #54839d;
     border-bottom: none;
   }
 
   .ServicesGrid .ServicesGrid--service:nth-of-type(3n+3) {
     border-right: 1px solid var(--darkerGrey);
+    border-right: 1px solid #54839d;
   }
 
   .ServicesGrid .ServicesGrid--service:nth-of-type(2n+2) {
@@ -133,6 +150,7 @@
 
   .ServicesGrid--service {
     border: 1px solid var(--darkerGrey) !important;
+    border: 1px solid #54839d !important;
     align-items: center;
     text-align: center;
     margin-bottom: 3rem;

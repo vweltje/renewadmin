@@ -28,6 +28,7 @@
   border: 1px solid #bababa;
   padding: 1.5rem 2rem;
   border-radius: var(--borderRadius);
+  border-radius: 3px;
   line-height: 1.25em;
   transition: border-color 0.2s;
   resize: none;
@@ -78,6 +79,7 @@
 
 .Form--Alert {
   background: var(--lightGrey);
+  background: #f8f8f8;
   width: 100%;
   text-align: center;
   padding: 2rem;

@@ -27,6 +27,7 @@
 
 .Form--Line .invalid {
   stroke: var(--danger);
+  stroke: #ff3d3d;
 }
 
 .Form--Input:focus ~ .Form--Line .focus,

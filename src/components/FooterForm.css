@@ -7,6 +7,7 @@
   margin: 0;
   width: 100%;
   justify-content: space-between;
+
 }
 
 .FooterForm .FormGroup label {
@@ -57,3 +58,35 @@
   align-self: flex-end;
   margin-top: 3rem;
 }
+
+input::-webkit-input-placeholder {
+	color: $fontLight;
+	}
+
+	input:-moz-placeholder { /* Firefox 18- */
+	color: $fontLight;
+	}
+
+	input::-moz-placeholder {  /* Firefox 19+ */
+	color: $fontLight;
+	}
+
+	input:-ms-input-placeholder {
+	color: $fontLight;
+	}
+
+	textarea::-webkit-input-placeholder {
+	color: $fontLight;
+	}
+
+	textarea:-moz-placeholder { /* Firefox 18- */
+	color: $fontLight;
+	}
+
+	textarea::-moz-placeholder {  /* Firefox 19+ */
+	color: $fontLight;
+	}
+
+	textarea:-ms-input-placeholder {
+	color: $fontLight;
+	}

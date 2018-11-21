@@ -2,7 +2,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 12rem;
 }
 
@@ -17,6 +17,7 @@
   border-radius: 2px;
   padding: 0 4rem 4rem 4rem;
   text-align: center;
+  margin: 0 1.5rem;
 }
 
 .About--TeamMember:not(:nth-child(-n + 5)) {
@@ -82,18 +83,19 @@
 .About--TeamPopoverContent {
   position: relative;
   width: 96rem;
+  height: 100%;
   max-width: 90%;
-  height: 62rem;
   border: 1px solid var(--secondary);
   border: 1px solid #33495b;
   border-radius: 1rem;
   background-color: var(--white);
   background-color: #fff;
   margin: 0 auto;
-  padding: 12rem 0 8rem;
-  top: 55%;
+  padding: 12rem 0 7.5vh;
+  top: 62.5%;
   transform: translateY(-50%);
-  max-height: 80vh;
+  max-height: 65vh;
+  z-index: 999;
 }
 
 .About--TeamPopoverContent img {
@@ -115,9 +117,8 @@
 
 .About--TeamPopoverContent > div {
   padding: 0 10rem;
-  max-height: 45vh;
-  min-height: 350px;
   overflow: auto;
+  max-height: 100%;
 }
 
 .About--TeamPopoverContent h3,
@@ -242,5 +243,12 @@
 @media only screen and (max-width: 810px) {
   .About--teamBlocks {
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .About--TeamPopoverContent img {
+    height: 12rem;
+    width: 12rem;
   }
 }

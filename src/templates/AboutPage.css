@@ -193,6 +193,15 @@
     padding-bottom: 0;
   }
 
+  .Home--CertificationsSection .ContentBlock div:last-child div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 0;
+  }
+
 @media only screen and (max-width: 1250px) {
   .About--TeamMember {
     width: auto;

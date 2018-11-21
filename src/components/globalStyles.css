@@ -19,6 +19,10 @@
   --borderRadius: 3px;
 }
 
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
 ::-webkit-scrollbar {
   width: 0.4rem;
 }

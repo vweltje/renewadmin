@@ -22,7 +22,7 @@
 .CaseStudies--Cases {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -41,6 +41,7 @@
   box-shadow: 0px 2px 25px 0px rgba(84, 131, 157, 0.4);
   text-decoration: none;
   margin-bottom: 5rem;
+  margin-right: 2rem;
 }
 
 .CaseStudies--Cases .caseStudie .Button {

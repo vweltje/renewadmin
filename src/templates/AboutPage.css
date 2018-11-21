@@ -43,7 +43,8 @@
 }
 
 .About--TeamMember > div {
-  transform: translateY(calc(-50% + 2.5rem));
+  transform: translateY(-50%);
+  margin-top: 2.5rem;
 }
 
 .About--TeamMember span {

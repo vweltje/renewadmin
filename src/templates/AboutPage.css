@@ -202,6 +202,14 @@
     margin: auto 0;
   }
 
+  .Home--CertificationsSection .logo {
+    max-width: 13.5rem;
+    max-height: 12rem;
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+
 @media only screen and (max-width: 1250px) {
   .About--TeamMember {
     width: auto;

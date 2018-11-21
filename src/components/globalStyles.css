@@ -324,7 +324,7 @@ section:first-of-type {
   color: #33495b;
 }
 .Button.Bordered {
-  background: var(--gray);
+  background: transparent;
   color: var(--secondary);
   color: #33495b;
   border: 2px solid var(--secondary);

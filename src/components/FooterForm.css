@@ -59,34 +59,34 @@
   margin-top: 3rem;
 }
 
-input::-webkit-input-placeholder {
+.FooterForm .Form--Input::-webkit-input-placeholder {
 	color: #f8f8f8;
 	}
 
-	input:-moz-placeholder { /* Firefox 18- */
+.FooterForm .Form--Input::-moz-placeholder { /* Firefox 18- */
 	color: #f8f8f8;
 	}
 
-	input::-moz-placeholder {  /* Firefox 19+ */
+	.FooterForm .Form--Input::-moz-placeholder {  /* Firefox 19+ */
 	color: #f8f8f8;
 	}
 
-	input:-ms-input-placeholder {
+	.FooterForm .Form--Input:-ms-input-placeholder {
 	color: #f8f8f8;
 	}
 
-	textarea::-webkit-input-placeholder {
+	.FooterForm .Form--Input::-webkit-input-placeholder {
 	color: #f8f8f8;
 	}
 
-	textarea:-moz-placeholder { /* Firefox 18- */
+	.FooterForm .Form--Input:-moz-placeholder { /* Firefox 18- */
 	color: #f8f8f8;
 	}
 
-	textarea::-moz-placeholder {  /* Firefox 19+ */
+	.FooterForm .Form--Input::-moz-placeholder {  /* Firefox 19+ */
 	color: #f8f8f8;
 	}
 
-	textarea:-ms-input-placeholder {
+	t.FooterForm .Form--Input:-ms-input-placeholder {
 	color: #f8f8f8;
 	}

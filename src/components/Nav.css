@@ -94,7 +94,6 @@
   color: #ffffff;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
   min-width: 15rem;
   padding: 0.7rem;
   margin-left: 4rem;
@@ -103,7 +102,6 @@
 .NavLink.ButtonSignup svg {
   position: relative;
   display: inline-block;
-  width: auto;
   margin-right: 1rem;
   margin-top: 0.4rem;
 }

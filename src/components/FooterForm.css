@@ -60,33 +60,33 @@
 }
 
 input::-webkit-input-placeholder {
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	input:-moz-placeholder { /* Firefox 18- */
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	input::-moz-placeholder {  /* Firefox 19+ */
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	input:-ms-input-placeholder {
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	textarea::-webkit-input-placeholder {
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	textarea:-moz-placeholder { /* Firefox 18- */
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	textarea::-moz-placeholder {  /* Firefox 19+ */
-	color: $fontLight;
+	color: #f8f8f8;
 	}
 
 	textarea:-ms-input-placeholder {
-	color: $fontLight;
+	color: #f8f8f8;
 	}

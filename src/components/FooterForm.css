@@ -24,6 +24,7 @@
 .FooterForm .FormGroup label textarea {
   height: auto;
   min-height: inherit;
+  overflow: auto;
 }
 
 .FooterForm .Form--Input {

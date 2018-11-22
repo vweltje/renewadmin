@@ -81,12 +81,12 @@ export const SingleServiceTemplate = ({
                 {...{
                   initialSlide: 0,
                   slidesToScroll: 1,
-                  variableWidth: true,
+                  variableWidth: false,
                   centerMode: true,
                   arrows: true,
-                  focusOnSelect: true,
-                  autoplay: true,
-                  autoplaySpeed: 3000
+                  focusOnSelect: true
+                  // autoplay: true,
+                  // autoplaySpeed: 3000
                 }}
               >
                 {relatedCaseStudies.map((item, i) => {

@@ -109,3 +109,52 @@
   border-right: 2px solid #33495b;
   right: 2rem;
 }
+
+@media screen and (max-width: 1024px) {
+  .Service--Cases .slick-slider {
+    height: 50rem;
+  }
+  .Service--RelatedCase > div {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+  }
+  .Service--Cases .slick-slide {
+    width: 70rem;
+  }
+  .Service--RelatedCaseImageBox {
+    width: 100% !important;
+    height: 20rem;
+  }
+  .Service--RelatedCaseImageBox::after {
+    display: none;
+  }
+  .Service--RelatedCaseContent > div:last-of-type {
+    width: 100%;
+    padding: 5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Service--Cases .slick-slider {
+    height: 20rem;
+  }
+  .Service--RelatedCaseContent > div:last-of-type {
+    display: none;
+  }
+  .Service--Cases .slick-slide {
+    padding: 0 2rem;
+  }
+  .Service--RelatedCase .Service--RelatedCaseImageBox .Image {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .Service--Cases .slick-slide {
+    width: 35rem;
+  }
+  .Service--Cases .slick-slide {
+    padding: 0 0.5rem;
+  }
+}

@@ -67,7 +67,7 @@ class FooterForm extends React.Component {
         data-netlify-honeypot={honeypot}
       >
         {this.state.alert && (
-          <div className="Form--Alert">{this.state.alert}</div>
+          <p className="Form--Alert">{this.state.alert}</p>
         )}
         <div className="FormGroup">
           <label className="Form--Label">

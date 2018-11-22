@@ -49,12 +49,13 @@ html {
   background: #f8f8f8;
 }
 
-html,body {
-   width: 100%;
-   height: 100%;
-   margin: 0px;
-   padding: 0px;
-   overflow-x: hidden;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 body {
@@ -455,6 +456,12 @@ section:first-of-type {
   max-width: 6rem;
   margin-bottom: 2rem;
   transition: ease all 0.3s;
+}
+
+@supports not (mask-image: url('/images/icons/flow.svg')) {
+  .imageBorder {
+    display: none !important;
+  }
 }
 
 @media (max-width: 1024px) {

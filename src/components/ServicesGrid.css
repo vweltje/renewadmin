@@ -89,6 +89,13 @@
   border: 2px solid #33495b;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .ServicesGrid--service .imageBorder {
+   visibility: hidden;
+ }
+}
+
+
 .ServicesGrid--service .imageBorder {
   position: relative;
   border-radius: 5rem;

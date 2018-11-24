@@ -95,6 +95,11 @@
  }
 }
 
+@supports (-ms-ime-align: auto) {
+  .ServicesGrid--service .imageBorder {
+   visibility: hidden;
+ }
+}
 
 .ServicesGrid--service .imageBorder {
   position: relative;

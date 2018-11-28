@@ -8,6 +8,7 @@ import './globalStyles.css'
 import Meta from './Meta'
 import Nav from './Nav'
 import Footer from './Footer'
+import ScrollToTop from './ScrollToTop'
 
 export default ({ children, meta }) => {
   return (
@@ -28,7 +29,7 @@ export default ({ children, meta }) => {
         const { siteTitle, siteUrl, socialMediaCard, headerScripts } =
           data.settingsYaml || {}
         return (
-          <Fragment>
+          <ScrollToTop>
             <Helmet
               defaultTitle={siteTitle}
               titleTemplate={`%s | ${siteTitle}`}
@@ -55,7 +56,7 @@ export default ({ children, meta }) => {
             <Fragment>{children}</Fragment>
 
             <Footer />
-          </Fragment>
+          </ScrollToTop>
         )
       }}
     />

@@ -34,7 +34,7 @@ certificationsSection:
     insurances can be provided upon request.
   description: >-
     Renew Administration are fully qualified and registered with Australian Tax
-    Practitioners Board, Australian Institute of Certified Bookkeepers & an
+    Practitioners Board, Australian Institute of Certified Bookkeepers & a
     partner of online accounting software providers.
   logos:
     - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/'

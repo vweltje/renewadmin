@@ -27,7 +27,7 @@ inlineBanner:
   title: Know how it works
   description: Our special sauce
 certificationsSection:
-  title: 'Certifications '
+  title: Certifications & Insurances
   shortDescription: >-
     Renew Administration is fully insured for all Professional Indemnity and
     Public and Product Liability. Further confirmation of other associated

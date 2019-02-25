@@ -1,20 +1,28 @@
 ---
 template: SingleService
-title: Accounts Receivable
-status: Featured
+title: Sales Invoicing
 shortDescription: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
-  nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis
-  aliquet lacus sollicitudin a.
+  Ideal business world
 
-  Donec vel sodales mauris.
-description: >-
-  Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In ut
-  erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris nisl
-  ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus velit
-  est, ac varius urna consequat non. Sed auctor, libero sit amet tempor
-  fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet
-  lorem.
+
+  1. your were able to invoice your clients online as soon as the job has been
+  completed?
+
+  2. You could keep track of what is happening with your cash flow at any time?
+
+  3. You could create professional looking invoices?
+description: >+
+  Online accounting software can make this happen!
+
+
+  Your customers can now pay you by clicking on the payment link in your
+  invoices through a wide range of payment options. 
+
+
+  We prepare and send invoices to your clients/customers. Keep track of any owed
+  invoices prepare and send statements for overdue accounts. Follow up and
+  confirm payments to be made. 
+
 image: 'https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/'
 infoSection:
   infoblocks:
@@ -59,9 +67,6 @@ infoSection:
         sed auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula
         eros.
   title: More info
-getInTouchSection:
-  subtitle: Ready to get started?
-  title: Get in touch or create an account.
 howItWorks:
   steps:
     - title: Create sales invoices
@@ -72,3 +77,4 @@ howItWorks:
     - title: if payments scheduled bookkeeper creates
     - title: Pay unvoices
 ---
+

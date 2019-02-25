@@ -1,20 +1,27 @@
 ---
 template: SingleService
-title: Payroll
-status: Featured
-shortDescription: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
-  nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis
-  aliquet lacus sollicitudin a.
+title: Payroll Solutions
+shortDescription: 'Keeping Happy Employees is essential to your business. '
+description: >
+  There is so much you need to be aware of when it comes to paying your
+  employees.
 
-  Donec vel sodales mauris.
-description: >-
-  Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In ut
-  erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris nisl
-  ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus velit
-  est, ac varius urna consequat non. Sed auctor, libero sit amet tempor
-  fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet
-  lorem.
+
+  Employee Awards and how they impact your employees
+
+  Track time worked & Attendance
+
+  Employee Rostering
+
+  What Pay Conditions will your company adopt?
+
+  Different pay cycles - Weekly, Fortnightly & Monthly
+
+  Holiday pay?
+
+
+  We can manage your payroll from setup to Year End Payment Summaries and
+  reconcile accounts for your accountant.
 image: 'https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/'
 infoSection:
   infoblocks:
@@ -67,3 +74,4 @@ howItWorks:
     - title: if payments scheduled bookkeeper creates
     - title: Pay unvoices
 ---
+

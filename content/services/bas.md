@@ -1,20 +1,16 @@
 ---
 template: SingleService
-title: BAS
-status: Featured
+title: 'Compliance - BAS '
 shortDescription: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus
-  nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis
-  aliquet lacus sollicitudin a.
+  Don't get overwhelmed in paperwork. Compliance is vital to staying on top of
+  your tax liabilities. 
 
-  Donec vel sodales mauris.
+
+  Completing your BAS statements is no one’s idea of fun, but it is essential to
+  all businesses that are registered for GST.
 description: >-
-  Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In ut
-  erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris nisl
-  ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus velit
-  est, ac varius urna consequat non. Sed auctor, libero sit amet tempor
-  fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet
-  lorem.
+  We balance and reconcile ledgers and lodge quarterly BAS in accordance with
+  the Australian Taxation Office.               
 image: 'https://ucarecdn.com/60670f6a-dde0-40ed-b55b-ef35283e9347/'
 infoSection:
   infoblocks:
@@ -59,9 +55,6 @@ infoSection:
         sed auctor enim. Praesent sagittis porta accumsan. Vivamus eu vehicula
         eros.
   title: More info
-getInTouchSection:
-  subtitle: Ready to get started?
-  title: Get in touch or create an account.
 howItWorks:
   steps:
     - title: Create sales invoices
@@ -70,3 +63,4 @@ howItWorks:
     - title: if payments scheduled bookkeeper creates
     - title: Pay unvoices
 ---
+

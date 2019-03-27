@@ -6,9 +6,7 @@ titleSection:
   subtitle: Taking the load off the mundane administration.
   title: Giving you time back for your business
 servicesSection:
-  description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
-    facilisis augue, et venenatis urna interdum in.
+  description: 'Bookkeeping - Payroll - BAS - Management Accounts '
   title: Our services
 aboutUsSection:
   description: >-
@@ -23,30 +21,32 @@ aboutUsSection:
   title: We are administration experts
 howItWorksSection:
   description: >-
-    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
-    Proin lacus enim, luctus volutpat accumsan vel, tincidunt eget purus.
-    Quisque ullamcorper nec est at scelerisque. Integer vel elementum risus.
-    Cras id dolor ante.
+    It's our passion, to look after your books and make sure your workflow is
+    efficient, accurate and up to date. We strive to have your business
+    reporting and record keeping current and accurate each month end. We do this
+    by using automated bank feeds, Receipt Bank, Hubdoc, Xero, MYOB. 
   image: 'https://ucarecdn.com/553d1034-1ced-498d-ac73-fe39ee64083c/'
   shortDescription: >-
-    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
-    Proin lacus enim, luctus volutpat
+    We take the load off and manage your numbers while you focus on running and
+    developing your business. 
   title: 'Bookkeeping + Workflow Efficiency '
 inlineBanner:
   background: 'https://ucarecdn.com/5c0e8b60-c345-43ae-8a5e-7c6ffe5f5914/'
   description: >-
-    Nullam lorem ante, sollicitudin vitae purus et, convallis faucibus nisl.
-    Proin lacus enim, luctus volutpat
+    Get in touch to discuss moving your business forward and letting us take the
+    load off.
   title: Book an appointment now
 caseStudiesSection:
   description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
-    facilisis augue, et venenatis urna interdum in.
-  title: Case studies
+    Renew Administration took over the day to day record keeping and production
+    control of Hammo Surfboards. It became clear that the business was not
+    running to its full potential. We clearly recognised the key areas that
+    needed to be addressed and implemented several workflows making the business
+    far more efficient. These workflows have give the business owners larger
+    production and increased profits.
+  title: Hammo Surfboards
 newsSection:
-  description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
-    facilisis augue, et venenatis urna interdum in.
+  description: ''
   title: Latest news
 certificationsSection:
   description: >-

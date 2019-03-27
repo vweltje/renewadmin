@@ -37,14 +37,8 @@ inlineBanner:
     load off.
   title: Book an appointment now
 caseStudiesSection:
-  description: >-
-    Renew Administration took over the day to day record keeping and production
-    control of Hammo Surfboards. It became clear that the business was not
-    running to its full potential. We clearly recognised the key areas that
-    needed to be addressed and implemented several workflows making the business
-    far more efficient. These workflows have give the business owners larger
-    production and increased profits.
-  title: Hammo Surfboards
+  description: ''
+  title: Case Studies
 newsSection:
   description: ''
   title: Latest news

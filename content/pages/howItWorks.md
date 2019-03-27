@@ -5,9 +5,9 @@ slug: how-it-works
 title: How It Works
 status: Published
 shortDescription: >-
-  Emily Irish, Charles Coathup and James Coathup met while working at Renew
-  Solutions. We found that our individual fields complemented each other’s in
-  surprising, and what turned out to be inseparable, ways.
+  Renew Administration was born out of an excitement for accurate record keeping
+  and maintenance of financial records. Using the best of the mondern business
+  world to help businesses grow and profit.
 description: >-
   Technology is changing the way administration is performed. This made us eager
   to cultivate our own practice, one that will effectively intersect our

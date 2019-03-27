@@ -48,10 +48,11 @@ certificationsSection:
     Australian Standards for Quality ISO 9001:2008, Occupational Health and
     Safety AS/NZS 4801;2001 and Environmental ISO 14001:2004 requirements.
   logos:
-    - 'https://ucarecdn.com/5edd4fb3-1fc9-4409-b5c0-9c7db04e867c~4/nth/0/'
-    - 'https://ucarecdn.com/5edd4fb3-1fc9-4409-b5c0-9c7db04e867c~4/nth/1/'
-    - 'https://ucarecdn.com/5edd4fb3-1fc9-4409-b5c0-9c7db04e867c~4/nth/2/'
-    - 'https://ucarecdn.com/5edd4fb3-1fc9-4409-b5c0-9c7db04e867c~4/nth/3/'
+    - 'https://ucarecdn.com/9c0d694b-d691-4f77-a57b-41f80dc47887~5/nth/0/'
+    - 'https://ucarecdn.com/9c0d694b-d691-4f77-a57b-41f80dc47887~5/nth/1/'
+    - 'https://ucarecdn.com/9c0d694b-d691-4f77-a57b-41f80dc47887~5/nth/2/'
+    - 'https://ucarecdn.com/9c0d694b-d691-4f77-a57b-41f80dc47887~5/nth/3/'
+    - 'https://ucarecdn.com/9c0d694b-d691-4f77-a57b-41f80dc47887~5/nth/4/'
   shortDescription: >-
     Renew Solutions is fully insured for all Professional Indemnity and Public
     and Product Liability. Further confirmation of other associated insurances

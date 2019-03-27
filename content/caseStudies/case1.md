@@ -1,31 +1,29 @@
 ---
 template: SingleCaseStudie
-title: Case1
-service: Payroll
-clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
+title: Hammo Surfboards
+service: Bookkeeping
+clientLogo: 'https://ucarecdn.com/bfeca5f5-584d-4427-81a0-2c9ab3e57fc5/'
 quote: >-
   "Thank You! It really saves us time and effort. Renew Admin is exactly what
   our business has been lacking. You guys rock!"
 contentBlock:
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      Renew Administration took over the day to day record keeping and
+      production control of Hammo Surfboards. It became clear that the business
+      was not running to its full potential. We clearly recognised the key areas
+      that needed to be addressed. Renew Admin implemented several workflows
+      making the business far more efficient. These workflows have give the
+      business owners larger production and increased profits.
     title: What we did
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      Renew Admin implemented several workflows making the business far more
+      efficient. These workflows have give the business owners larger production
+      and increased profits.
     title: Results
-image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
+image: 'https://ucarecdn.com/7fca57bf-4148-4a4c-ba0e-c4a5afb964fb/'
 youtubeVideo: 'https://www.youtube.com/watch?v=SFySjst-TlA'
 meta:
   description: And this is the description
   title: This is a case studie
 ---
+

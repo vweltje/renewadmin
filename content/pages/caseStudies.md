@@ -1,22 +1,24 @@
 ---
 template: CaseStudiesIndex
 pageTitle: Case Studies
-title: Case Studies
 slug: case-studies
+title: Case Studies
 titleSection:
-  title: Join [1,000+] businesses on Renew Admin
-  shortDescription: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vel purus nec ligula facilisis imperdiet. Vestibulum mattis sagittis tortor, quis aliquet lacus sollicitudin a.
-    Donec vel sodales mauris.
   description: >-
-    Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus velit est, ac varius urna consequat non. Sed auctor, libero sit amet tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus sit amet lorem.
+    We provide solutions for their bookkeeping, record keeping and workflow
+    efficiencies, supported by our team of superstar bookkeepers and admin
+    professionals who bring a personal, hands-on approach. Our goal is to help
+    business owners improve the efficiency and cost-effectiveness of their
+    organizations. If we cannot save you time or add to your bottom line we
+    believe we are not doing our job.
+  shortDescription: >-
+    Renew Administration is helping businesses on the Gold Coast and across
+    Australia.
+  title: Join the businesses on Renew Admin
 businessesSection:
   title: Businesses that have already join us
-  logos:
-    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/0/'
-    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/1/'
-    - 'https://ucarecdn.com/b9064660-06ae-4ac0-b8c0-e49cac56067d~3/nth/2/'
 sectionGetInTouch:
-  title: Get in touch or create an account.
   subtitle: Ready to get started?
+  title: Get in touch or create an account.
 ---
+

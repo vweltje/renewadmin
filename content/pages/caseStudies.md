@@ -14,7 +14,7 @@ titleSection:
   shortDescription: >-
     Renew Administration is helping businesses on the Gold Coast and across
     Australia.
-  title: Join the businesses on Renew Admin
+  title: Renew Administration is ready for you
 businessesSection:
   title: Businesses that have already join us
 sectionGetInTouch:

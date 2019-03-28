@@ -2,7 +2,7 @@
 template: SingleCaseStudie
 title: Marloe Marloe
 service: 'Workflow Efficiency '
-clientLogo: 'https://ucarecdn.com/997d9780-e6ea-4bca-b324-7fa13bb03f2d/'
+clientLogo: 'https://ucarecdn.com/6f655962-9b9e-4cfe-8348-4a5d6e11211c/'
 quote: >-
   "Working from my studio plus international travel, the books were the last
   thing I had time for. Now with Renew Administration I am more organised and
@@ -18,7 +18,7 @@ contentBlock:
     title: What we did
   - text: 12 months later the business has grown and reported a profit.
     title: Results
-image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
+image: 'https://ucarecdn.com/3d8bb993-285c-4ea0-92c2-3198f883b3a4/'
 youtubeVideo: ''
 ---
 

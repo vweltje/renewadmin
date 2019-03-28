@@ -19,9 +19,7 @@ image: 'https://ucarecdn.com/00e506c7-65ab-4ac6-bb3e-50ff7022aa87/'
 teamTitle: Our team
 servicesSection:
   title: Our services
-  description: >-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur aliquam
-    facilisis augue, et venenatis urna interdum in.
+  description: ''
 inlineBanner:
   background: 'https://ucarecdn.com/844428d5-2084-4fef-84ed-63e1f620fcea/'
   title: Know how it works

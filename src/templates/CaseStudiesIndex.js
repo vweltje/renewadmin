@@ -91,15 +91,16 @@ export const CaseStudiesTemplate = ({
             <div className="container">
               <h2>{businessesSection.title}</h2>
               <div>
-                {businessesSection.logos.map((logo, index) => {
-                  return (
-                    <Image
-                      src={logo}
-                      alt={'Logo ' + index}
-                      key={'BusinessLogo-' + index}
-                    />
-                  )
-                })}
+                {businessesSection.logos.lenght &&
+                  businessesSection.logos.map((logo, index) => {
+                    return (
+                      <Image
+                        src={logo}
+                        alt={'Logo ' + index}
+                        key={'BusinessLogo-' + index}
+                      />
+                    )
+                  })}
               </div>
             </div>
           </section>

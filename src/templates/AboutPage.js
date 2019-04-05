@@ -20,11 +20,9 @@ export class AboutPageTemplate extends React.Component {
     shortDescription: '',
     description: '',
     image: '',
-    teamTitle: '',
     servicesSection: {},
     inlineBanner: {},
     certificationsSection: {},
-    team: {},
     services: {}
   }
 
@@ -62,71 +60,6 @@ export class AboutPageTemplate extends React.Component {
           </section>
         )}
 
-        {!!page.team && (
-          <section className="section About--Team">
-            <div className="container">
-              <h1>{page.teamTitle}</h1>
-              <div className="About--teamBlocks">
-                {page.team.length &&
-                  page.team.map((member, i) => {
-                    return (
-                      <Fragment key={'f-' + i}>
-                        <div
-                          className="About--TeamMember"
-                          key={'teamMember-' + i}
-                        >
-                          <Image src={member.photo} alt={member.title} />
-                          <div>
-                            <h3>{member.title}</h3>
-                            <span>{member.function}</span>
-                            <button
-                              className="Button Secondary"
-                              onClick={() => this.handlePopup(i)}
-                            >
-                              know more
-                            </button>
-                            <ShareWidget heading={''} />
-                          </div>
-                        </div>
-                        <div
-                          className={
-                            'About--TeamPopover ' +
-                            (this.state.activePopup === i ? 'active' : '')
-                          }
-                          key={'teamMemberPopover-' + i}
-                        >
-                          <div className="About--TeamPopoverContent">
-                            <Image src={member.photo} alt={member.title} />
-                            <button
-                              className="About--TeamPopoverContentClose"
-                              onClick={() => this.handlePopup(i)}
-                            />
-                            <div>
-                              <h3>{member.title}</h3>
-                              <span>{member.function}</span>
-                              <div className="About--TeamPopoverContentSplitVieuw">
-                                <div>
-                                  <h4>Bio</h4>
-                                  <p>{member.bio}</p>
-                                  <ShareWidget
-                                    heading={'Folow ' + member.title}
-                                  />
-                                </div>
-                                <div>
-                                  <Content source={member.additionalInfo} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Fragment>
-                    )
-                  })}
-              </div>
-            </div>
-          </section>
-        )}
-
         {!!page.servicesSection && (
           <section className="section About--Services">
             <div className="container">
@@ -154,7 +87,7 @@ export class AboutPageTemplate extends React.Component {
 }
 
 // Export Default AboutPage for front-end
-const AboutPage = ({ data: { page, teamMembers, services } }) => {
+const AboutPage = ({ data: { page, services } }) => {
   page.services = []
   services.edges.map((service, index) => {
     return page.services.push({
@@ -164,14 +97,7 @@ const AboutPage = ({ data: { page, teamMembers, services } }) => {
   })
   return (
     <Layout meta={page.frontmatter.meta || false}>
-      <AboutPageTemplate
-        {...page}
-        {...page.frontmatter}
-        team={teamMembers.edges.map(edge => ({
-          ...edge.node.frontmatter,
-          ...edge.node.fields
-        }))}
-      />
+      <AboutPageTemplate {...page} {...page.frontmatter} />
     </Layout>
   )
 }
@@ -207,29 +133,6 @@ export const pageQuery = graphql`
           description
           shortDescription
           title
-        }
-      }
-    }
-    teamMembers: allMarkdownRemark(
-      filter: { fields: { contentType: { eq: "teamMembers" } } }
-    ) {
-      edges {
-        node {
-          fields {
-            slug
-          }
-          frontmatter {
-            title
-            photo
-            function
-            bio
-            socialMediaLinks {
-              googlePlus
-              linkedin
-              twitter
-            }
-            additionalInfo
-          }
         }
       }
     }

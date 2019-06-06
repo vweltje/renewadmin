@@ -1,29 +1,23 @@
 ---
 template: SingleCaseStudie
-title: Case4
-date: '2018-03-04'
-service: Account payable
-clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
-quote: >-
-  "Thank You! It really saves us time and effort. Renew Admin is exactly what
-  our business has been lacking. You guys rock!"
+title: Bethesda Properties
+service: Bookkeeping
+clientLogo: 'https://ucarecdn.com/45499c37-e6e5-4c65-bc6b-f4063d0c1094/'
+quote: '"Renew Administration solved all of my record keeping problems!"'
 contentBlock:
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      A savvy property investor approached Renew Administration as they were in
+      over their heads. With no systems in place for their record keeping. The
+      initial task was to get their book work up to date and correct. We set
+      them up with a software to capture all the data. We also worked closely
+      with their property managers creating a seamless flow for the businesses
+      records. 
     title: What we did
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      The portfolio is now able to report to their accountant and meet all their
+      tax liabilities.
     title: Results
-image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
-youtubeVideo: 'https://www.youtube.com/watch?v=SFySjst-TlA'
+image: 'https://ucarecdn.com/0b4c112a-b4f0-48fa-a14f-b168226d4ab7/'
+youtubeVideo: ''
 ---
+

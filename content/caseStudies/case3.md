@@ -1,27 +1,24 @@
 ---
 template: SingleCaseStudie
-title: Case3
-service: Account payable
-clientLogo: 'https://ucarecdn.com/64aff3ab-50ac-4058-8f0b-201032eba248/'
+title: Security Specialists Australia
+service: Payroll
+clientLogo: 'https://ucarecdn.com/f1f27fb8-20a7-42a6-9725-8fea545edeaf/'
 quote: >-
-  "Thank You! It really saves us time and effort. Renew Admin is exactly what
-  our business has been lacking. You guys rock!"
+  "Paying our employees on time and accurately is vital to our business, knowing
+  the team at Renew Admin have our backs is amazing!"
 contentBlock:
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      Renew Administration onboarded the payroll for 100 employees. The payroll
+      was very manual to begin with. Business owners were receptive to changes
+      and allowed us to automate and use the current TNA system. This software
+      was incurring a monthly subscription fee, which we could see as a cost
+      waste. Using the TNA to its full potential elevated managements time spent
+      on payroll, and allowing them to focus on more detailed tasks within the
+      business.
     title: What we did
   - text: >-
-      Quisque id nisi eu odio egestas aliquet. Curabitur vel consequat nunc. In
-      ut erat mauris. Aliquam tempor magna ac neque scelerisque pretium. Mauris
-      nisl ligula, interdum eu arcu at, pharetra blandit purus. Aliquam dapibus
-      velit est, ac varius urna consequat non. Sed auctor, libero sit amet
-      tempor fermentum, orci neque vestibulum tortor, et lobortis turpis lacus
-      sit amet lorem.
+      By implementing new workflows, we created a more reliable, accurate and
+      cost effective payroll function.
     title: Results
   - text: >-
       Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam

@@ -27,6 +27,6 @@ contentBlock:
       dui pellentesque, lacinia risus ut, imperdiet eros.
     title: test
 image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
-youtubeVideo: 'https://www.youtube.com/watch?v=SFySjst-TlA'
+youtubeVideo: ''
 ---
 

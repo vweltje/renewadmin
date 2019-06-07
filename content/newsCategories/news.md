@@ -1,0 +1,5 @@
+---
+template: NewsIndex
+title: News
+---
+

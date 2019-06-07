@@ -2,9 +2,9 @@
 template: SingleService
 title: Superannuation
 shortDescription: >-
-  It is essential to keep on to of your Employees Superannuation Guarantee. This
-  liability can weigh heavily on cash flow if you do not keep track and up to
-  date with payments.
+  It is essential to keep on top of your Employees Superannuation Guarantee.
+  This liability can weigh heavily on cash flow if you do not keep track and up
+  to date with payments.
 
 
   We take help you take control of this part of your business.

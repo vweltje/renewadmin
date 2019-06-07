@@ -158,7 +158,7 @@ collections: # A list of collections the CMS should be able to edit
           - { label: short description, name: shortDescription, widget: text }
           - { label: description, name: description, widget: text }
           - { label: Image, name: image, widget: image }
-          - { label: team title, name: teamTitle, widget: string }
+
           - label: 'services section'
             name: 'servicesSection'
             widget: 'object'
@@ -570,33 +570,6 @@ collections: # A list of collections the CMS should be able to edit
                   widget: boolean,
                   required: false,
                 }
-
-  - name: team-member
-    label: Team Member
-    editor:
-      preview: false
-    folder: content/teamMembers
-    slug: '{{slug}}'
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields each document in this collection have
-      - { label: Title, name: title, widget: string }
-      - { label: function, name: function, widget: string }
-      - { label: Bio, name: bio, widget: text }
-      - { label: Photo, name: photo, widget: image }
-      - label: 'Sicial media links'
-        name: 'socialMediaLinks'
-        widget: 'object'
-        fields:
-          - { label: Twitter, name: twitter, widget: string }
-          - { label: linkedin, name: linkedin, widget: string }
-          - { label: google plus, name: googlePlus, widget: string }
-      - {
-          label: additional info,
-          name: additionalInfo,
-          widget: markdown,
-          required: false,
-          buttons: { bold, italic, link, bulleted-list, numbered-list },
-        }
 
   - name: service
     label: Services

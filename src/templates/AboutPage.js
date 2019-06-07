@@ -1,14 +1,14 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import Helmet from 'react-helmet'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Content from '../components/Content'
+
 import ContentBlock from '../components/ContentBlock'
 import InlineBanner from '../components/InlineBanner'
-import Image from '../components/Image'
+
 import ServicesGrid from '../components/ServicesGrid'
-import ShareWidget from '../components/ShareWidget'
+
 import CertificationsSection from '../components/Certifications'
 
 import './AboutPage.css'
@@ -118,7 +118,6 @@ export const pageQuery = graphql`
         shortDescription
         description
         image
-        teamTitle
         servicesSection {
           title
           description

@@ -4,7 +4,8 @@ title: Made an honest mistake on your activity statement?
 status: Published
 date: 2019-03-29T23:57:22.593Z
 featuredImage: 'https://ucarecdn.com/ba291926-587e-4f08-b911-b4c805e91d45/'
-categories: []
+categories:
+  - category: News
 shortDescription: >-
   If you've made a mistake or left something out on a previous activity
   statement, in most cases you can simply correct the error on your next

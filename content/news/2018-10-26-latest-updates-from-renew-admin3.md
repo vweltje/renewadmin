@@ -4,7 +4,8 @@ title: Are you STP ready?
 status: Published
 date: 2019-06-06T23:57:22.593Z
 featuredImage: 'https://ucarecdn.com/ba291926-587e-4f08-b911-b4c805e91d45/'
-categories: []
+categories:
+  - category: News
 shortDescription: >-
   Is your small business STP ready? From 1 July 2019 employers with less than 19
   employees are required to report wages and superannuation paid to employees to

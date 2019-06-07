@@ -8,7 +8,9 @@ shortDescription: >-
   1. your were able to invoice your clients online as soon as the job has been
   completed?
 
+
   2. You could keep track of what is happening with your cash flow at any time?
+
 
   3. You could create professional looking invoices?
 description: >+

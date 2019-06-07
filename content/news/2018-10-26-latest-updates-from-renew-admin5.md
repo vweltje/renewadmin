@@ -1,43 +1,19 @@
 ---
 template: SingleNewsItem
-title: Latest Updates from Renew Admin 5
+title: Budget 2019-20
 status: Published
-date: 2018-10-24T23:57:22.593Z
+date: 2019-04-04T23:57:22.593Z
 featuredImage: 'https://ucarecdn.com/ba291926-587e-4f08-b911-b4c805e91d45/'
-categories:
-  - category: Account Payable
-shortDescription: >-
-  Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
-  neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
-  tincidunt. Proin tristique, turpis in consequat ullamcorper.
+categories: []
+shortDescription: On 2 April 2019 the Budget for 2019–20 was released.
 contentImages:
-  images:
-    - Image: 'https://ucarecdn.com/f5691196-91d0-4d3b-ac97-516f7ae2fd34/'
-      description: this is a caption id
-    - Image: 'https://ucarecdn.com/7851a46b-682c-418c-adc4-4884c0418001/'
-      description: this is another caption id
-bodyOptional: >-
-  Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
-  neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
-  tincidunt. Proin tristique, turpis in consequat ullamcorper, felis urna
-  pharetra est, in scelerisque quam nibh facilisis tortor. Proin commodo urna
-  sit amet eleifend consectetur. Morbi non enim euismod, pretium augue vitae,
-  mattis leo.
-
-
-  > Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut
-  neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac
-  tincidunt.
-
-
-  Duis tempus, diam eu finibus tincidunt, enim risus dignissim ante, nec
-  vestibulum nulla lacus ut arcu. Morbi at lacus ante. Donec in pharetra dolor.
-  Nulla et ante nisl. Morbi semper auctor nibh ac tempor. Mauris eu dolor ac
-  nisi gravida lacinia non non urna. Etiam gravida odio sit amet quam
-  condimentum, non pellentesque odio porttitor. Morbi commodo urna sollicitudin
-  risus euismod mollis.
+  images: []
+bodyOptional: ''
 ---
+The measures announced as part of the 2019–20 Budget are subject to receiving Royal assent and are not yet law.
 
-Nullam a viverra augue. Mauris at ipsum diam. Donec in mi neque. Vivamus ut neque eu libero fermentum dignissim. Donec molestie ullamcorper massa ac tincidunt. Proin tristique, turpis in consequat ullamcorper, felis urna pharetra est, in scelerisque quam nibh facilisis tortor. Proin commodo urna sit amet eleifend consectetur. Morbi non enim euismod, pretium augue vitae, mattis leo.
+While the ATO sometimes provide input to tax and superannuation policies, the government is responsible for the legislation that the ATO administer on their behalf.
 
-Duis tempus, diam eu finibus tincidunt, enim risus dignissim ante, nec vestibulum nulla lacus ut arcu. Morbi at lacus ante. Donec in pharetra dolor. Nulla et ante nisl. Morbi semper auctor nibh ac tempor. Mauris eu dolor ac nisi gravida lacinia non non urna. Etiam gravida odio sit amet quam condimentum, non pellentesque odio porttitor. Morbi commodo urna sollicitudin risus euismod mollis.
+Find out about: The budget 
+
+https://www.budget.gov.au/

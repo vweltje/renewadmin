@@ -4,8 +4,7 @@ title: STP Update for you from the ATO
 status: Published
 date: 2019-05-31T23:57:22.593Z
 featuredImage: 'https://ucarecdn.com/73eb437a-5b4f-497e-9a42-cab37d6e98f4/'
-categories:
-  - {}
+categories: []
 shortDescription: >+
   Single Touch Payroll Information Pack from the ATO
 

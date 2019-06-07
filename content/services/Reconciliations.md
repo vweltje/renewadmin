@@ -2,14 +2,14 @@
 template: SingleService
 title: Monthly Reporting
 shortDescription: >
-  Know What to Measure in Your Business
+  Know what to measure in your business
 
 
-  We provide a monthly reconciliation of your accounts so that you can gage at a
-  glace how your business is tracking.
+  We provide a monthly reconciliation of your accounts, that way you can gage at
+  a glance how your business is tracking.
 description: >-
-  Cloud accounting platforms such as Xero and QuickBooks Online, you have access
-  to a wide range of reports to manage your business:
+  Cloud accounting platforms such as Xero and MYOB, allow access to a wide range
+  of reports to manage your business:
 
 
   Profit and Loss

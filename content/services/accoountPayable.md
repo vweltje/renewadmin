@@ -7,7 +7,7 @@ shortDescription: >-
 
   We have partnered with Receipt Bank and Hub Doc to manage the collation of
   your receipts and invoices. Creating a streamlined approach, for the piles of
-  paper collected in running your business. No more crowed work space and home
+  paper collected in running your business. No more crowded work spaces and home
   offices with messy paperwork,
 description: >-
   Enter invoices into software, code and allocate to correct expense account.

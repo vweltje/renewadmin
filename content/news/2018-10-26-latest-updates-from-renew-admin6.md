@@ -6,6 +6,7 @@ date: 2019-04-11T23:57:22.593Z
 featuredImage: 'https://ucarecdn.com/ba291926-587e-4f08-b911-b4c805e91d45/'
 categories:
   - category: News
+  - category: Payroll
 shortDescription: If you are an employer you may have a payroll tax obligation.
 contentImages:
   images:

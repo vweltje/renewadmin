@@ -446,6 +446,12 @@ section:first-of-type {
 .Service--Icon.flow {
   mask-image: url('/images/icons/flow.svg');
 }
+.Service--Icon.reporting {
+  mask-image: url('/images/icons/reporting.svg');
+}
+.Service--Icon.sales {
+  mask-image: url('/images/icons/sales.svg');
+}
 
 .Service--Icon {
   background-color: var(--secondary);

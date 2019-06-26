@@ -15,6 +15,9 @@ export default class Grid extends React.Component {
     else if (slug.includes('reconciliations')) icon = 'reconciliantion'
     else if (slug.includes('superannuation')) icon = 'super'
     else if (slug.includes('work-flow-efficiency')) icon = 'flow'
+    else if (slug.includes('monthly-reporting')) icon = 'reporting'
+    else if (slug.includes('sales-invoicing')) icon = 'sales'
+    else icon = 'payable'
     return icon
   }
 

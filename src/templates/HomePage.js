@@ -283,7 +283,6 @@ export const pageQuery = graphql`
     }
     services: allMarkdownRemark(
       filter: { fields: { contentType: { eq: "services" } } }
-      limit: 6
     ) {
       edges {
         node {

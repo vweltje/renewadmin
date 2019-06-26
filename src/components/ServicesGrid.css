@@ -1,36 +1,24 @@
 .ServicesGrid {
   display: flex;
+  justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
   border-top: 1px solid var(--darkerGrey);
-  border-top: 1px solid #54839d;
-  border-bottom: 1px solid var(--darkerGrey);
-  border-bottom: 1px solid #54839d;
 }
 
 .ServicesGrid--service {
-  width: calc(100% / 3);
+  width: calc(100% / 2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   padding: 5rem;
   transition: ease all 0.3s;
 }
 
 .ServicesGrid--service {
   position: relative;
-  border-top: 1px solid var(--darkerGrey);
-  border-top: 1px solid #54839d;
-  border-right: 1px solid var(--darkerGrey);
-  border-right: 1px solid #54839d;
-}
-
-.ServicesGrid--service:nth-of-type(-n + 3) {
-  border-top: 0;
-}
-
-.ServicesGrid--service:nth-of-type(3n+3) {
-  border-right: none;
+  border-bottom: 1px solid var(--darkerGrey);
 }
 
 .ServicesGrid--service .Service--Icon .ServicesGrid--service p {
@@ -91,14 +79,14 @@
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .ServicesGrid--service .imageBorder {
-   visibility: hidden;
- }
+    visibility: hidden;
+  }
 }
 
 @supports (-ms-ime-align: auto) {
   .ServicesGrid--service .imageBorder {
-   visibility: hidden;
- }
+    visibility: hidden;
+  }
 }
 
 .ServicesGrid--service .imageBorder {
@@ -137,12 +125,12 @@
     border-bottom: none;
   }
 
-  .ServicesGrid .ServicesGrid--service:nth-of-type(3n+3) {
+  .ServicesGrid .ServicesGrid--service:nth-of-type(3n + 3) {
     border-right: 1px solid var(--darkerGrey);
     border-right: 1px solid #54839d;
   }
 
-  .ServicesGrid .ServicesGrid--service:nth-of-type(2n+2) {
+  .ServicesGrid .ServicesGrid--service:nth-of-type(2n + 2) {
     border-right: none;
   }
 }
@@ -171,5 +159,4 @@
   .ServicesGrid--service p {
     text-align: center;
   }
-
 }

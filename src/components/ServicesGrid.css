@@ -16,6 +16,18 @@
   transition: ease all 0.3s;
 }
 
+@media screen and (max-width: 750px) {
+  .ServicesGrid--service {
+    width: calc(100%);
+    padding: 3rem;
+  }
+}
+@media screen and (max-width: 550px) {
+  .ServicesGrid--service {
+    padding: 2rem;
+  }
+}
+
 .ServicesGrid--service {
   position: relative;
   border-bottom: 1px solid var(--darkerGrey);
@@ -109,54 +121,4 @@
   left: -2px;
   bottom: 0;
   right: 0;
-}
-
-@media only screen and (max-width: 980px) {
-  .ServicesGrid--service {
-    flex: 0 0 50%;
-    border-top: none;
-    border-bottom: 1px solid var(--darkerGrey);
-    border-bottom: 1px solid #54839d;
-  }
-
-  .ServicesGrid {
-    border: 1px solid var(--darkerGrey);
-    border: 1px solid #54839d;
-    border-bottom: none;
-  }
-
-  .ServicesGrid .ServicesGrid--service:nth-of-type(3n + 3) {
-    border-right: 1px solid var(--darkerGrey);
-    border-right: 1px solid #54839d;
-  }
-
-  .ServicesGrid .ServicesGrid--service:nth-of-type(2n + 2) {
-    border-right: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .ServicesGrid--service {
-    width: 100%;
-    flex: 0 0 100%;
-    border-right: none !important;
-  }
-}
-
-@media (max-width: 560px) {
-  .ServicesGrid {
-    border: none;
-  }
-
-  .ServicesGrid--service {
-    border: 1px solid var(--darkerGrey) !important;
-    border: 1px solid #54839d !important;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 3rem;
-  }
-
-  .ServicesGrid--service p {
-    text-align: center;
-  }
 }

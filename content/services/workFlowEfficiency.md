@@ -7,7 +7,7 @@ shortDescription: >-
   to go.
 
 
-  We take happily sit passenger with you. 
+  We happily take the passenger seat with you. 
 description: >-
   Create and manage business workflows. Establish cloud based filing and
   accounting systems. Manage filing for business owner.

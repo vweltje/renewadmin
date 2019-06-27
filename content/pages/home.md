@@ -3,8 +3,8 @@ template: HomePage
 pageTitle: Home Page
 slug: ''
 titleSection:
-  subtitle: Taking the load off the mundane administration.
-  title: Giving you time back for your business
+  subtitle: Your "best practice" cheer leaders
+  title: 'Renewing your time, for your business'
 servicesSection:
   description: 'Bookkeeping - Payroll - BAS - Management Accounts '
   title: Our services

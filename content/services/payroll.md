@@ -1,12 +1,12 @@
 ---
 template: SingleService
 title: Payroll Solutions
-shortDescription: 'Keeping Happy Employees is essential to your business. '
-description: >
+shortDescription: >-
+  Keeping Happy Employees is essential to your business. 
+
   There is so much you need to be aware of when it comes to paying your
   employees.
-
-
+description: >
   Employee Awards and how they impact your employees
 
   Track time worked & Attendance

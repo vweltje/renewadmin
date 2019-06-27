@@ -20,12 +20,6 @@ contentBlock:
       By implementing new workflows, we created a more reliable, accurate and
       cost effective payroll function.
     title: Results
-  - text: >-
-      Etiam ac quam eget lectus venenatis ullamcorper sit amet non arcu. Nullam
-      interdum arcu vitae augue pulvinar sodales. Sed non dui diam. Quisque
-      lectus est, lobortis ac efficitur vitae, posuere a mauris. Phasellus ac
-      dui pellentesque, lacinia risus ut, imperdiet eros.
-    title: test
 image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
 youtubeVideo: ''
 ---

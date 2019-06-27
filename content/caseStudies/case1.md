@@ -11,9 +11,7 @@ contentBlock:
       Renew Administration took over the day to day record keeping and
       production control of Hammo Surfboards. It became clear that the business
       was not running to its full potential. We clearly recognised the key areas
-      that needed to be addressed. Renew Admin implemented several workflows
-      making the business far more efficient. These workflows have give the
-      business owners larger production and increased profits.
+      that needed to be addressed. 
     title: What we did
   - text: >-
       Renew Admin implemented several workflows making the business far more

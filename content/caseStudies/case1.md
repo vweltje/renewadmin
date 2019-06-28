@@ -2,7 +2,7 @@
 template: SingleCaseStudie
 title: Hammo Surfboards
 service: Bookkeeping
-clientLogo: 'https://ucarecdn.com/bfeca5f5-584d-4427-81a0-2c9ab3e57fc5/'
+clientLogo: 'https://ucarecdn.com/1bc873e6-84fc-4ad4-a066-c36de8b2ad81/'
 quote: >-
   "Thank You! It really saves us time and effort. Renew Admin is exactly what
   our business has been lacking. You guys rock!"
@@ -11,7 +11,7 @@ contentBlock:
       Renew Administration took over the day to day record keeping and
       production control of Hammo Surfboards. It became clear that the business
       was not running to its full potential. We clearly recognised the key areas
-      that needed to be addressed. 
+      that needed to be addressed.
     title: What we did
   - text: >-
       Renew Admin implemented several workflows making the business far more
@@ -24,4 +24,3 @@ meta:
   description: And this is the description
   title: This is a case studie
 ---
-

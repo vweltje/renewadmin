@@ -2,7 +2,7 @@
 template: SingleCaseStudie
 title: Security Specialists Australia
 service: Payroll
-clientLogo: 'https://ucarecdn.com/f1f27fb8-20a7-42a6-9725-8fea545edeaf/'
+clientLogo: 'https://ucarecdn.com/a0d889fd-05f5-4215-b988-4f74a15d940f/'
 quote: >-
   "Paying our employees on time and accurately is vital to our business, knowing
   the team at Renew Admin have our backs is amazing!"
@@ -23,4 +23,3 @@ contentBlock:
 image: 'https://ucarecdn.com/6c1942d9-a6a9-4561-ae71-a8059b0ed47f/'
 youtubeVideo: ''
 ---
-

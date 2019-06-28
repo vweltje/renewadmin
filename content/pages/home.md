@@ -59,7 +59,10 @@ certificationsSection:
     can be provided upon request.
   title: 'Certifications '
 meta:
-  description: This is the home page of renew admin
-  title: Home page
+  description: >-
+    It's our passion, to look after your books and make sure your workflow is
+    efficient, accurate and up to date. We strive to have your business
+    reporting and record keeping current and accurate each month end. 
+  title: Renew Administration | Bookkeeping Administration Services
 ---
 

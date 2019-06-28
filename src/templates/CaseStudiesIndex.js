@@ -91,7 +91,7 @@ export const CaseStudiesTemplate = ({
             <div className="container">
               <h2>{businessesSection.title}</h2>
               <div>
-                {businessesSection.logos.lenght &&
+                {businessesSection.logos.length &&
                   businessesSection.logos.map((logo, index) => {
                     return (
                       <Image

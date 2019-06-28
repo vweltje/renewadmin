@@ -7,10 +7,6 @@ siteDescription: >-
 socialMediaCard:
   image: 'https://ucarecdn.com/f6e4fa24-dc88-4c7d-8eea-38c25b4e1fb4/'
 headerScripts: >-
-  <!-- Add your analytics scripts / verification meta here -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-
   <script async
   src="https://www.googletagmanager.com/gtag/js?id=UA-123975389-29"></script>
 
